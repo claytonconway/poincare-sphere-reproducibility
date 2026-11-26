@@ -1,0 +1,6 @@
+# Portable scientific Python dependencies (verified on Python 3.9.6 and Python 3.14.7)
+# For the exact original Python 3.9.6 lockfile, see requirements-py39-lock.txt
+numpy>=2.0.0
+scipy>=1.13.0
+matplotlib>=3.9.0
+mpmath>=1.3.0

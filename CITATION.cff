@@ -1,0 +1,23 @@
+cff-version: 1.2.0
+message: "If you use this verification suite, datasets, or figure builders in your research, please cite it as below."
+title: "Gauge Cosmology and Semiclassical Gravity on the Poincare Homology Sphere S^3/I* — Reproducibility Code and Datasets (Tracks I-III)"
+type: software
+version: 1.0.0
+date-released: 2026-11-26
+license: MIT
+repository-code: "https://github.com/claytonconway/poincare-sphere-reproducibility"
+authors:
+  - family-names: "Conway"
+    given-names: "Clayton"
+    email: "clayton@verorv.com"
+    orcid: "https://orcid.org/0009-0002-1026-3106"
+    affiliation: "Independent Researcher"
+keywords:
+  - "Poincare homology sphere"
+  - "Bianchi IX cosmology"
+  - "SU(2) Yang-Mills-Higgs"
+  - "sphalerons"
+  - "Casimir effect"
+  - "Starobinsky cosmology"
+  - "Riegert action"
+  - "reproducibility"

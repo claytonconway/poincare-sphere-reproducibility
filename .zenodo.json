@@ -1,0 +1,35 @@
+{
+  "title": "Gauge Cosmology and Semiclassical Gravity on the Poincare Homology Sphere S^3/I* — Reproducibility Code and Datasets (Tracks I-III)",
+  "upload_type": "software",
+  "access_right": "open",
+  "license": "MIT",
+  "description": "Self-contained Python and arbitrary-precision mpmath verification suite, differential-geometry and spectral oracles, deterministic JSON reference datasets, automated smoke tests, and publication figure generators reproducing every theorem, numerical table, and figure across the three companion papers on classical, non-Abelian SU(2)_L Yang-Mills-Higgs, and semiclassical Starobinsky-Casimir / covariant Riegert-Weyl cosmology on the Poincare homology sphere S^3/I* and spherical space forms S^3/Gamma.",
+  "creators": [
+    {
+      "name": "Conway, Clayton",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0002-1026-3106"
+    }
+  ],
+  "keywords": [
+    "Poincare homology sphere",
+    "general relativity",
+    "Bianchi IX cosmology",
+    "SU(2) Yang-Mills-Higgs",
+    "sphalerons",
+    "Galois flat connections",
+    "Casimir effect",
+    "Atiyah-Patodi-Singer eta invariant",
+    "Starobinsky inflation",
+    "Riegert action",
+    "Weyl-squared gravity",
+    "reproducibility"
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/claytonconway/poincare-sphere-reproducibility",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ]
+}
