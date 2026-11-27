@@ -1,0 +1,497 @@
+{
+  "schema_version": "1.0",
+  "program_name": "Poincare Homology Sphere Gauge Cosmology",
+  "updated_at": "2026-11-27",
+  "claims": [
+    {
+      "id": "CLM-T1-01",
+      "stream": "p01_tilted_null_bianchi9",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Complete Axisymmetric Homogeneous Null-Wave No-Go across all three g_33 causal signatures (>0, <0, ==0); unique minimal globally hyperbolic closure is zero-shift synchronous rotating triaxial Bianchi IX with universal pure null-dust bounce ceiling u_0* = 8*sqrt(3)/27 = 0.513200.",
+      "evidence_paths": [
+        "open_problems/p01_tilted_null_bianchi9/P01_Tilted_Null_Bianchi9_Technical_Note.md",
+        "open_problems/p01_tilted_null_bianchi9/synchronous_and_bounds.json"
+      ],
+      "paper_ref": "Track I (CQG/gr-qc) Theorems 3.1-3.2",
+      "depends_on": [],
+      "caveats": [],
+      "audited_by": "blinded-critic (hostile CQG audit PASS)"
+    },
+    {
+      "id": "CLM-T1-02",
+      "stream": "p04_israel_darmois",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Spherical Israel-Darmois Schwarzschild-to-S^3/I* thin-shell bounce-epoch WEC+NEC no-go inside chi_inj = pi/10 (pure dS t_breach <= arcosh(sec(pi/10)) = 0.319458 a_dS; bounce WEC ceiling mu/y_+ < sin^3(pi/10) = 0.0295085; exact static/turning-point NEC no-go).",
+      "evidence_paths": [
+        "open_problems/p04_israel_darmois/Israel_Darmois_Poincare_Sphere_Note.md",
+        "open_problems/p04_israel_darmois/junction_verification.json"
+      ],
+      "paper_ref": "Track I (CQG/gr-qc) Theorems 5.1-5.3",
+      "depends_on": [],
+      "caveats": [],
+      "audited_by": "blinded-critic (hostile CQG audit PASS)"
+    },
+    {
+      "id": "CLM-T1-03",
+      "stream": "r3_04_faceted_shell",
+      "status": "VERIFIED_NUMERIC",
+      "statement": "I*-equivariant l=6 (n=12) faceted thin-shell matching cannot reach pi/80 = 0.039270: continuous max inscribed ceiling sin^3(19.1824 deg) = 0.035474 (-9.67%), controlled O(eps) WEC 0.031003, exact nonlinear pure-Schwarzschild WEC <= 0.029508 (breaks at eps=0.018).",
+      "evidence_paths": [
+        "open_problems/round3_scouts/Round3_Micro_Scouts_Summary.md",
+        "open_problems/round3_scouts/r3_04_faceted_shell.json"
+      ],
+      "paper_ref": "Track I (CQG/gr-qc) Section 6",
+      "depends_on": [
+        "CLM-T1-02"
+      ],
+      "caveats": [
+        "Finite-amplitude Schwarzschild row is approximate ([h] <= 1.37%)."
+      ],
+      "audited_by": "blinded-critic (hostile CQG audit PASS)"
+    },
+    {
+      "id": "CLM-T1-04",
+      "stream": "r3_05_tilted_su2_bianchi9",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Pure-Null Gauss Ellipsoid Theorem for 9-component homogeneous SU(2)_L on rotating triaxial Bianchi IX; paired contracting pure-null ensembles give 0/400 Abelian and 0/400 SU(2)_L bounces above u_0* = 0.513200, and on 900 partially-tilted trials SU(2)_L is indistinguishable from (u, S_3, T^3_3)-matched decoupled U(1)_A x U(1)_B (19/900 vs 18/900).",
+      "evidence_paths": [
+        "open_problems/round3_scouts/Round3_Micro_Scouts_Summary.md",
+        "open_problems/round3_scouts/r3_05_tilted_su2_bianchi9.json"
+      ],
+      "paper_ref": "Track I (CQG/gr-qc) Section 4",
+      "depends_on": [
+        "CLM-T1-01"
+      ],
+      "caveats": [
+        "Matched U(1)_A x U(1)_B control matches 8/10 T_uv(0) components + transverse trace (leaving T^1_1 - T^2_2 unmatched)."
+      ],
+      "audited_by": "blinded-critic (hostile CQG audit PASS)"
+    },
+    {
+      "id": "CLM-T2-01",
+      "stream": "p02_inhomogeneous_su2_higgs",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Exact closed-form K = j +/- 2 perturbation law yields E_tach(m) = (m^2-1)^4/(32 m^4), raising inhomogeneous pure-YM tachyonic onset 280.08x on S^3/I* (n=12, K=4: E_tach = 442.5927 vs S^3 n=4 twin at 128/81 = 1.5802).",
+      "evidence_paths": [
+        "open_problems/p02_inhomogeneous_su2_higgs/P02_Inhomogeneous_SU2_Higgs_Report.md",
+        "open_problems/p02_inhomogeneous_su2_higgs/p02_01_operator_verification.json"
+      ],
+      "paper_ref": "Track II (JHEP/CMP) Theorem 3.1",
+      "depends_on": [],
+      "caveats": [],
+      "audited_by": "blinded-critic (hostile JHEP/CMP audit PASS)"
+    },
+    {
+      "id": "CLM-T2-02",
+      "stream": "p03_galois_rho2",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Explicit closed-form Z[sqrt(5)] degree-7 holomorphic intertwiner P_7 constructs flat I*-invariant connection A_{rho2} = u_7^-1 du_7 with exact N_CS = +49/120, 21x Higgs covariant Laplacian lifting (lambda_min = 63/a^2), and full-3D 315-DOF Morse-index-1 sphaleron S_02 at E_YM = 31.493447 (127.64x S_01) establishing V-shaped Morse graph rho_1 <-> S_01 <-> rho_0 <-> S_02 <-> rho_2.",
+      "evidence_paths": [
+        "open_problems/p03_galois_rho2/P03_Galois_Rho2_Technical_Note.md",
+        "open_problems/p03_galois_rho2/goal1_rho2_verification.json",
+        "open_problems/p03_galois_rho2/goal2_tier2_full3d.json"
+      ],
+      "paper_ref": "Track II (JHEP/CMP) Theorems 4.1-4.2",
+      "depends_on": [
+        "CLM-T2-01"
+      ],
+      "caveats": [],
+      "audited_by": "blinded-critic (hostile JHEP/CMP audit PASS)"
+    },
+    {
+      "id": "CLM-T2-03",
+      "stream": "r3_01_twisted_casimir_eta",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Exact pure-rational Ad(rho_i)-twisted 1-loop pure-YM Casimir energies and APS eta-invariants on S^3/I*: E_Cas^YM(rho_0)=-349/225, rho_1=-221/150, rho_2=+79/150, exact integer jump E(rho_2)-E(rho_1)=+2 hbar c/a, exact Freed-Gompf spectral flow SF_1=1, SF_2=5, and Higgs-free weak-coupling Hosotani ordering rho_0 < rho_1 < 0 < rho_2.",
+      "evidence_paths": [
+        "open_problems/round3_scouts/Round3_Micro_Scouts_Summary.md",
+        "open_problems/round3_scouts/r3_01_twisted_casimir_eta.json"
+      ],
+      "paper_ref": "Track II (JHEP/CMP) Theorem 5.1",
+      "depends_on": [
+        "CLM-T2-02"
+      ],
+      "caveats": [
+        "Weak-coupling 1-loop Hosotani ordering holds for g_YM(1/a) << 1."
+      ],
+      "audited_by": "blinded-critic (hostile JHEP/CMP audit PASS)"
+    },
+    {
+      "id": "CLM-T3-01",
+      "stream": "p05_starobinsky_casimir",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Species-Scale Squeeze & Isotropy-Irreducible No-Go: across all 5 nontrivial isotropy-irreducible homogeneous spherical space forms (RP^3, S^3/Q_8, S^3/T*, S^3/O*, S^3/I*), L_min(a_Cas)/l_sp^red stays strictly < 1 (max 0.4551 pure vectors / 0.8981 mixed on S^3/I*) for all N >= 1, blocking large-N parametric semiclassicality.",
+      "evidence_paths": [
+        "open_problems/p05_starobinsky_casimir/P05_Starobinsky_Casimir_Report.md",
+        "open_problems/p05_starobinsky_casimir/p05_01_identities.json",
+        "open_problems/round3_scouts/r3_02_ade_lens_species_escape.json"
+      ],
+      "paper_ref": "Track III (PRD/gr-qc) Section 3",
+      "depends_on": [],
+      "caveats": [],
+      "audited_by": "blinded-critic (hostile PRD audit PASS)"
+    },
+    {
+      "id": "CLM-T3-02",
+      "stream": "track3_semiclassical",
+      "status": "CAVEATED",
+      "statement": "On S^3/I*, non-tachyonic Starobinsky-Casimir dynamics host a long-lived adiabatically trapped (KAM-like) cyclic breathing island (x_ring = 21.9168 at sigma_t0 = 9/31), whereas squashed Berger-sphere L(p,1) and S^3/D_m* suffer universal Hopf-fiber runaway collapse a_3 -> 0 (0/47 valid bounces across 160 trials).",
+      "evidence_paths": [
+        "open_problems/p05_starobinsky_casimir/P05_Starobinsky_Casimir_Report.md",
+        "open_problems/track3_semiclassical/t3_01_berger_casimir_backreaction.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Track III (PRD/gr-qc) Sections 4-5",
+      "depends_on": [
+        "CLM-T3-01"
+      ],
+      "caveats": [
+        "At dark-gauge value sigma_t0=9/31, scalaron is trans-unitarity (omega_scal = 3.55 M_unit^HW); sub-unitarity window requires free parameter sigma_t in (3.65, ~15).",
+        "O(eps^2) topological Casimir elastic shear modulus is uncomputed in Track III (Stream p2_01 later showed that on P05's Casimir-supported ring x_ring^2 ~ |kappa_V|, non-Weyl topological Casimir kinetic/shear terms are O(1) relative to Einstein-Hilbert rather than O(1/x_ring^2))."
+      ],
+      "retraction_reason": null,
+      "audited_by": "blinded-critic (hostile PRD audit PASS)",
+      "updated_at": "2026-11-25",
+      "created_at": "2026-11-25"
+    },
+    {
+      "id": "CLM-T3-03",
+      "stream": "track3_semiclassical",
+      "status": "CAVEATED",
+      "statement": "Direct 4D covariant Riegert + running Weyl-C^2 spin-2 perturbation theory removes the spurious local-^(3)H ghost at x=7.7905 (A_Rieg > 0 on [7,60], exact symplectic Wronskian drift 5.67e-13 over tau=6000) and maps 4 Ostrogradsky regimes in beta_0 including a 2:1 Stelle-scalaron resonance tongue in (0.2880, 0.2903) and broad Regime IV off-resonance stability.",
+      "evidence_paths": [
+        "open_problems/track3_semiclassical/t3_02_riegert_weyl_c2_spin2.json"
+      ],
+      "paper_ref": "Track III (PRD/gr-qc) Section 6",
+      "depends_on": [
+        "CLM-T3-02"
+      ],
+      "caveats": [
+        "Local covariant truncation omits nonlocal C ln(-Box/mu^2) C form factor (addressed in Track IV-A) and Stelle UV completion."
+      ],
+      "audited_by": "blinded-critic (hostile PRD audit PASS)"
+    },
+    {
+      "id": "CLM-T4A-01",
+      "stream": "t4a_nonlocal_weyl_kam",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Maxwell Opposite-Chirality Selection & Dissipation Positivity: T_{ij}^TF proportional to (1 - s_1*s_2) lifts exact 2-photon thresholds to M_{S^3}(n) = n+4 (M_{S^3}(2)=6) and M_{I^*}(2)=26, M_{I^*}(10)=14, M_{I^*}(14)=26, M_{I^*}(18)=22, M_{I^*}(22)=26, strictly above the B_n < 0 magnetic-Weyl band.",
+      "evidence_paths": [
+        "open_problems/track4_nonlocal_weyl_kam/T4A_Nonlocal_Weyl_KAM_Report.md",
+        "open_problems/track4_nonlocal_weyl_kam/t4a_01_kernel_verification.json"
+      ],
+      "paper_ref": "Track IV-A (CQG/PRD/gr-qc) Section 3 (Theorems 3.1 & 3.3)",
+      "depends_on": [
+        "CLM-T3-03"
+      ],
+      "caveats": [],
+      "audited_by": "blinded-critic (2-round cold audit PASS, 0 P0 / 0 P1)"
+    },
+    {
+      "id": "CLM-T4A-02",
+      "stream": "t4a_nonlocal_weyl_kam",
+      "status": "CAVEATED",
+      "statement": "Chiral Topological Horowitz Stabilization: lifting M from 6 to 26 lowers continuum-log static Horowitz pinch-off 16.61x from beta_pinch(S^3)=6.3718 to beta_pinch(S^3/I*)=0.3836 (dynamical adiabatic max 0.4206 on x_ring), stabilizing unreduced 4th-order Regime IV beta_0 in [0.44, 6.37]; scalaron sidebands cancel 99.76% via Manley-Rowe while n=14 damps (-1.24e-2 H_S) and n=18,22 hit 2:1 Mathieu reheating.",
+      "evidence_paths": [
+        "open_problems/track4_nonlocal_weyl_kam/T4A_Nonlocal_Weyl_KAM_Report.md",
+        "open_problems/track4_nonlocal_weyl_kam/t4a_02_solver_benchmarks.json",
+        "open_problems/track4_nonlocal_weyl_kam/t4a_03_kam_phase_map.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Track IV-A (CQG/PRD/gr-qc) Sections 4-6",
+      "depends_on": [
+        "CLM-T4A-01"
+      ],
+      "caveats": [
+        "Exact numerical pinch-off 0.3836 uses single-threshold continuum-log kernel above M_I*=26 (superseded in exact discrete pole sum by CLM-P2-01 and CLM-OPEN-01).",
+        "P05 background scalaron sits at 4*c_anom*omega_scal^2 = 4.000 and n=18,22 sit at eps_EFT = 0.87-1.28; strict 1-loop EFT requires sigma_t >= 4.",
+        "O(1/N_v) 2-graviton self-loop cut at 2*sqrt(8) ~ 5.66 and nonlinear radiation backreaction remain open."
+      ],
+      "retraction_reason": null,
+      "audited_by": "blinded-critic (2-round cold audit PASS, 0 P0 / 0 P1)",
+      "updated_at": "2026-11-25",
+      "created_at": "2026-11-25"
+    },
+    {
+      "id": "CLM-T4B-01",
+      "stream": "t4b_dynamical_hosotani_rho2",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Exact Goldstone-covariant linearized fluctuation theory (regular at phi=0) obeys exact dynamical Ward identity V*C + C'' == 0 (err 2.89e-12; 2.26e-12 at phi=0) and nonsingular parallel-transport Coulomb reduction on C^perp, cutting P02 frozen-phi SM error from 22.2% to 8.65e-5.",
+      "evidence_paths": [
+        "open_problems/track4_dynamical_hosotani_rho2/T4B_Dynamical_Hosotani_Rho2_Report.md",
+        "open_problems/track4_dynamical_hosotani_rho2/t4b_01_goldstone_covariant.json"
+      ],
+      "paper_ref": "Track IV-B (JHEP/CQG/hep-th) Section 2 (Theorem 2.1)",
+      "depends_on": [
+        "CLM-T2-01",
+        "CLM-T2-02"
+      ],
+      "caveats": [],
+      "audited_by": "blinded-critic (cold audit PASS, 3 P0 + 5 P1 closed)"
+    },
+    {
+      "id": "CLM-T4B-02",
+      "stream": "t4b_dynamical_hosotani_rho2",
+      "status": "CAVEATED",
+      "statement": "Dynamical SM Hosotani restoration shatters stiff-Higgs stabilization on S^3 (87.6x-478.9x) but preserves S^3/I* n=12 (1.07x-8.73x; quenches E=2500 436x below pure YM); real-time 3+1D winding-k (k=1,7) solver resolves super-horizon rho_2 -> S_02 -> rho_0 supercooled plunge + coherent rebound, sub-horizon supercooled escape (10/10), pre-bounce gamma_c=1/4 bounce/crunch bifurcation, and clean pure-YM n=12 saturation.",
+      "evidence_paths": [
+        "open_problems/track4_dynamical_hosotani_rho2/T4B_Dynamical_Hosotani_Rho2_Report.md",
+        "open_problems/track4_dynamical_hosotani_rho2/t4b_03_dynamical_phenomena.json",
+        "open_problems/track4_dynamical_hosotani_rho2/t4b_03b_avalanche_bifurcations.json",
+        "open_problems/track4_dynamical_hosotani_rho2/t4b_05_audit_remediation.json"
+      ],
+      "paper_ref": "Track IV-B (JHEP/CQG/hep-th) Sections 2.2-4",
+      "depends_on": [
+        "CLM-T4B-01"
+      ],
+      "caveats": [
+        "Pre-bounce contracting avalanches exhibit UV-cascade Gauss-leakage boundary at a <= 1.09 (eta >= 0.90 at N_max = 36)."
+      ],
+      "audited_by": "blinded-critic (cold audit PASS, 3 P0 + 5 P1 closed)"
+    },
+    {
+      "id": "CLM-OPEN-01",
+      "stream": "p2_01_discrete_photon_pole_sum",
+      "status": "CAVEATED",
+      "statement": "Exact Discrete S^3/I* Two-Photon Pole Repulsion & Regime IV Sideband Audit: replacing Track IV-A's continuum-log kernel with the conformal-Weyl-factored discrete pole sum (Model A) shifts static Horowitz pinch-off +78.23% from 0.383639 to 0.683775 (Omega_pinch = 17.9290; exact discrete round S^3 shifts +21.22% from 6.371770 to 7.723779, preserving an 11.30x topological advantage) and raises dynamical adiabatic envelopes to 0.7266 on x_ring and 1.1273 on eccentric x_b=15, reopening UHP Horowitz ghost runaway on beta_0 in [0.44, 0.72] (gamma_dyn = +2.220e-1 H_S at beta_0 = 0.50). Contrary to the original conjecture's expectation of destabilizing sideband windows, 0/28 sampled points on x_ring in [0.747, 8.00] -- including all exact dressed hyperbolic Krein normal-mode resonance candidates H_1 (0.747), H_fund (1.199), H_{2,mod} (1.217), H_3 (1.994), and H_4 (2.186) -- destabilize over tau = 773.4 H_S^{-1} (max_ratio <= 1.26, |gamma| <= 4.62e-4 H_S; true graviton-eigenvector IC |gamma_E| <= 1.29e-6 H_S; x_b=15 bounded for beta_0 >= 1.20).",
+      "evidence_paths": [
+        "streams/p2_01_discrete_photon_pole_sum/REPORT.md",
+        "streams/p2_01_discrete_photon_pole_sum/results.json",
+        "streams/p2_01_discrete_photon_pole_sum/01_derive.json",
+        "streams/p2_01_discrete_photon_pole_sum/02_solve.json",
+        "streams/p2_01_discrete_photon_pole_sum/03_kill_tests.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Track IV-A (CQG/PRD/gr-qc) Section 7 (Section 7.2 & Table 4)",
+      "depends_on": [
+        "CLM-T4A-02",
+        "CLM-P2-01"
+      ],
+      "caveats": [
+        "Model A vs Model B O(1)-relative-to-EH caveat: because x_ring^2 = 480.34 ~ |kappa_V| = 481.05 on P05's Casimir-supported ring, the non-Weyl topological Casimir kinetic remainder (+3900/31 Omega^2 = 26.2% of x_ring^2 rel-S^3; +4344/31 Omega^2 = 29.2% abs) shifts static beta_pinch to 0.5747 (rel-S^3) / 0.5615 (abs), while the Kubo Omega^0 constant (+608048/155 = +3922.89, 102% of 8*x_ring^2) requires the uncomputed squashed-Bianchi-IX contact/tadpole diagram for the complete static Casimir shear modulus.",
+        "Time-domain runs evolve explicit poles up to J_cut=30 (E<=122; verified against J_cut=60 to 2.32e-4 at beta_0=1.0) with K(0)-matched UV tail; 34-point x_ring scan over tau=773.4 H_S^{-1} (5.65 T_macro) rules out broad/moderate sidebands above 0.7266, not ultra-narrow tongues (Delta beta_0 << 0.01) or secular drifts |gamma| < 1e-4 H_S beyond tau=773.",
+        "Large-N_v Maxwell limit omits O(1/N_v) 2-graviton self-loop cut at 2*sqrt(8) ~ 5.66 and nonlinear scalaron/radiation backreaction (CLM-OPEN-02); strict scalaron EFT perturbativity requires sigma_t >= 4."
+      ],
+      "retraction_reason": null,
+      "audited_by": "referee-critic (cold audit PASS, 0 P0 / 0 P1 / 0 P2; physics_audit_results PASS 4/4 KT)",
+      "updated_at": "2026-11-25",
+      "created_at": "2026-11-25"
+    },
+    {
+      "id": "CLM-OPEN-02",
+      "stream": "p2_02_nonlinear_kam_backreaction",
+      "status": "CAVEATED",
+      "statement": "Nonlinear Scalaron-Radiation-Graviton Backreaction on S^3/I*: exact first-order lapse-covariant Starobinsky-Casimir + Riegert + O(b_n^2) TT action satisfies the exact dissipative Noether/Bianchi identity d/dtau(x^4 E_00) == 0 (35-digit mpmath 8.97e-34; un-floored max_rel_E00 <= 3.22e-8 over tau=10,000 in KT1; DOP853 vs Radau <= 2.71e-6 across 5 deterministic KT2 regimes; P05 recovery 9.04e-10 in KT4). Converting w=0 scalaron dust into w=1/3 radiation suppresses outer-barrier escape (delta h^2 < 0 for x > x_0) and erodes the Casimir bounce along x_ring,eff = sqrt(|kappa_eff(0)| - kappa_rad), crashing 19/21 depleted positive-Lambda runs into A_R -> 0+ while 1/32 (lam=5e-5, G=1e-3) reaches asymptotic IR dS via a transient Starobinsky-kick + reheating (tau=1986.63, DOP853 vs Radau 1.83e-8) and 1/32 (lam=1e-4, G=2e-4) sits on a chaotic UV Starobinsky separatrix (ghost_A_R_zero near tau=5360 in KT2f). At trans-unitarity sigma_t0=9/31 (eps_scal=4.0), n=18,22 Mathieu gravitons destroy the KAM ring across all 16 tested configurations in tau in [28.4, 277.1] H_S^-1; in the homogeneous n=18,22===0 truncation, radius-dependent n=2 catalyzed depletion bifurcates between chiral self-quenching onto a shrunk damped cyclic attractor (g_2 b_0^2 <= 0.003: x_late in [12.40, 16.02] at lam=0, |b_2| <= 0.077 -> 0.001-0.005) and 2nd-harmonic punch-through crashes (g_2 b_0^2 >= 0.010). Across the sub-unitarity 1-loop EFT window sigma_t in [4, 12] (eps_scal in [0.097, 0.290]), the I* TT spectral desert (1.0022, 15.4856) suppresses Mathieu gain 852x (sigma_t=5.05) and 227x (sigma_t=8.60) vs matched S^3-forbidden controls (KT3), enabling unified 5-mode survival over tau=10,000 at sigma_t=4 (g_2=1,5), 6, 8, 12 (and 10 for b0_2 <= 0.02 or lam=5e-5), bounded by a safely saturating n=10 1:1 tongue at sigma_t=4.20 (70.8x -> 33.5x peak / 25.6x late with 1-loop damping), a finite-amplitude web-diffusion crash at sigma_t=10, b0_2=0.05, lam=0 (tau=4662.0), and an EFT-safe n=2 2:1 Mathieu wall at sigma_t >= 16.5.",
+      "evidence_paths": [
+        "streams/p2_02_nonlinear_kam_backreaction/P2_02_Nonlinear_KAM_Backreaction_Report.md",
+        "streams/p2_02_nonlinear_kam_backreaction/results.json",
+        "streams/p2_02_nonlinear_kam_backreaction/p2_02_01_identities.json",
+        "streams/p2_02_nonlinear_kam_backreaction/p2_02_02_dynamics.json",
+        "streams/p2_02_nonlinear_kam_backreaction/p2_02_03_killtests.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Track IV-A (CQG/PRD/gr-qc) Section 8 (Theorem 8.1, Prop. 8.2, Table 5)",
+      "depends_on": [
+        "CLM-T4A-02",
+        "CLM-OPEN-01"
+      ],
+      "caveats": [
+        "At trans-unitarity dark-gauge sigma_t0 = 9/31, 4*c_anom*omega_scal^2 = 4.000, n=18,22 sit at eps_EFT = 0.87-1.28, and dR^(3)/R^(3) reaches O(1-20) before crash, so the sigma_t0=9/31 Mathieu breakdown is an EFT/linearization breakdown trigger rather than a UV-complete endpoint.",
+        "Inhomogeneous TT modes n=10,14,18,22 couple to homogeneous FLRW E_00 via Brill-Hartle/Isaacson spatial averaging at O(b_n^2), omitting O(b_n^2) inhomogeneous scalar/vector potentials and O(b^3) mode-mode scattering; homogeneous n=2 Bianchi IX O(b^4) curvature error is 0.58% at b=0.05 and 2.35% at b=0.10.",
+        "L_TT omits conservative 4th-order Weyl-squared/nonlocal dispersive terms (Track IV-A continuum-log Regime IV boundary beta_0 >= 0.44 was superseded in CLM-OPEN-01's discrete pole sum by beta_0 >= 0.75 on x_ring) and non-Weyl n=2 topological Casimir kinetic (+3900/31 Omega^2 = 26.2%-29.2% of EH) and Kubo Omega^0 (+608048/155 = +3922.89, 102% of 8*x_ring^2, pending squashed-Bianchi-IX contact/tadpole completion) terms that are O(1) already at x_ring and can shift the n=2 Mathieu wall (sigma_t ~ 16.5) and chiral damping window [12.49, 15.53] at O(1) (while n >= 10 modes are k_n^-2-suppressed).",
+        "1-loop 2-photon dissipation uses Markovian cycle-averaged Parseval/Manley-Rowe rates calibrated to the continuum-log kernel above M_I*(n) (n=2 PCHIP lookup clamps at x_min=8.68 during punch-through crashes where |b_2| > 0.15; sigma_t=4.20 n=10 1:1 tongue uses nearby off-resonance sigma_4p0 table); per CLM-T3-01, L_min(a_Cas)/l_sp^red = 0.4551 < 1 leaves O(1) non-perturbative species-scale corrections."
+      ],
+      "retraction_reason": null,
+      "audited_by": "referee-critic (Round-4 cold audit PASS, 0 P0 / 0 P1; physics_audit_results PASS 4/4 KT)",
+      "updated_at": "2026-11-26",
+      "created_at": "2026-11-26"
+    },
+    {
+      "id": "CLM-RET-01",
+      "stream": "r3_02_ade_lens_species_escape",
+      "status": "RETRACTED",
+      "statement": "RETRACTED: Earlier isotropic FLRW ODE KAM breathing rings on L(40,1) and S^3/D_m* escaping the Species-Scale Squeeze.",
+      "evidence_paths": [
+        "open_problems/round3_scouts/Round3_Micro_Scouts_Summary.md",
+        "open_problems/track3_semiclassical/t3_01_berger_casimir_backreaction.json"
+      ],
+      "depends_on": [],
+      "retraction_reason": "P0 cold-audit catch: S^1-pinched L(p,1) (p>=3) and S^3/D_m* (m>=3) Casimir stress tensors carry O(100%) Hopf-fiber shear (p_par - p_perp ~ 4 u_Cas), invalidating isotropic FLRW; full anisotropic Berger-sphere backreaction (T3-A) proved universal runaway Hopf-fiber collapse a_3 -> 0.",
+      "superseded_by": "CLM-T3-02",
+      "audited_by": "blinded-critic (R3-2 P0-1 retraction)"
+    },
+    {
+      "id": "CLM-RET-02",
+      "stream": "r3_05_tilted_su2_bianchi9",
+      "status": "RETRACTED",
+      "statement": "RETRACTED: Initial claim of non-Abelian SU(2)_L 'tachyonic destruction' of bounces in partially-tilted Bianchi IX based on an S_3-only comparison.",
+      "evidence_paths": [
+        "open_problems/round3_scouts/Round3_Micro_Scouts_Summary.md",
+        "open_problems/round3_scouts/r3_05_tilted_su2_bianchi9.json"
+      ],
+      "depends_on": [],
+      "retraction_reason": "P1 cold-audit catch: confounded control (raw 2 -> 8 shift was static S_3(0) dilution). Under (u, S_3, T^3_3)-matched decoupled U(1)_A x U(1)_B controls across 900 trials, SU(2)_L is indistinguishable from Abelian radiation (19/900 vs 18/900).",
+      "superseded_by": "CLM-T1-04",
+      "audited_by": "blinded-critic (R3-5 P1-6 catch)"
+    },
+    {
+      "id": "CLM-P2-01",
+      "stream": "p2_01_discrete_photon_pole_sum",
+      "status": "PROVEN_ANALYTIC",
+      "statement": "Exact Discrete S^3/I* Opposite-Chirality Two-Photon Spectral Pole Sum (Theorems 1-2): for homogeneous n=2 (-) shear on R_eta x Sigma_3 (Sigma_3 in {S^3, S^3/I*}), SU(2)_L Schur orthogonality and Maxwell (1 - s_1*s_2) duality lock j_L(gamma_+)=j_L(gamma_-)=j >= 1 with E_j = 4j + 2 (M_{S^3}=6, M_{I*}=26), stretched Wigner 6j overlap C_R(j) = (2j-1)(2j+3)/[5(2j+1)], exact Bach factorization (2j+1)*omega_+*omega_-*C_R(j) = B_2(E_j)/80, zero-mean period-30 I* remainder sum_{r=0}^{29} R_{I*}(r) = 0 recovering c_anom = 9/31, exact closed-form digamma kernels K_{Sigma_3}^{disc}(Omega; mu_cyl) with Im K_{I*}^{disc}(Omega) == 0 on |Omega| < 26, exact Hurwitz-zeta constants zeta_{S^3}(1) = -74/3, zeta_{I*}(1) = -724/3, zeta_{S^3}(3) = -4316/15, zeta_{I*}(3) = -521224/45, and exact Kubo polynomial-division remainders +4344/31 * Omega^2 (I*-S^3: +3900/31 * Omega^2) and +608048/155.",
+      "evidence_paths": [
+        "streams/p2_01_discrete_photon_pole_sum/REPORT.md",
+        "streams/p2_01_discrete_photon_pole_sum/01_derive.json",
+        "streams/p2_01_discrete_photon_pole_sum/results.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Track IV-A (CQG/PRD/gr-qc) Section 7 (Theorems 7.1-7.2)",
+      "depends_on": [
+        "CLM-T4A-01"
+      ],
+      "caveats": [],
+      "retraction_reason": null,
+      "audited_by": "referee-critic (cold audit PASS, 0 P0 / 0 P1 / 0 P2; physics_audit_results PASS 4/4 KT)",
+      "updated_at": "2026-11-25",
+      "created_at": "2026-11-25"
+    },
+    {
+      "id": "CLM-P2-03",
+      "stream": "p2_03_graviton_casimir_null_cone",
+      "status": "CAVEATED",
+      "statement": "1-Loop Pure-Graviton Casimir Focusing Across Spherical Space Forms S^3/Gamma (KT1-KT4): on on-shell vacuum global dS_4/Gamma, canonical ADM scalar/vector constraints and 3D York Jacobians cancel all off-shell p >= 3 modes identically (50-digit gauge/EL/Bianchi err <= 5.47e-48), conformal Killing scalars vanish on all nontrivial S^3/Gamma (d0(2)=0 vs 4 on S^3), and spatial Killing vectors at p=2 (6 on S^3, RP^3; 4 on L(p,1), p>=3; 3 on Q_8, D_m*, T*, O*, I*) enforce Moncrief's global Isom_0 angular-momentum constraints with zero shift to local <T_uv>. Across all 5 nontrivial ADE isotropy-irreducible space forms (RP^3, Q_8, T*, O*, I*), UV-finite 1-loop pure-graviton topological Casimir null energy is strictly positive (focusing), reinforcing Chandrasekaran arXiv:2611.34924 Xi_y >= 0 in both the physical-TT static-ESU limit (pi^2 Delta C_top^EH = +0.812266, +4.528512, +23.755536, +52.861439, +129.061298; 50-digit Hurwitz+digamma vs Abel-Plana <= 2.57e-46) and on-shell global dS_4/Gamma Ford-Parker Bunch-Davies (+120.265044 bounce / +110.792744 prescription-indep a^-4 on S^3/I*, tightening area ceiling Delta s_*^tip = -2.336454 ESU / -2.182358 BD; DOP853 vs Radau <= 3.39e-11, BD 2-component ODE <= 1.50e-12; round-S^3 dS_4 limit 0.00). Proving the exact first-order Berger-sphere spin-2 TT slope law d(omega^2)/d(lam_B)|_1 = 4s(p+s)^2/p - 8(p+2s)/p M_L^2 (Theorem 2, matrix err 6.25e-13; exact isotropy |p_par - p_perp|=0 on RP^3 and Q_8; Hurwitz vs Abel-Plana <= 1.27e-47) shows anisotropic L(p,1) flips permanently to Hopf-parallel pure-graviton defocusing for p >= 11 (u_grav < 0 for p >= 14), plus an isolated odd-lens low-order anomaly at L(3,1) (pi^2 u = +0.8216 > 0 yet pi^2 p_par = -1.6576, pi^2 T_uu^par = -0.8360 < 0, cone theta < 32.49 deg; matched spin-1 Maxwell on L(3,1) has exact Bernoulli p_par = 0, T_uu^par = +4/9 > 0), and S^3/D_m* flips for m >= 6 (u_grav < 0 for m >= 8), both recovering the exact S^1 flat-circle limit (-pi^2/(45 L_min^4), p_par/u -> 3) while flat cubic T^3 negative control gives defocusing u_grav = -1.675074/L^4 (Delta s_* = +1.8369). Dark-photon flip is impossible on RP^3, Q_8, T*, O* and requires N_V >= 5 (ESU, 4.1541) / N_V >= 4 (BD, 3.8802) uniquely on S^3/I*; non-abelian SU(2) flat-holonomy total sign switch rho_0/rho_1 <-> rho_2 requires N_SU(2) >= 2 (1.3847 ESU / 1.2903 BD); throughout a >> a_Cas (L_min >> l_sp^red), Delta s_* stays finite and bounded preserving dim H_D < inf, while |Xi| ~ O(1) lies strictly inside CLM-T3-01's species-scale squeeze (L_min(a_Cas)/l_sp^red = 0.92758 < 1 for pure gravity on S^3/I*).",
+      "evidence_paths": [
+        "streams/p2_03_graviton_casimir_null_cone/REPORT.md",
+        "streams/p2_03_graviton_casimir_null_cone/results.json",
+        "streams/p2_03_graviton_casimir_null_cone/01_derive.json",
+        "streams/p2_03_graviton_casimir_null_cone/02_solve.json",
+        "streams/p2_03_graviton_casimir_null_cone/03_kill_tests.json"
+      ],
+      "json_key": null,
+      "paper_ref": "Phase 2 Stream p2_03 (Proposition 1, Theorem 2, Tables 2.2-5.2)",
+      "depends_on": [
+        "CLM-T3-01",
+        "CLM-T2-03"
+      ],
+      "caveats": [
+        "Vacuum & Stress-Tensor Prescription: On-shell pure-GR vacuum is global dS_4/Gamma (static R_t x S^3/Gamma is only the physical-TT H -> 0 limit). On global dS_4/Gamma, Delta T_uu^{BD-TT} uses the Ford-Parker / exponential-parameterization minisuperspace TT stress tensor: the leading a^-4 piece (+110.7927 on S^3/I*, alone giving N_V^crit = 4) is prescription-independent, while the subleading O(a_dS^-2 a^-2) piece (+9.4723, 7.9% of bounce null-energy coefficient) differs from linear-metric <G_uv^(2)[h]> by O(H_dS^2 <h^2>) terms; switching ESU vs BD preserves strictly positive focusing across all 5 ADE (bounce diff 6.23%-8.72%; S^3/I* 6.60%-6.82%) while shifting S^3/I* dark-photon flip from N_V >= 5 (ESU) to N_V >= 4 (BD).",
+        "Weak-Coupling Deconfined Regime for SU(2) Switch (CLM-T2-03): 1-loop Ad(rho_i)-twisted pure-YM Casimir energies on S^3/I* hold strictly in the weakly coupled deconfined UV regime g_YM(1/a) << 1 (L_min << Lambda_YM^-1); in the confined IR regime L_min >> Lambda_YM^-1, confinement exponentially suppresses the YM Casimir shift as O(exp(-m_gap L_min)).",
+        "Static Round Metric for Anisotropic Quotients: Berger-sphere graviton pressures (p_par, p_perp) on L(p,1) and S^3/D_m* are evaluated at the round metric (lam_B = 1) via the scale-covariant 3D Lichnerowicz operator -Delta_2 - 2 R_{ikjl} h^{kl}; per CLM-RET-01 and CLM-T3-02, O(100%) Casimir shear drives dynamical Berger-sphere squashing backreaction (a_3 != a_perp) near a ~ a_Cas.",
+        "Species-Scale Cutoff (CLM-T3-01): Across all 5 ADE space forms and all N_V >= 0 (including pure gravity on S^3/I* where L_min(a_Cas)/l_sp^red = 0.92758 and static |Xi|=1 proxy = 0.43594; dynamical dS_4 with K_top > 0 has no bounce for a_b < sqrt(2) a_Cas), nonperturbative |Xi| ~ O(1) sits strictly below the Dvali species scale (L_min < l_sp^red), where 1-loop semiclassical gravity EFT breaks down.",
+        "Semiclassical Backreaction vs Local Null-Cone Algebra: Chandrasekaran (arXiv:2611.34924) quantizes pure vacuum GR inside a single causal diamond; the global 1-loop Casimir stress tensor enters semiclassical Raychaudhuri focusing as a c-number vacuum expectation value <T_uu> shifting the macroscopic area ceiling by a finite constant Delta s_* without modifying the local single-diamond canonical algebra."
+      ],
+      "retraction_reason": null,
+      "audited_by": "referee-critic (Round-2 cold audit PASS, 0 P0 / 0 P1; physics_audit_results PASS 4/4 KT)",
+      "updated_at": "2026-11-26",
+      "created_at": "2026-11-26"
+    },
+    {
+      "id": "CLM-P2-04",
+      "stream": "p2_04_graviton_invariance_and_berger_stability",
+      "status": "CAVEATED",
+      "statement": "Analytically proved and numerically verified across KT1--KT4 (0 P0, 0 P1, 0 P2 cold referee PASS): (1) Exact 1-parameter metric redefinition invariance cancels the 24.4% to 37.7% Ford-Parker vs linear-metric backreaction shift to 1.71e-49 across all 5 ADE global dS_4/Gamma space forms; the exact Sachs-Einstein identity (-R_uv^(2) k^u k^v === sigma^2 + d(delta_theta^(2)_alpha)/dlambda, err 8.71e-24) proves zero double-counting of GW shear focusing; full 2nd-order null-geodesic integration (general-angle Gowdy + curved-S^3 Bianchi IX p=3) reveals the alpha-independent Schur-complement metric-shear term (+1/10 <h^2>), retracting N_V^crit(I*)=4 and bounding N_V^crit(I*) in {5, 6} (x=4.8208 Schur baseline, x=5.0328 WKB geodesic). (2) Exact SymPy proofs establish stretched omega^2=4(j+2)(j+2-lam^2)/lam^2, universal lam_oblate=1/2, strict all-lam_B>0 positivity of M_L=0 for all j>=1 (with exact (-1)^j D_m* parity), and sub-stretched |M_L|=j+1 positivity for all j>=1, lam_B>=1 (unique isolated tachyon at j=1/2, |M_L|=3/2, lam_B=3.243808); 2j<=40 scans verify saturation across oblate [0.51, 0.95] and prolate [1.2, 6.0] (16-quotient table err 2.05e-13). (3) Kahan-compensated Gaussian heat-kernel numerics across 15 quotients up to L(24,1)/D_12* match 50-digit p2_03 to <= 7.08e-7 rel, establish 3D-TT local Berger-S^3 c_C=63/320 and exact A_4''(1)=+554/15=+36.9333 (2-decade u''_ren band [-17.41, +152.68]), isolate spin-2 vs Spin-1 Maxwell control MC4 (opposite sign on Q_8 and L(6,1)/D_3*, zero Maxwell tachyons), and split Class 4 into sub-species 4a (L(11,1)/D_6*/L(14,1)) vs super-species 4b (q>=16 under l_sp^(2)=7.090 l_P). (4) DOP853 vs Radau Bianchi IX dynamics (max diff 2.83e-10, max un-clamped e00 2.53e-10 across 146 runs, 50-digit fixed-mu trace-anomaly conservation <= 1.34e-51) verify genuine super-species oblate runaway to lam_B=0.525 starting at L(16,1) (pure GR) and persisting even in sub-Planckian Starobinsky f(R) on L(24,1)/D_12* at a_b=36 l_P (R_0/M_Pl^2=0.59 < 1, min L_min/l_sp^(3)=1.067 > 1).",
+      "evidence_paths": [
+        "streams/p2_04_graviton_invariance_and_berger_stability/CHARTER.md",
+        "streams/p2_04_graviton_invariance_and_berger_stability/01_derive.py",
+        "streams/p2_04_graviton_invariance_and_berger_stability/01_derive.json",
+        "streams/p2_04_graviton_invariance_and_berger_stability/02_solve.py",
+        "streams/p2_04_graviton_invariance_and_berger_stability/02_solve.json",
+        "streams/p2_04_graviton_invariance_and_berger_stability/03_kill_tests.py",
+        "streams/p2_04_graviton_invariance_and_berger_stability/03_kill_tests.json",
+        "streams/p2_04_graviton_invariance_and_berger_stability/results.json",
+        "streams/p2_04_graviton_invariance_and_berger_stability/REPORT.md"
+      ],
+      "json_key": null,
+      "paper_ref": "Phase 2 Stream p2_04 (KT1--KT4, Theorem 2, Tables 3.2--6.4)",
+      "depends_on": [
+        "CLM-P2-03",
+        "CLM-T3-01"
+      ],
+      "caveats": [
+        "KT1 N_V^crit(I*) bound: Including the alpha-independent Schur-complement metric-shear term (+1/10 <h^2>) retracts N_V^crit(I*)=4 and bounds the parameterization-invariant crossover honestly as N_V^crit(I*) in {5, 6} (x=4.8208 Schur baseline; x=5.0328 full 2nd-order WKB geodesic).",
+        "KT2 analytic vs numerical scope: Stretched (all j), oblate (0,0), M_L=0 positivity (all j>=1, all lam_B>0), and sub-stretched |M_L|=j+1 positivity (all j>=1, lam_B>=1; unique tachyon at j=1/2, |M_L|=3/2, lam_B=3.243808) are proved analytically for all j; interior sectors 0 < |M_L| <= j are verified numerically up to 2j <= 40 across oblate [0.51, 0.95] and prolate [1.2, 6.0].",
+        "KT3 3D-TT operator & scheme sensitivity: c_C = 63/320 and A_4''(1) = +554/15 = +36.9333 characterize the static 3D-TT operator Delta_L^(3D) on non-Einstein R_t x S^3_lam (omitting O((lam-1)^2) 4D gauge-constraint mixing); shallow O(1) topological wells on Q_8, L(6,1), D_3*, L(3,1) are scheme-sensitive while q >= 14 is unconditionally 2-decade scheme-robust.",
+        "KT3/KT4 Dvali species scale: Under pure-GR l_sp^(2) = sqrt(2)*l_Pl = 7.090 l_P, Class 4a (L(11,1), D_6*, L(14,1)) is sub-species; genuine super-species static and pure-GR dynamical runaway to lam_B=0.525 starts at L(16,1) (min L_min/l_sp^(2)=1.047) and reaches 1.619 on L(24,1).",
+        "KT4 adiabatic & Starobinsky N_sp=3 boundaries: Bianchi IX ODEs use quasi-static instantaneous Casimir stresses (halted at lam_B=0.525 before omega_{0,0}->0 non-adiabatic breakdown); Starobinsky f(R) has N_sp=3 (l_sp^(3) = sqrt(3)*l_Pl = 8.683 l_P) and omits the 1-loop massive-scalaron Casimir energy, while L(24,1) and D_12* at a_b=36 l_P (R_0/M_Pl^2=0.59 < 1) still undergo strictly super-species oblate runaway (min L_min/l_sp^(3) = 1.067, 1.066 > 1)."
+      ],
+      "retraction_reason": null,
+      "audited_by": "physics_audit_results PASS (0/0/0) + blinded referee-critic PASS (0 P0, 0 P1, 0 P2)",
+      "updated_at": "2026-11-26",
+      "created_at": "2026-11-26"
+    },
+    {
+      "id": "CLM-P2-05",
+      "stream": "p2_05_diamond_invariance_and_twisted_prolate",
+      "status": "CAVEATED",
+      "statement": "Analytically proved (Theorems 1--4) and numerically verified across KT1--KT4 (physics_audit_results PASS 4/4 KT; cold referee-critic PASS 0 P0 / 0 P1 / 1 P2): (1) KT1 Tension 3 P0 Closure: correcting p2_04's S^3/I* TT index remark (surviving modes p<=30 are p=3,11,15,19,23,27,29; p=13 absent), aliasing-free uncapped curved-S^3=SU(2) 4D null-geodesic shooting across all 28 integer modes p=3..30 on global [-pi/2, +pi/2] (zero linear interpolation; quadrature-refinement max diff 1.29e-7; strictly monotonic to 1/6; justified for all chiralities/I*-invariants by Schur's Lemma + S^3 parity isometry) locks pi^2 Delta_eta_tot(I*) = +116.78129 (WKB tail) / +115.90416 (Schur tail), x = 4.78596 / 4.75002 => exact parameterization-invariant N_V^crit,global(I*) = 5 (eliminating 6) and N_SU(2)^crit = 2. On finite causal diamonds (chi = pi/10), exact IBP proves isotropic delta-alpha cancellation <= 2.99e-49, while the exact S^3 Euler--Arnold physical-sky affine-redshift correlator (+1/15 <h_ij(eta_0) h^ij(eta)>, ODE err 2.22e-7, |p|^2 err 2.00e-15) falsifies any single-c_inv affine ansatz and exact nonlinear vacuum triaxial Bianchi IX p=3 fixed-affine ray-tracing (Ham res 1.47e-14, DOP853 vs Radau 4.65e-7, step-doubling 5.10e-7) gives ds/R = -0.00075211, 6.67% of p2_03's coarse-grained fluid benchmark (-0.01126786, N_V^BR,FP = 4), establishing the low-p scale-separation boundary. (2) KT2 Differential Spin-2 Invariants: palindromic breaking K_+(t)+K_-(-t) = 3e^(-t)+m_Gamma(1)e^(+t) (m_Gamma(1/2)=0 automatic by faithful action on C^2) proves universal conformal spin-2 chiral asymmetry pi^2(u_+^conf-u_-^conf) = +(3/4)|Gamma| (+90 on I*, 0 on RP^3, 0 Maxwell) and physical EH +68.189833 on S^3/I* (|HZ-AP|=2.67e-46, (0,0,0) UV sum rules; mode-exact global chiral transit +70.680594/+70.675343, const Schur +71.414249, const WKB +77.117109, 6-alpha err 1.71e-49); orthogonal-ray p_par - p_perp gives -2.897192 (13.04x Maxwell -2/9) on L(3,1) and -39.476280 on L(11,1) (|HZ-AP|<=3.55e-48, exact 0 on RP^3 and Q_8), strictly invariant to round-metric R^2, C^2 and isotropic Phi_iso while shifting by -(4*delta_alpha/a^2)*(Phi_par-Phi_perp) under mixed-index / on-shell dS_4 anisotropic metric redefinitions. (3) KT3 Prolate Berger Stabilization & Kills: inside the 100% tachyon-free window lam_B in [0.60, 1.40] (0 dropped S^3 or L(q,1) modes; ts_xfine vs exact <= 6.73e-7; ladder <= 3.74e-6), N_anti_per^scal >= 3 (L_min/l_sp = 1.5527, 2.0154 on L(24,1)) and periodic Ramond N_Weyl,per >= 2 (2.2797) achieve strictly stable (V''>0), sub-Planckian, super-species fixed-volume prolate equilibria at lam_* = 1.05 robust to <= 0.5% across 2 decades of local C^2 (and surviving [-100, +250]); anti-periodic NS Weyl (Fermi sign -7/4) and 7:8 / 2:2 finite-lam_* parametric escape (exact O(q^0) no-go: L_min/l_sp frozen at 0.4884 / 0.8864 < 1) are killed, with all surviving equilibria sitting in 3H^2 < 0 at Lambda = 0 (radial support requires positive Lambda or independent stabilizer). (4) KT4 Twisted Dirac on S^3/I*: Galois invariance (sqrt(5)->-sqrt(5)) proves all 6 (rho_0,rho_1,rho_2)x(fund,adj) Dirac/Weyl energies and eta_D(0) are exact pure rationals (triple-verified Fraction Bernoulli / Cauchy / Hurwitz |M1-M2|<=3.04e-48, |M1-Q|<=3.21e-49, pal=0.00e+00) with exact Galois jumps -29/5 (fund) and -26/5 (adj), inverting bosonic YM onto rho_2 across Witten-anomaly-free models (N=1 SYM -10.6875, 1 YM + 1 adj Dirac -52.8375, 1 YM + 1 fund Dirac -42.8486); N_f = 1 graviton flip is killed across all setups (flavor-twist: adj N_f=2 all 3 observables, fund N_f=2 ESU/BD and borderline 2--3 global; dynamical SU(2) YM: fund N_f=3 all 3 observables [b_0=16/3>0], adj N_f=2 ESU/BD [b_0=+2] and N_f=3 global [b_0=-2/3<0, UV Landau pole]).",
+      "evidence_paths": [
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/CHARTER.md",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/01_derive.py",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/01_derive.json",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/02_solve.py",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/02_solve.json",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/03_kill_tests.py",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/03_kill_tests.json",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/results.json",
+        "streams/p2_05_diamond_invariance_and_twisted_prolate/REPORT.md"
+      ],
+      "json_key": null,
+      "paper_ref": "Phase 2 Stream p2_05 (KT1--KT4, Theorems 1--4, Tables 2.1--2.4)",
+      "depends_on": [
+        "CLM-P2-03",
+        "CLM-P2-04",
+        "CLM-T2-03",
+        "CLM-T3-01"
+      ],
+      "caveats": [
+        "KT1 Global Transit vs. Local Diamond Scale-Separation Boundary: Global I^- -> I^+ transit Delta_eta_tot (N_V^crit,global = 5, N_SU(2)^crit = 2, all 28 modes p=3..30 uncapped) is strictly parameterization-invariant. On sub-injectivity causal diamonds (chi_inj = pi/10), isotropic delta-alpha shifts cancel identically (<= 2.99e-49), but a single-c_inv affine-redshift ansatz is invalid for anisotropic TT modes (proved via exact S^3 Euler--Arnold + physical-sky homogeneous correlator +1/15 <h_ij(eta_0) h^ij(eta)>), and exact nonlinear vacuum triaxial Bianchi IX p=3 fixed-affine ray-tracing gives only 6.67% of p2_03's coarse-grained fluid benchmark (N_V^BR,FP = 4) because low-p modes violate scale separation (p*chi_inj = 0.94 < pi).",
+        "KT2 Counterterm & Anisotropic Metric-Redefinition Scope: Both spin-2 differential invariants are macroscopic-a observables (a >> l_sp) with exact 0.0 sensitivity to parity-even/round-metric local R^2, C^2 counterterms (parity-odd R*R_tilde vanishes identically on conformally flat dS_4/Gamma and static round R_t x S^3/Gamma). On dS_4/I*, Phi_alpha^+ - Phi_alpha^- != 0 cancels identically in the combined global chiral transit Delta_eta_tot,+ - Delta_eta_tot,- (parity-odd difference of s=+1 vs s=-1 virtual-graviton helicity sectors, not classical test-photon birefringence). On anisotropic L(q>=3,1), p_par - p_perp is invariant to round-metric R^2, C^2 and purely isotropic Phi_iso, but shifts under full anisotropic tensor metric redefinitions g_ij^(alpha) by -(4*delta_alpha/a^2)*(Phi_par - Phi_perp) in mixed-index / on-shell dS_4 static variation (or -(3*delta_alpha/a^2)*(Phi_par - Phi_perp) in lowered-index off-shell static R_t x S^3 variation).",
+        "KT3 Fixed-Volume Squashing Truncation & Radial Friedmann Constraint: Finite-lam_B prolate equilibria on L(20,1) and L(24,1) are static fixed-volume tests inside the strictly tachyon-free window [0.60, 1.40] using the 3D-TT Lichnerowicz operator Delta_L^(3D) on non-Einstein R_t x S^3_lam, omitting O((lam_B - 1)^2) 4D gauge-constraint mixing ((lam_* - 1)^2 = 2.5e-3 at lam_* = 1.05) and full dynamical axisymmetric Bianchi IX evolution. At a_bar_sq (lam_* = 1.05), spatial curvature -R^(3)/(2 a_bar_sq^2) dominates +u_tot/a_bar_sq^4 despite u_tot > 0 because a_bar_sq^2 = 2 u'/R^(3)' >> 2 u/R^(3), placing the equilibrium in the classically forbidden 3H^2 < 0 region at Lambda = 0, while positive radiation energy u_tot > 0 (rho + 3p > 0) independently forbids a Lambda = 0 Casimir bounce (a_ddot > 0); sustaining a_bar requires positive Lambda (which relaxes lam_B -> 1 in de Sitter expansion) or an independent radial stabilization mechanism. Anti-periodic NS Weyl prolate stabilization and 7:8 / 2:2 finite-lam_* parametric species-scale escape are explicitly falsified.",
+        "KT4 Running-Coupling Regimes (b_0 > 0 vs b_0 < 0), Witten Anomaly & Dynamical-YM Thresholds: Physical dynamical SU(2) gauge theories must satisfy Witten's pi_4(SU(2)) = Z_2 global anomaly (even number of fundamental Weyl doublets), satisfied by N=1 SYM (1 YM + 1 adj Weyl, b_0 = 6), 1 YM + 1 adj Dirac (b_0 = 14/3), and 1 YM + 1 fund Dirac (b_0 = 20/3). Against 1 graviton, N_f = 1 Dirac fails to flip the null-cone sign in all cases. Under a non-dynamical flavor twist (1g + N_f D), adj requires N_f = 2 across ESU/BD/global while fund requires N_f = 2 on ESU/BD and sits borderline at x_f = 2.0009/1.9859 (N_f in {2, 3}) on global transit. Under a dynamical SU(2) gauge holonomy (1g + 1 YM + N_f D, adding +31.4625 YM), fund requires N_f = 3 across ESU, BD, and global transit (b_0 = 16/3 > 0, asymptotically free, requiring weak UV coupling L_min << Lambda_YM^-1 and suppressed by IR confinement at L_min >> Lambda_YM^-1), whereas adj requires N_f = 2 on ESU/BD (b_0 = +2 > 0, near/inside the conformal window) and N_f = 3 on KT1 global transit (x_f = 2.1370/2.1238; b_0 = -2/3 < 0, losing asymptotic freedom, remaining IR-free at large a and encountering a UV Landau pole at small a)."
+      ],
+      "retraction_reason": null,
+      "audited_by": "physics_audit_results PASS (4/4 KT, 0 P0 / 0 P1 / 0 P2) + blinded referee-critic PASS (0 P0, 0 P1, 1 non-blocking P2)",
+      "updated_at": "2026-11-27",
+      "created_at": "2026-11-27"
+    },
+    {
+      "id": "CLM-P2-06",
+      "stream": "p2_06_poincare_shear_modulus_and_talbot_revivals",
+      "status": "CAVEATED",
+      "statement": "Analytically proved (Theorems 1--3, valid at arbitrary macroscopic a >> l_sp) and numerically verified across KT1--KT3 (physics_audit_results PASS 3/3 KT; cold referee-critic Round-2 PASS 0 P0 / 0 P1 / 0 P2): (1) KT1 (Track IV-A P0 Closure, Exact Maxwell Contact Ward Identity & Complete Model B): exact symbolic Laurent-polynomial shell proof in Q[N, N^-1] (zero N=1 jump, regularization equivalence via non-identity SU(2)_L characters, N=1..61 exact Fraction, 50-digit ADE err <= 3.69e-46, exact RG mismatch 0) proves Pi_contact^top(Gamma; 0) === 4*kappa_V(Gamma) === (1920/31)*pi^2*u_EM,top(Gamma; 1) for every finite Gamma in SU(2)_L, evaluating to -178952/93 = -1924.215054 on S^3/I* (cancelling 49.05% of p2_01's absolute +608048/155 Kubo remainder; 48.98% total I* contact; 47.60% top-to-top). Independent Kahan-compensated Gaussian heat kernels prove Spin-1 Maxwell (pi^2 u''_EM,top(I*; 1) = +31.719501, HK rel err 3.28e-6, 9.24x exact-derivative 2-decade S^3 C^2 band [-1.4777, +3.4345]) unconditionally stabilizes round S^3/I* (reconciling left-invariant (0,2) Q_8 = +0.065130 > 0 vs p2_04 right-invariant (2,0) Q_8 = -3.366933 < 0), while auditing Spin-2 on non-Einstein R_t x S^3_{lam_B} shows that replacing unprojected 3D-TT Delta_L^(3D) (+201.8205, fine vs xfine 3.39e-6) on the 2 non-divergence-free broken Killing modes (2j=0, |2M_R|=2) by the exact volume-preserving Bianchi IX exponential potential shifts pi^2 u''_S2,top(I*; 1) by -336.5828 to -134.7624 (2-decade band [-152.17, +17.91] straddling zero), leaving the physical Spin-2 static shear sign off-shell indeterminate without a full 4D gauge-fixed + ghost calculation. In Complete Model B on P05's ring (formal large-N_v toy-model audit), static n=2 shear is strictly linearly stable (+57.51% stiffer than EH), yet bare Omega_0 crosses the Bach zero Omega=4 (4.1004 rel-S^3 / 4.1675 abs MS), creating an upper Krein collision ceiling beta_max = 4.4900 (rel-S^3, Omega_coll=4.477) / 3.7288 (abs MS, Omega_coll=4.653), bounding P05 static Regime IV to [0.5680, 4.4900] (rel-S^3) / [0.5548, 3.7288] (abs MS) (verified by 45-digit UHP root at beta_0=5.0 vs time-domain runaway: J30 rel err 2.73e-6, inf rel err 1.15e-4), while macroscopic a >> l_sp (x > x_Bach = 22.72 rel-S^3 / 23.21 abs MS) restores the Omega=4 barrier (3/3 real roots at beta_0=10, 100) and doubling Omega_grav^2 drops p2_02's n=2 2:1 Mathieu wall from 15.49 bare / 15.98 Model A to 7.191 (rel-S^3) / 6.915 (abs MS). (2) KT2 (Tension 5 Closure, Half-Antipodal Talbot Revivals & Coherent Rabi Trapping): for every antipodal space form (-I in Gamma), E_j = 4j+2 === 2 mod 4 proves exact bare-kernel anti-periodicity K_Gamma^disc(s + pi/2) === -K_Gamma^disc(s) (2.95e-49 at 50 digits; 2.32e-14 f64 vs round-S^3 failure 0.937; pulse echo -1.000000), with S^3/I* uniquely selecting maximal threshold E_6 = 26 and two-scale comb ratio 13/2 (exhausting ADE antipodal quotients: L(2k,1) 3/2, D_m* 5/2, T* 7/2, O* 9/2; round S^3 3). In coupled solve_discrete_aux_ode (J_cut=30, static H_tot drift <= 7.61e-13, Model B 9.84e-14, un-clamped bg E_00 <= 1.04e-10, DOP853 vs Radau <= 1.93e-11), all 6 periodic P05 breathing runs remain strictly trapped (late/early = 0.958..1.009; J30 vs J60 <= 0.008), refuting p2_02 smooth Markovian drain on periodic breathing; FM chirp confirms 110.4x Jacobi--Anger J_0(2.405) suppression (work balance <= 3.79e-12), while explicit line-broadening proves smooth Markovian drain requires gamma_deph * (pi/2) >= 1 (E_diss(10pi) = 21.38 at gamma=1.50; M_ac(pi): +0.469 -> +0.200 -> +0.048 -> +0.023 at gamma=0.70, +0.053 carrier-dominated at 1.50). Complete Model B shifts the strictly adiabatic-safe opposite-Krein difference resonance cleanly from Omega_p = 9.577 (Model A: 8.93e4x -> Model B: 1.04x quiet) down to Omega_p = 6.054 (Model B: 4.26e7x, FFT peaks 4.20 and 10.20), and true instantaneous (A_R, K_R) auditing confirms Model A EFT_sig6_xring_b1 (min margin +0.0964 > 0, 268.5x -> 2.80x under Model B) is pure parametric resonance while Complete Model B stays strictly adiabatically stable across sig in {4, 6, 10, 14, 16}. (3) KT3 (2-Graviton Selection Rules, Honest Partial Kill & 13-Channel Desert): for external n=2(-) at (0,2), all opposite-chirality 2-graviton pairs are strictly forbidden (|j_R2 - j_R1| = 4 > 2, mirror opposite of Maxwell); same-chirality p=3(-,-) at E_0 = 2*sqrt(8) = 5.6569 is allowed with exact nonzero cubic Bianchi IX vertex V = -10 M_Pl^2 a^2 C_{abc} (sum |C|^2 = 7/12, 50-digit all-3-on-shell invariance 5.11e-46 across exp and vol-lin), falsifying lifting of the O(1/N_v) cut above 2*sqrt(8) (kinematically forbidden for on-shell n=2 decay) while carving a 13-channel intermediate desert across (5.66, 21.91) before p=11(+,+) at 21.9089 with O(1/N_v)-suppressed physical 3D-TT residue (0.0342/N_v exp; 0.0875/N_v vol-lin, 2.56x off-shell parameterization shift).",
+      "evidence_paths": [
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/CHARTER.md",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/01_derive.py",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/01_derive.json",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/02_solve.py",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/02_solve.json",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/03_kill_tests.py",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/03_kill_tests.json",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/results.json",
+        "streams/p2_06_poincare_shear_modulus_and_talbot_revivals/REPORT.md"
+      ],
+      "json_key": null,
+      "paper_ref": "Phase 2 Stream p2_06 (KT1--KT3, Theorems 1--3, Tables 2.1--2.3)",
+      "depends_on": [
+        "CLM-T4A-01",
+        "CLM-T4A-02",
+        "CLM-P2-01",
+        "CLM-OPEN-01",
+        "CLM-P2-03",
+        "CLM-P2-04",
+        "CLM-T3-01"
+      ],
+      "caveats": [
+        "Macroscopic-a Exact Theorems vs. P05 Sub-Species Toy Model: The Maxwell Contact Ward Identity (Pi_contact^top === 4*kappa_V), Spin-1 static shear modulus u''_EM(1), half-antipodal Talbot anti-periodicity (Delta_eta_rev = pi/2 across all antipodal quotients -I in Gamma, uniquely 13/2 comb ratio on S^3/I*), and 2-graviton selection-rule theorem hold rigorously at arbitrary macroscopic a >> l_sp (where x > x_Bach = 22.72 rel-S^3 / 23.21 abs MS restores the Omega = 4 Bach barrier). By contrast, Complete Model B Horowitz window bounds [0.5680, 4.4900] (rel-S^3) / [0.5548, 3.7288] (abs MS), shifted p2_02 Mathieu wall (7.191 / 6.915), and P05-ring breathing dynamics are a formal large-N_v toy-model audit sitting inside CLM-T3-01's species-scale squeeze (L_min(a_Cas)/l_sp^red = 0.4551 < 1) and trans-unitarity scalaron (sigma_t0 = 9/31, 4*c_anom*omega_scal^2 = 4.000; strict scalaron EFT requires sigma_t >= 4).",
+        "Local S^3 Renormalization Scheme Degeneracy: Only the topological difference (I* - S^3, rel-S^3) is scheme-independent (Pi_tot^top(0) = +2210.1330, pi^2 u''_EM,top = +31.719501, 9.24x the 2-decade S^3 C^2 band [-1.48, +3.43]). The unquotiented Berger-S^3 local finite part pi^2 u''_EM,ren(S^3; 1; mu=1/a_bar) = +0.9784 (exact-derivative Gaussian MS, fine vs xfine rel 1.10e-6) shifts linearly with ln(mu) identically to bare Weyl-squared coupling beta_0 (degeneracy err <= 1e-13).",
+        "Spin-2 Non-Einstein 3D-TT Off-Shell Sign Indeterminacy: On non-Einstein R_t x S^3_{lam_B}, the 2 broken SU(2)_R/U(1)_R Killing modes at 2j=0, |2M_R|=2 are not divergence-free for lam_B != 1 (||div h||^2 = 2(lam_B^2 - 1)^2/lam_B^2), and replacing unprojected 3D-TT Delta_L^(3D) (+201.8205) on those 2 modes by the exact volume-preserving Bianchi IX exponential potential omega^2 = 4(lam_B^(8/3) + lam_B^(2/3)) shifts pi^2 u''_S2,top(I*; 1) by -336.5828 to -134.7624 (2-decade C^2 band [-152.17, +17.91] straddling zero; an analogous non-divergence-free issue affects the 2j=1, |2M_R|=1 subtraction mode). The physical Spin-2 static shear sign is therefore off-shell indeterminate without a full 4D gauge-fixed + ghost (or Vilkovisky--DeWitt) calculation; this does not affect Theorem 1's Maxwell Ward identity, Spin-1 stabilization, or Complete Model B (Spin-2 loops are O(1/N_v) subleading).",
+        "Coherent Cavity Truncation & Physical Line-Broadening (KT2): Coupled aux-ODE Talbot runs omit the smooth continuum UV tail (include_tail=False; J_cut=30 vs 60 changes pointwise phase by ~5% over 10*pi while preserving late/early trapping within 0.008) and nonlinear photon-photon scattering / thermalization; smooth Markovian drain requires an explicit dephasing/line-broadening rate gamma_deph * (pi/2) >= 1.",
+        "2-Graviton Cut Off-Shell Parameterization Dependence & Physical 3D-TT Truncation (KT3): While the on-shell 3-graviton vertex V = -10 M_Pl^2 a^2 C_{abc} (50-digit invariance 5.11e-46) and threshold E_0 = 2*sqrt(8) = 5.6569 are parameterization-invariant, the off-shell 1-loop self-energy evaluates physical 3D-TT gravitons (omitting off-shell gauge/ghost loops) and its residue at Omega = 2*sqrt(8) varies by 2.56x between exponential (V_exp = -10, 0.0342/N_v) and volume-preserving linear (V_vol_lin = -16, 0.0875/N_v) parameterizations; on-shell n=2 -> n=2+n=2 decay is kinematically forbidden (sqrt(8) < 2*sqrt(8))."
+      ],
+      "retraction_reason": null,
+      "audited_by": "physics_audit_results PASS (3/3 KT, 0 P0 / 0 P1 / 0 P2) + cold referee-critic Round-2 PASS (0 P0 / 0 P1 / 0 P2)",
+      "updated_at": "2026-11-27",
+      "created_at": "2026-11-27"
+    }
+  ]
+}

@@ -1,0 +1,286 @@
+{
+  "schema_version": "1.0",
+  "stream_id": "p2_04_graviton_invariance_and_berger_stability",
+  "title": "Parameterization-Invariant 1-Loop Graviton Focusing, Topological Prolate Stabilization, and Anisotropic Berger-Sphere Casimir Dynamics on S^3/Gamma",
+  "status": "verified",
+  "updated_at": "2026-11-26",
+  "conventions": {
+    "metric_signature": "(-,+,+,+)",
+    "units": "Reduced Planck units 8*pi*G_N = M_Pl^-2 = 1, c = 1, hbar = 1; unreduced Planck length l_P = sqrt(G_N*hbar) = l_Pl / sqrt(8*pi); pure-gravity Dvali species scale (N_sp = 2, per CLM-T3-01 and CLM-P2-03) l_sp^red = sqrt(2)*l_Pl = 4*sqrt(pi)*l_P = 7.089815 l_P",
+    "coframe": "Left-invariant orthonormal coframe d(omega^a) = -eps_abc omega^b ^ omega^c, [X_a, X_b] = 2 eps_abc X_c, dvol = +omega^1 ^ omega^2 ^ omega^3",
+    "berger_metric": "ds_3^2 = a_perp^2 [(omega^1)^2 + (omega^2)^2 + lam_B^2 (omega^3)^2] = a_bar^2 [lam_B^(-2/3)((omega^1)^2+(omega^2)^2) + lam_B^(4/3)(omega^3)^2], fixed-volume radius a_bar = (a_perp^2 a_3)^(1/3), squashing lam_B = a_3/a_perp, Vol(S^3_lam/Gamma) = 2*pi^2*a_bar^3/|Gamma|",
+    "renormalization_scheme": "Topological Casimir difference u_top(Gamma; lam_B) = u(S^3_lam/Gamma) - u(S^3_lam) via Kahan-compensated Schwinger Gaussian heat-kernel regulator (1/2)*w*exp(-t*w^2), supplemented by exact covariantly conserved fixed-mu local Berger-S^3 renormalized energy u_ren(S^3_lam; mu) for the 3D-TT operator Delta_L^(3D) with Seeley-DeWitt coefficients B_0 = 1/4, B_2 = -(7/48)*R^(3), A_4 = 2*B_4 = (-5/192)*(R^(3))^2 + (63/320)*C_(4)^2 and exact trace anomaly T^u_u = +A_4(lam)/(pi^2*a_bar^4)"
+  },
+  "parameters": {
+    "mpmath_dps": 50,
+    "alphas_tested_kt1": [
+      -1.0,
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      1.5
+    ],
+    "kt2_non_stretched_max_2j": 40,
+    "kt2_non_stretched_prolate_max_lam": 6.0,
+    "kt2_non_stretched_oblate_lam_range": [
+      0.51,
+      0.95
+    ],
+    "kt3_quotients_evaluated": 15,
+    "kt3_lam_grid_points": 27,
+    "kt3_lam_range": [
+      0.52,
+      1.38
+    ],
+    "kt4_ode_rtol": 1e-12,
+    "kt4_ode_atol": 1e-14,
+    "kt4_starobinsky_sigma_t": 4.0
+  },
+  "quantities": {
+    "pi2_Delta_eta_tot_schur_Istar": {
+      "value": 117.6302252538779,
+      "uncertainty_or_tol": 1e-48,
+      "units": "dimensionless (Schur-complement inverse-metric baseline: FP BR + (1/15) int Delta<h^2>)",
+      "precision_digits": 48
+    },
+    "pi2_Delta_eta_tot_wkb_Istar": {
+      "value": 122.80383472582496,
+      "uncertainty_or_tol": 1e-48,
+      "units": "dimensionless (full 2nd-order fixed-endpoint WKB geodesic total: FP BR + (1/12) int Delta<h^2>)",
+      "precision_digits": 48
+    },
+    "Istar_dark_photon_crossover_x_schur": {
+      "value": 4.820754043700046,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless ratio -Delta_eta_tot^Schur(I*) / Delta_eta_EM(I*) -> N_V^crit = 5",
+      "precision_digits": 15
+    },
+    "Istar_dark_photon_crossover_x_wkb": {
+      "value": 5.032780321203,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless ratio -Delta_eta_tot^WKB(I*) / Delta_eta_EM(I*) -> N_V^crit = 6",
+      "precision_digits": 15
+    },
+    "Istar_dark_photon_N_V_crit_schur": {
+      "value": 5,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer dark-photon count (Schur-complement geodesic baseline; full WKB gives 6, so N_V^crit(I*) in {5, 6})",
+      "precision_digits": 15
+    },
+    "Istar_dark_photon_N_V_crit_wkb": {
+      "value": 6,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer dark-photon count (full 2nd-order fixed-endpoint WKB geodesic total)",
+      "precision_digits": 15
+    },
+    "berger_lam_oblate_universal": {
+      "value": 0.5,
+      "uncertainty_or_tol": 0.0,
+      "units": "exact dimensionless squashing (j=0, M_L=0 mode omega^2 = 32/3*lam^2 - 8/3)",
+      "precision_digits": 15
+    },
+    "berger_lam_prolate_L3_1_exact": {
+      "value": 1.7320508075688772,
+      "uncertainty_or_tol": 1e-13,
+      "units": "exact dimensionless squashing sqrt(3)",
+      "precision_digits": 13
+    },
+    "berger_isolated_sub_stretched_tachyon_j_half_ML_3half": {
+      "value": 3.243807806144665,
+      "uncertainty_or_tol": 1e-12,
+      "units": "dimensionless squashing (unique non-stretched prolate tachyon across 2j<=40, lam<=6)",
+      "precision_digits": 12
+    },
+    "pi2_u_top_pp1_Q8": {
+      "value": 2.9724726392303205,
+      "uncertainty_or_tol": 0.01,
+      "units": "dimensionless topological curvature at lam=1 (Class 1, opposite sign to Spin-1 Maxwell -3.367)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_L3_1": {
+      "value": -7.3186894785934316,
+      "uncertainty_or_tol": 0.01,
+      "units": "dimensionless topological curvature at lam=1 (Class 3, oblate zero at lam=0.6447)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_L14_1": {
+      "value": -460.3581746716278,
+      "uncertainty_or_tol": 0.2,
+      "units": "dimensionless (Class 4a sub-species: a_destab=14.826 l_P, L_min/l_sp^red=0.939 < 1)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_L16_1": {
+      "value": -813.3903035787604,
+      "uncertainty_or_tol": 0.3,
+      "units": "dimensionless (first Class 4b static super-species: a_destab=19.707 l_P, L_min/l_sp^red=1.092 > 1)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_L20_1": {
+      "value": -2059.2592758392075,
+      "uncertainty_or_tol": 0.5,
+      "units": "dimensionless (Class 4b super-species: a_destab=31.356 l_P, L_min/l_sp^red=1.389)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_L24_1": {
+      "value": -4345.777957702476,
+      "uncertainty_or_tol": 1.0,
+      "units": "dimensionless (Class 4b super-species, 28.5x 2-decade S^3 band: a_destab=45.552 l_P, L_min/l_sp^red=1.682)",
+      "precision_digits": 4
+    },
+    "pi2_u_top_pp1_D12_star": {
+      "value": -4325.127585060452,
+      "uncertainty_or_tol": 1.0,
+      "units": "dimensionless (Class 4b super-species, 28.3x 2-decade S^3 band: a_destab=45.443 l_P, L_min/l_sp^red=1.678)",
+      "precision_digits": 4
+    },
+    "S3_local_Weyl_anomaly_coeff_cC": {
+      "value": 0.19687512437123705,
+      "uncertainty_or_tol": 1e-05,
+      "units": "dimensionless 3D-TT Delta_L^(3D) coefficient of C_(4)^2 in A_4(lam) (exact rational 63/320 = 0.19687500)",
+      "precision_digits": 6
+    },
+    "S3_local_pi2_upp_ren_mu1": {
+      "value": 67.63517862540286,
+      "uncertainty_or_tol": 0.1,
+      "units": "dimensionless universal 3D-TT Berger-S^3 local curvature at mu=1/a_bar (RG slope -36.9334*ln(mu*a_bar))",
+      "precision_digits": 4
+    },
+    "S3_local_RG_slope_mu_d_dmu_upp_ren": {
+      "value": -36.93335455935779,
+      "uncertainty_or_tol": 0.002,
+      "units": "dimensionless exact RG running -A_4''(1) = -554/15 = -36.933333 (verified by 4th-order FD(0.03) = -36.934614)",
+      "precision_digits": 5
+    },
+    "KT4_L24_max_runaway_ab_lP_top_only": {
+      "value": 44.0,
+      "uncertainty_or_tol": 2.0,
+      "units": "unreduced Planck lengths l_P (hits lam=0.525 with min L_min/l_sp^red = 1.619 > 1)",
+      "precision_digits": 2
+    },
+    "KT4_L24_max_runaway_ab_lP_tot_fixed_mu": {
+      "value": 44.0,
+      "uncertainty_or_tol": 2.0,
+      "units": "unreduced Planck lengths l_P (hits lam=0.525 with fixed-mu trace anomaly, min L_min/l_sp^red = 1.619 > 1)",
+      "precision_digits": 2
+    },
+    "KT4_D12_max_runaway_ab_lP_tot_fixed_mu": {
+      "value": 44.0,
+      "uncertainty_or_tol": 2.0,
+      "units": "unreduced Planck lengths l_P (hits lam=0.525 with fixed-mu trace anomaly, min L_min/l_sp^red = 1.618 > 1)",
+      "precision_digits": 2
+    }
+  },
+  "verification": {
+    "conservation_residuals": {
+      "kt1_bianchi_conservation_50dps": 1.1652037531794244e-49,
+      "kt1_sachs_einstein_identity_err": 8.709549636406815e-24,
+      "kt1_gowdy_geodesic_null_constraint_res": 4.9960036108132044e-15,
+      "kt1_global_deta_wkb_alpha_invariance_50dps": 1.7105694144590052e-49,
+      "kt1_global_deta_schur_alpha_invariance_50dps": 1.7105694144590052e-49,
+      "kt1_local_screen_area_ratio_alpha_invariance_50dps": 6.41463530422127e-50,
+      "kt3_S3_SO4_isotropy_4th_order_shell_sum_res": 3.2061961974250153e-09,
+      "kt4_traceless_trace_50dps": 0.0,
+      "kt4_traceless_pure_gr_bianchi_50dps": 1.3363823550460978e-51,
+      "kt4_traceless_starobinsky_bianchi_50dps": 2.923336401663339e-52,
+      "kt4_fixed_mu_anomaly_trace_50dps": 0.0,
+      "kt4_fixed_mu_anomaly_cov_cons_50dps": 4.176194859519056e-53,
+      "kt4_fixed_mu_anomaly_pure_gr_bianchi_50dps": 1.0022867662845734e-51,
+      "kt4_fixed_mu_anomaly_starobinsky_bianchi_50dps": 1.2110965092605262e-51,
+      "kt4_dual_checks_unclamped_max_rel_e00": 1.791240260833151e-10,
+      "kt4_all_sweeps_unclamped_max_rel_e00": 2.53160486754088e-10
+    },
+    "solver_cross_checks": {
+      "kt1_nonlinear_bianchi9_alpha_max_err": 4.975834194360162e-23,
+      "kt1_nonlinear_gowdy_alpha_max_err": 5.566706509816078e-22,
+      "kt1_general_angle_gowdy_geodesic_max_err": 4.981813983562233e-08,
+      "kt1_curved_S3_bianchi9_alpha_slope_err": 3.0930864536315994e-09,
+      "kt1_direct_2x2_screen_area_ratio_max_err": 5.079209663971795e-09,
+      "kt1_direct_2x2_screen_log_det_max_err": 3.864956688026666e-09,
+      "kt2_symbolic_vs_numerical_block_max_err": 2.2737367544323206e-13,
+      "kt2_full_matrix_vs_block_max_err": 2.8421709430404007e-13,
+      "kt2_quotient_prolate_table_16_max_err": 2.0450308113595383e-13,
+      "kt3_lam1_u_rel_vs_50dps_p203_all15": 7.08016747734105e-07,
+      "kt3_lam1_up_rel_vs_50dps_p203_all15": 1.8683054278816646e-06,
+      "kt3_finite_lam_convergence_ladder_lam1p00_rel": 9.850214523980864e-06,
+      "kt3_finite_lam_convergence_ladder_lam1p25_rel": 3.1456577961751546e-06,
+      "kt3_finite_lam_convergence_ladder_lam0p60_q_le_16_rel": 5.303413312122359e-06,
+      "kt3_S3_local_B2_max_rel_err_0p66_1p30": 2.21827821556637e-10,
+      "kt3_S3_local_A4_model_max_abs_err_0p80_1p20": 8.642874014808122e-07,
+      "kt3_S3_local_A4_model_max_abs_err_0p66_1p30": 1.3675367089849289e-06,
+      "kt3_S3_local_A4_pp1_cC_fit_rel_err": 5.747118535583265e-07,
+      "kt3_mc4_spin1_maxwell_lam1_max_rel_err": 5.501035711662158e-07,
+      "kt4_bianchi9_dop853_vs_radau_max_diff": 2.832682332976249e-10
+    },
+    "matched_controls": [
+      {
+        "control_id": "MC1_flat_K0_Gowdy_vs_curved_K1_Bianchi9_alpha_redefinition",
+        "matched_components": "Identical 1-parameter metric family g_ij^(alpha) = a^2(gamma_ij + h_ij + alpha*(h^2)_ij) across 6 alpha values in [-1, 1.5], exact nonlinear 4D Einstein tensors and nonlinear null geodesics",
+        "treatment_result": "On curved global dS_4/Gamma (K=+1), background backreaction Delta_eta_BR(alpha) varies by 24.4% to 37.7% (26.7% on S^3/I*) between FP (alpha=1/2) and linear (alpha=0), cancelling to 1.71e-49 against exact inverse-metric/geodesic Delta_eta_LC(alpha). Curved-S^3 triaxial Bianchi IX (p=3) geodesic integration confirms exact -alpha/6 slope invariance (err 3.09e-09) with Schur-complement offset +0.149528 vs 3/20 = 0.150000.",
+        "control_result": "On flat K=0 space (H=0), delta_rho_alpha === 0 and delta_P_alpha = 2*Phi_alpha'' averages to zero under Isaacson averaging; exact Sachs-Einstein identity -R_uv^(2) k^u k^v === sigma^2 + d(delta_theta^(2)_alpha)/dlam holds to 8.71e-24, and general-angle nonlinear Gowdy fixed-endpoint shooting (including phi=pi/4) verifies exact S^2 average (1-alpha)/6 to <= 4.98e-08.",
+        "conclusion": "The Ford-Parker vs linear-metric backreaction discrepancy is a curved-spacetime metric-parameterization artifact that cancels identically in physical geodesic observables with zero double-counting of gravitational-wave shear focusing; including the alpha-independent Schur-complement metric-shear term (+1/10 <h^2>) shifts N_V^crit(I*) from 4 to 5 (Schur baseline, x=4.8208) or 6 (full 2nd-order WKB geodesic, x=5.0328)."
+      },
+      {
+        "control_id": "MC2_round_S3_Bianchi9_negative_control_vs_Class1_to_4b_quotients",
+        "matched_components": "Identical 4-variable pure-GR + Lambda and 6-variable Starobinsky f(R) (sigma_t=4.0) axisymmetric Bianchi IX ODEs (DOP853 and Radau, rtol=1e-12, atol=1e-14)",
+        "treatment_result": "High-order Class 4b quotients drive dynamical oblate collapse to the Lichnerowicz wall lam_B = 0.525 strictly inside the super-species EFT domain (L_min/l_sp^red > 1 throughout the trajectory) on pure-GR + Lambda bounces: L(24,1) hits lam=0.525 up to a_b = 44 l_P (min L_min/l_sp^red = 1.619), D_12* up to a_b = 44 l_P (min L_min/l_sp^red = 1.618); by contrast Class 4a quotients (L(11,1), D_6*, L(14,1)) cross L_min/l_sp^red < 1 and are sub-species.",
+        "control_result": "Round S^3 negative control (u_top === 0, perturbed to lam_0 = 0.98) and isotropy-irreducible Q_8 (lam_0 = 0.98) remain strictly stable with damped classical shear oscillations returning toward lam_B = 1.",
+        "conclusion": "Dynamical oblate collapse is driven purely by the anisotropic O(q^4) pure-graviton Casimir torque, with genuine super-species runaway (L_min/l_sp^red > 1 all the way to lam_B = 0.525) commencing at L(16,1) (a_b = 19 l_P, min L_min/l_sp^red = 1.047) and becoming deeply super-species on L(20,1)/D_10* and L(24,1)/D_12* (min L_min/l_sp^red = 1.62) after correcting the Dvali species scale to l_sp^red = sqrt(2)*l_Pl = 7.090 l_P."
+      },
+      {
+        "control_id": "MC3_topological_only_vs_fixed_mu_trace_anomaly_S3_background",
+        "matched_components": "Identical finite-lam_B quotients comparing traceless u_top(Gamma; lam_B) alone against exact covariantly conserved fixed-mu u_tot = u_top + u_ren(S^3_lam; mu) with trace anomaly T^u_u = +A_4(lam)/(pi^2*a_bar^4)",
+        "treatment_result": "Topological-only u_top exhibits shallow O(1) curvatures on Q_8 (+2.97), L(6,1) (-2.17), D_3* (+2.99), L(3,1) (-7.32), moderate destabilization on Class 4a L(11,1)/D_6*/L(14,1), and massive O(q^4) curvature on Class 4b L(20,1) (-2059.3), L(24,1) (-4345.8), D_12* (-4325.1).",
+        "control_result": "Universal 3D-TT Berger-S^3 local renormalized energy has pi^2*u''_ren(S^3; 1; mu) = +67.64 -36.9334*ln(mu*a_bar) (exact A_4''(1) = +554/15 = +36.9333; 2-decade band [-17.41, +152.68]), which overwhelms shallow O(1) topological wells on Q_8, L(6,1), D_3*, L(3,1) while being overwhelmed 13.5x on L(20,1) and 28.5x on L(24,1). Dynamically on L(24,1) at a_b=42 l_P, all three fixed-mu scales mu*a_b in (0.1, 1.0, 10.0) hit the Lichnerowicz wall lam=0.525 with min L_min/l_sp^red > 1.",
+        "conclusion": "Linearized equilibrium directions u'_top(1) are 100% scheme-independent (SO(4) isotropy u'_ren(1)===0); shallow finite-lam_B wells on Q_8/L(6,1)/D_3*/L(3,1) are O(1) scheme-sensitive; high-order O(q^4) oblate runaway (q >= 14 statically; q >= 16 dynamically super-species) is robustly insensitive across a full 2-decade RG scale sweep."
+      },
+      {
+        "control_id": "MC4_spin1_maxwell_berger_S3_control_vs_spin2_graviton",
+        "matched_components": "Exact closed-form Spin-1 Maxwell *_B d spectrum on identical Berger quotients S^3_lam/Gamma using the same Gaussian heat-kernel regulator (verified to <= 5.50e-7 against exact rational t3_01 round-metric polynomials)",
+        "treatment_result": "Spin-2 gravitons exhibit the universal oblate Lichnerowicz wall lam_oblate = 1/2, divisor-arithmetic prolate walls, quantum-reinforced roundness on Q_8 (u''_S2(1) = +2.972 > 0), and prolate-pulling slopes on L(6,1) (-1.987) and D_3* (-1.830).",
+        "control_result": "Spin-1 Maxwell has min |omega| = +0.2000 across 2j<=40, lam in [0.10, 6.00] (ZERO tachyons for all lam_B > 0), OPPOSITE-SIGN destabilizing curvature on Q_8 (u''_EM(1) = -3.367 < 0), and OPPOSITE-SIGN oblate-pulling slopes on L(6,1) (+4.148 > 0) and D_3* (+3.148 > 0), while converging asymptotically within 3% of Spin-2 at high order L(24,1) (u''_EM = -4477.9 vs u''_S2 = -4345.8).",
+        "conclusion": "The Lichnerowicz instability walls (KT2), Class 1 Q_8 round reinforcement, and Class 2 L(6,1)/D_3* prolate attraction are uniquely spin-2 curvature-coupling effects, whereas asymptotic O(q^4) Class 4b oblate destabilization is universal to 2-helicity massless bosons but uniquely terminates at the spin-2 Lichnerowicz wall lam_B -> 1/2."
+      }
+    ],
+    "kill_tests": [
+      {
+        "id": "KT1",
+        "hypothesis_attacked": "KT1 (Field-Redefinition Invariance & 2nd-Order Sachs Shear Accounting): Test whether Ford-Parker vs linear-metric discrepancy cancels across arbitrary alpha in R on all 5 ADE global dS_4/Gamma space forms, whether Sachs shear adds extra focusing or is already accounted for, and determine the true parameterization-invariant N_V^crit(I*).",
+        "passed": true,
+        "metric": 1.7105694144590052e-49,
+        "notes": "Exact 1-parameter identity verified against nonlinear Bianchi IX (4.98e-23) and 1+1D Gowdy waves (5.57e-22, Bianchi residual 1.17e-49) across 6 alphas in [-1, 1.5]. Exact Sachs-Einstein identity -R_uv^(2) k^u k^v === sigma^2 + d(delta_theta^(2)_alpha)/dlam verified to 8.71e-24 proves zero double-counting of GW shear focusing. General-angle nonlinear Gowdy geodesic shooting (including phi=pi/4) verifies the exact S^2-averaged fixed-endpoint shift (1-alpha)/6 to <= 4.98e-08, revealing the alpha-independent Schur-complement metric-shear term (+1/10 <h^2>) missed by a straight coordinate line (-alpha/6 + 1/20). Curved-S^3 triaxial Bianchi IX (p=3) geodesics confirm exact -alpha/6 slope invariance (err 3.09e-09) with offset +0.149528 vs Schur 3/20 = 0.150000. Both total observables are alpha-invariant to 1.71e-49 (fractional 2D screen-area shift +1/15 <h^2> invariant to 6.41e-50, with direct 3D TT S^2-averaged 2x2 determinant check err <= 5.08e-09 verifying both +1/15 area-ratio and +1/20 log-determinant totals) and retract the incomplete N_V^crit(I*)=4 value to N_V^crit(I*) in {5, 6}: Schur baseline gives pi^2 Delta_eta_tot(I*) = +117.630225 (x = 4.8208, N_V^crit = 5); full 2nd-order WKB geodesic gives +122.803835 (x = 5.0328, N_V^crit = 6)."
+      },
+      {
+        "id": "KT2",
+        "hypothesis_attacked": "KT2 (Exact Analytical + Matrix Proof of Topological Prolate Stabilization Theorem): Prove lam_oblate = 1/2, strict prolate gap of all M_L = 0 modes for all lam_B > 1, exact divisor-arithmetic prolate thresholds across L(q,1) and S^3/D_m*, and test whether any non-stretched mode undercuts either threshold.",
+        "passed": true,
+        "metric": 2.0450308113595383e-13,
+        "notes": "Analytic SymPy proofs for ALL j: (1) stretched |M_L|=j+2: omega^2 = 4(j+2)(j+2-lam^2)/lam^2 (zero at sqrt(j+2)); (2) oblate j=0, M_L=0: omega^2 = (32/3)lam^2 - 8/3 (universal lam_oblate = 1/2); (3) M_L=0: j=1 exact omega^2 = 8(4*lam^4+10*lam^2+1)/(3*lam^2+2) > 0, and for all j>=2 odd-parity Div_odd has nonzero det = 2*sqrt(j(j-1)(j+1)(j+2)) (proving exact (-1)^j D_m* parity) while the even-parity 2x2 TT block is Sylvester-positive for ALL j>=2 and ALL lam_B > 0; (4) sub-stretched |M_L|=j+1 is strictly positive for all j>=1, lam>=1 (min_num = +4) with a unique isolated tachyon at (j=1/2, |M_L|=3/2) crossing at lam = 3.243808 (above L(3,1)'s sqrt(3) and absent for L(q>=4,1), D_m*). Finite-cutoff numerical saturation check across 2j<=40 confirms zero other prolate tachyons on lam in [1.2, 6.0] and zero oblate undercuts on lam in [0.51, 0.95] (min non-(0,0) oblate eig = +8.279239). Full-matrix vs block err 2.84e-13; symbolic vs numerical err 2.27e-13; 16-quotient prolate table max err 2.05e-13."
+      },
+      {
+        "id": "KT3",
+        "hypothesis_attacked": "KT3 (Finite-lam_B Pure-Graviton Casimir Landscape & Universal S^3_lam Local-Renormalization Bound): Verify the 4-class landscape across 15 quotients up to L(24,1) and D_12*, quantify exact local Berger-S^3 Weyl-counterterm scheme sensitivity, and pinpoint the true super-species threshold.",
+        "passed": true,
+        "metric": 7.08016747734105e-07,
+        "notes": "Kahan-compensated Schwinger Gaussian heat-kernel regulator matches 50-digit p2_03 across all 15 quotients to max rel |u(1)-p203| = 7.08e-07 (q<=14 abs err 1.49e-07) and max rel |u'(1)-p203| = 1.87e-06, with 0 dropped non-positive modes on [0.52, 1.38] and fine-vs-xfine convergence ladder rel diffs 9.85e-06 (lam=1.0), 3.15e-06 (lam=1.25), 1.96e-04 (lam=0.60). Universal 3D-TT Berger-S^3 local check confirms B_2 = -(7/48)*R^(3) to 2.22e-10, A_4(1) = -0.93750087 vs exact -15/16, c_C = +0.19687512 vs exact 63/320 = 0.19687500 (max abs err 8.64e-07 on [0.80,1.20], 1.37e-06 on [0.66,1.30]), and exact A_4''(1) = +554/15 = +36.933333 (verified by 4th-order FD(0.03) = +36.934614). Thus pi^2*u''_ren(S^3;1;mu) = +67.64 -36.9334*ln(mu*a_bar) (2-decade band [-17.41, +152.68]), proving shallow O(1) wells on Q_8/L(6,1)/D_3*/L(3,1) are scheme-sensitive while q>=14 is unconditionally 2-decade scheme-robust (3.02x at L(14,1), 28.46x at L(24,1)). Under corrected l_sp^red = 4*sqrt(pi)*l_P = 7.090 l_P, Class 4 splits into sub-species Class 4a (L(11,1)/D_6*/L(14,1), static L_min/l_sp^red = 0.697, 0.763, 0.939 < 1) and super-species Class 4b starting statically at L(16,1) (L_min/l_sp^red = 1.092)."
+      },
+      {
+        "id": "KT4",
+        "hypothesis_attacked": "KT4 (Coupled Axisymmetric Bianchi IX Dynamical Oblate-Runaway Verification): Test via DOP853 vs Radau with un-clamped Hamiltonian/Bianchi residuals and exact fixed-mu trace anomaly whether Class 4 oblate destabilization reaches the Lichnerowicz wall lam_B -> 0.50 dynamically inside the true super-species EFT regime L_min/l_sp^red > 1.",
+        "passed": true,
+        "metric": 2.832682332976249e-10,
+        "notes": "50-digit Bianchi conservation verified to <= 1.34e-51 (pure GR + Lambda) and <= 1.21e-51 (Starobinsky f(R)) for both traceless and fixed-mu local trace-anomaly stress tensors. Across 12 DOP853 vs Radau pairs, max solver diff = 2.833e-10 (< 1e-7); max un-clamped rel e_00 = 1.791e-10 (dual checks) and 2.532e-10 across all 146 integrated trajectories (< 1e-8). Under corrected l_sp^red = 7.090 l_P, Class 4a (L(11,1), D_6*, L(14,1)) hits lam=0.525 only in the sub-species regime (min L_min/l_sp^red < 1), whereas Class 4b achieves genuine super-species oblate runaway all the way to lam_B = 0.525 starting at L(16,1) (a_b = 19 l_P, min L_min/l_sp^red = 1.047 > 1) and extending strongly on L(20,1)/D_10* (a_b <= 30 l_P, min L_min/l_sp^red = 1.323) and L(24,1)/D_12* up to a_b = 44 l_P (L(24,1) min L_min/l_sp^red = 1.619 > 1, robust across fixed-mu RG scales mu*a_b in (0.1, 1.0, 10.0); D_12* min L_min/l_sp^red = 1.618 > 1). On Starobinsky f(R) (sigma_t=4.0), a_b = 10 l_P has super-Planckian curvature R_0/M_Pl^2 = 3.64 > 1 (where artificial f'(R) ~ 5.85 stiffening quenches Class 4a); at genuinely sub-Planckian curvature a_b = 36 l_P (R_0/M_Pl^2 = 0.588 < 1, 2*sigma_t*r_0 = 0.783), EVEN Starobinsky f(R) cannot rescue L(24,1) or D_12*: both undergo oblate_runaway_to_lichnerowicz_wall strictly above BOTH the N_sp=2 (min L_min/l_sp^(2) = 1.307) AND the Starobinsky N_sp=3 (min L_min/l_sp^(3) = 1.067 on L(24,1), 1.066 on D_12*) species scales, while at a_b = 44 l_P (R_0/M_Pl^2 = 0.450) L(24,1) hits the wall at L_min/l_sp^(3) = 0.878 (< 1 under N_sp=3)."
+      }
+    ],
+    "domain_of_validity": {
+      "regime": "1-loop semiclassical pure-vacuum-GR graviton QFT on global dS_4/Gamma (ADE space forms) and squashed Berger-sphere quotients S^3_{lam_B}/Gamma (L(q,1) and S^3/D_m*) in the super-species EFT domain L_min(a_bar, lam_B) > l_sp^red = sqrt(2)*l_Pl = 7.090 l_P, sub-Planckian curvature R < M_Pl^2, and inside the Lichnerowicz stability window 1/2 < lam_B < lam_prolate(Gamma).",
+      "caveats": [
+        "Dvali Species-Scale Threshold: Under CLM-T3-01 / CLM-P2-03, pure gravity (N_sp = 2) has l_sp^(2) = sqrt(2)*l_Pl = 4*sqrt(pi)*l_P = 7.0898 l_P. Consequently, Class 4a quotients L(11,1), D_6*, and L(14,1) lie in the sub-species regime at their destabilization radii (static L_min/l_sp^(2) = 0.697, 0.763, 0.939 < 1); genuine super-species static destabilization begins at L(16,1) (L_min/l_sp^(2) = 1.092), and genuine dynamical oblate runaway remaining super-species all the way to the Lichnerowicz wall lam_B = 0.525 also begins at L(16,1) (a_b = 19 l_P, min L_min/l_sp^(2) = 1.047) and becomes strongly super-species across L(20,1)/D_10* (min L_min/l_sp^(2) = 1.32) and L(24,1)/D_12* (min L_min/l_sp^(2) = 1.62).",
+        "2nd-Order Geodesic Crossover N_V^crit(I*) in {5, 6}: Including the strictly alpha-independent Schur-complement metric-shear term (+1/10 <h^2> in sqrt(g^nn)) shifts the total parameterization-invariant null-cone delay on S^3/I* from the incomplete straight-line estimate (x=3.5486, N_V^crit=4, retracted) to x = 4.8208 (N_V^crit = 5, Schur-complement geodesic baseline) and x = 5.0328 (N_V^crit = 6, full 2nd-order fixed-endpoint WKB geodesic including flat-space Fermat +1/40 and longitudinal redshift -1/120). Because the exact curved-S^3 mode-by-mode Fermat coefficient c_geo(p) on global dS_4/I* is verified for p=3 (Bianchi IX, +0.149528 vs Schur 0.150000) and asymptotically via WKB (1/6), the exact integer crossover is bounded honestly as N_V^crit(I*) in {5, 6}.",
+        "3D-TT Non-Einstein Operator Truncation, 6 Broken CKV Modes, and Scheme Sensitivity: On static non-Einstein R_t x S^3_lam (lam != 1), the 3D-TT Lichnerowicz operator Delta_L^(3D) omits O((lam-1)^2) coupling to 4D background-stress / vector-scalar gauge constraints, so c_C = 63/320 and A_4''(1) = +554/15 = +36.9333 characterize the 3D-TT operator specifically. Retaining the 6 broken round-S^3 Killing/CKV modes via continuous_s3=True (2j=0,|2M|=2 and 2j=1,|2M|=1; u_6''(1) = +4.510) preserves exact SO(4) continuity at lam=1 and cancels identically in u_tot = u_top + u_ren(S^3) for every L(q>=3,1) and D_m*. Shallow O(1) topological wells on Q_8, L(6,1), D_3*, L(3,1) are O(1) scheme-sensitive to C^2 counterterms, whereas q >= 14 is unconditionally 2-decade scheme-robust.",
+        "Quasi-Static Adiabatic Stress-Tensor Approximation, Starobinsky N_sp = 3 Species Scale, & Omitted Scalaron Casimir Energy (KT4): Dynamical Bianchi IX ODEs evaluate the quasi-static finite-lam_B graviton stress tensor (including exact covariantly conserved fixed-mu trace anomaly) instantaneously along (a_bar(t), lam_B(t)), omitting dynamical pair creation proportional to (d(lam_B)/dt)^2 that becomes O(1) as lam_B -> 0.50 (where omega_{0,0} -> 0); ODEs halt honestly at lam_B = 0.525. Starobinsky f(R) bounces at a_b = 10 l_P have super-Planckian curvature R_0/M_Pl^2 ~ 3.6 > 1 (outside EFT). Because Starobinsky f(R) propagates N_sp = 3 gravitational degrees of freedom (2 graviton helicities + 1 scalaron of mass M_S = M_Pl/sqrt(2*sigma_t) = 0.354 M_Pl), its Dvali species scale is l_sp^(3) = sqrt(3)*l_Pl = 8.683 l_P, and our runs omit the 1-loop massive-scalaron Casimir energy; under l_sp^(3), L(24,1) and D_12* at a_b = 36 l_P (R_0/M_Pl^2 = 0.59 < 1, 2*sigma_t*r_0 = 0.78 < 1) still undergo strictly super-species oblate runaway (min L_min/l_sp^(3) = 1.067 and 1.066 > 1), whereas L(20,1) at a_b = 24 l_P (0.868) and L(24,1) at a_b = 44 l_P (0.878) fall below l_sp^(3).",
+        "Analytic vs Finite-Cutoff Scope in KT2: The stretched formula (all j), oblate (0,0) formula, M_L=0 prolate gap (all j>=1, all lam_B>0), and sub-stretched |M_L|=j+1 positivity (all j>=1, lam>=1; unique tachyon at j=1/2, |M_L|=3/2, lam=3.243808) are proved analytically for ALL j (establishing exact analytic upper bounds on lam_prolate); general interior non-stretched sectors 0 < |M_L| <= j are verified numerically up to 2j <= 40 across both oblate lam in [0.51, 0.95] and prolate lam in [1.2, 6.0]."
+      ]
+    }
+  }
+}

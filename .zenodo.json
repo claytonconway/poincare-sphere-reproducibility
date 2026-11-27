@@ -1,9 +1,10 @@
 {
-  "title": "Gauge Cosmology and Semiclassical Gravity on the Poincare Homology Sphere S^3/I* — Reproducibility Code and Datasets (Tracks I-III)",
+  "title": "Poincare Homology Sphere Gauge Cosmology and Semiclassical Gravity (S^3/I*): Open Reproducibility Archive, Verification Suite, Claim Ledger, and Technical Reports (Tracks I-V)",
+  "version": "2.0.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "description": "Self-contained Python and arbitrary-precision mpmath verification suite, differential-geometry and spectral oracles, deterministic JSON reference datasets, automated smoke tests, and publication figure generators reproducing every theorem, numerical table, and figure across the three companion papers on classical, non-Abelian SU(2)_L Yang-Mills-Higgs, and semiclassical Starobinsky-Casimir / covariant Riegert-Weyl cosmology on the Poincare homology sphere S^3/I* and spherical space forms S^3/Gamma.",
+  "description": "Self-contained Python, NumPy/SciPy, and 50-digit mpmath verification suite, exact spectral and differential-geometry oracles, deterministic JSON reference datasets, automated smoke tests, Claim Ledger (including permanently preserved retracted dead ends), and six standalone technical reports (Tracks I-V) exploring classical Bianchi IX general relativity, SU(2)_L Yang-Mills-Higgs sphalerons and dynamical Hosotani restoration, pure-graviton 1-loop spectral geometry, nonlocal Weyl-squared dispersion, and half-antipodal Talbot revivals on the Poincare homology sphere S^3/I* and spherical space forms S^3/Gamma. Produced through a human-directed, AI-assisted symbolic and numerical verification workflow.",
   "creators": [
     {
       "name": "Conway, Clayton",
@@ -13,17 +14,22 @@
   ],
   "keywords": [
     "Poincare homology sphere",
+    "spherical space forms",
     "general relativity",
     "Bianchi IX cosmology",
     "SU(2) Yang-Mills-Higgs",
     "sphalerons",
+    "Hosotani mechanism",
     "Galois flat connections",
     "Casimir effect",
     "Atiyah-Patodi-Singer eta invariant",
-    "Starobinsky inflation",
+    "Starobinsky cosmology",
     "Riegert action",
     "Weyl-squared gravity",
-    "reproducibility"
+    "Berger sphere",
+    "Talbot revivals",
+    "reproducibility",
+    "open science"
   ],
   "related_identifiers": [
     {

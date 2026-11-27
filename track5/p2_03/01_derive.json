@@ -1,0 +1,184 @@
+{
+  "molien_verification_max_err": {
+    "L(2,1)": 3.600427885670995e-46,
+    "L(3,1)": 1.9258606118569316e-46,
+    "L(4,1)": 1.803822175194122e-46,
+    "L(5,1)": 1.1644968565400687e-46,
+    "L(7,1)": 8.214207783526345e-47,
+    "L(10,1)": 7.29477672325463e-47,
+    "D_2*": 9.056262305440891e-47,
+    "D_3*": 6.015457894769e-47,
+    "D_4*": 4.515769615936269e-47,
+    "D_5*": 3.68494070580411e-47,
+    "D_8*": 2.247928759423041e-47,
+    "T*": 2.6727647100921956e-51,
+    "O*": 2.6727647100921956e-51,
+    "I*": 2.6727647100921956e-51
+  },
+  "low_mode_and_killing_accounting": {
+    "S3": {
+      "order": 1,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 4,
+      "N_KV_d1_p2": 6,
+      "d2_TT_p3": 10
+    },
+    "RP3": {
+      "order": 2,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 6,
+      "d2_TT_p3": 10
+    },
+    "Q8": {
+      "order": 8,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 3,
+      "d2_TT_p3": 7
+    },
+    "T*": {
+      "order": 24,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 3,
+      "d2_TT_p3": 5
+    },
+    "O*": {
+      "order": 48,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 3,
+      "d2_TT_p3": 5
+    },
+    "I*": {
+      "order": 120,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 3,
+      "d2_TT_p3": 5
+    },
+    "L(3,1)": {
+      "order": 3,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 4,
+      "d2_TT_p3": 6
+    },
+    "L(5,1)": {
+      "order": 5,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 4,
+      "d2_TT_p3": 6
+    },
+    "L(10,1)": {
+      "order": 10,
+      "d0_p1": 1,
+      "d0_p2_conformal_killing": 0,
+      "N_KV_d1_p2": 4,
+      "d2_TT_p3": 6
+    }
+  },
+  "ade_quasi_polynomial_uv_sum_rules": {
+    "RP3": {
+      "period": 2,
+      "sum_C": 0,
+      "sum_A": 0,
+      "sum_B": 0
+    },
+    "Q8": {
+      "period": 4,
+      "sum_C": 0,
+      "sum_A": 0,
+      "sum_B": 0
+    },
+    "T*": {
+      "period": 12,
+      "sum_C": 0,
+      "sum_A": 0,
+      "sum_B": 0
+    },
+    "O*": {
+      "period": 24,
+      "sum_C": 0,
+      "sum_A": 0,
+      "sum_B": 0
+    },
+    "I*": {
+      "period": 60,
+      "sum_C": 0,
+      "sum_A": 0,
+      "sum_B": 0
+    }
+  },
+  "kt1_on_shell_dS4_adm_verification": {
+    "adm_gauge_invariance_err_50dps": 4.802624088446914e-52,
+    "adm_scalar_EL_hamiltonian_err_50dps": 0.0,
+    "adm_scalar_EL_trace_err_50dps": 5.473822126268817e-48,
+    "adm_scalar_contracted_bianchi_err_50dps": 5.473822126268817e-48,
+    "adm_scalar_p3_min_constraint_det": 25.0,
+    "adm_p2_conformal_killing_solution_err_50dps": 5.345529420184391e-51,
+    "adm_p1_homogeneous_gauge_err_50dps": 1.3363823550460978e-51
+  },
+  "kt1_bunch_davies_50dps_residuals": {
+    "max_bd_ode_err": 9.562373727405869e-50,
+    "max_bd_wron_err": 2.6727647100921956e-51,
+    "max_bd_dh_err": 6.41463530422127e-50,
+    "max_bd_h_err": 2.1382117680737565e-50
+  },
+  "kt1_bd_vs_esu_ade": {
+    "RP3": {
+      "pi2_dC_conf2": 0.9375,
+      "pi2_dC_esu_TT": 0.8122655897792616,
+      "pi2_dC_bd_rad_a4": 0.6987943611198906,
+      "pi2_dC_bd_curv_a2": 0.05967640972002734,
+      "pi2_dC_bd_bounce": 0.758470770839918,
+      "sum_R_pm1": 0.9548225555204375
+    },
+    "Q8": {
+      "pi2_dC_conf2": 5.4375,
+      "pi2_dC_esu_TT": 4.528512274421229,
+      "pi2_dC_bd_rad_a4": 3.698794361119891,
+      "pi2_dC_bd_curv_a2": 0.43467640972002736,
+      "pi2_dC_bd_bounce": 4.133470770839918,
+      "sum_R_pm1": 6.954822555520438
+    },
+    "T*": {
+      "pi2_dC_conf2": 27.21527777777778,
+      "pi2_dC_esu_TT": 23.755535905501027,
+      "pi2_dC_bd_rad_a4": 20.537687960236774,
+      "pi2_dC_bd_curv_a2": 1.669397454385251,
+      "pi2_dC_bd_bounce": 22.207085414622025,
+      "sum_R_pm1": 26.710359270164016
+    },
+    "O*": {
+      "pi2_dC_conf2": 60.21527777777778,
+      "pi2_dC_esu_TT": 52.861438736646306,
+      "pi2_dC_bd_rad_a4": 46.01639084191954,
+      "pi2_dC_bd_curv_a2": 3.5497217339645593,
+      "pi2_dC_bd_bounce": 49.5661125758841,
+      "sum_R_pm1": 56.79554774343295
+    },
+    "I*": {
+      "pi2_dC_conf2": 148.68194444444444,
+      "pi2_dC_esu_TT": 129.06129834887156,
+      "pi2_dC_bd_rad_a4": 110.79274443959459,
+      "pi2_dC_bd_curv_a2": 9.472300001212465,
+      "pi2_dC_bd_bounce": 120.26504444080705,
+      "sum_R_pm1": 151.55680001939945
+    }
+  },
+  "berger_geometry_errors": {
+    "max_torsion_err": 2.220446049250313e-16,
+    "max_ricci_err": 1.7763568394002505e-15
+  },
+  "berger_theorem2_verification": {
+    "berger_operator_identity_fd_max_err": 4.948148557559762e-08,
+    "berger_lande_c1_max_err": 3.9968028886505635e-15,
+    "berger_wigner_eckart_c2_max_err": 8.43769498715119e-15,
+    "berger_slope_analytic_vs_matrix_max_err": 6.252776074688882e-13,
+    "berger_slope_hf_vs_fd_max_err": 8.179404176189564e-08,
+    "berger_stretched_state_finite_lam_max_err": 1.0800249583553523e-12
+  }
+}

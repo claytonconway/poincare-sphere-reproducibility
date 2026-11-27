@@ -244,26 +244,131 @@ def check_track3() -> dict:
     return res
 
 
+def check_track4a() -> dict:
+    """Validate Track IV-A (Discrete 2-Photon Pole Sum, Maxwell Contact Ward Identity, Talbot Revivals)."""
+    t0 = time.perf_counter()
+    res = {}
+    tdir = REPO_ROOT / "track4a"
+
+    # 1. Exact Bach 6j factorization across j=1..60 (exact Fraction)
+    for j in range(1, 61):
+        c_r = Fraction((2 * j - 1) * (2 * j + 3), 5 * (2 * j + 1))
+        e_j = 4 * j + 2
+        assert (2 * j + 1) * (2 * j + 2) * (2 * j) * c_r == Fraction((e_j**2 - 4) * (e_j**2 - 16), 80)
+
+    # 2. Exact shell-by-shell Maxwell Contact Ward identity across N=1..61 (exact Fraction)
+    for n in range(1, 62):
+        s0 = Fraction(n * n + 2, 1)
+        s2 = Fraction(16 * n * n, 45) + Fraction(40, 9) - Fraction(32, 15 * n * n)
+        b2_2n = (4 * n * n - 4) * (4 * n * n - 16)
+        assert Fraction(1, 2) * s2 - Fraction(4, 9) * s0 == Fraction(-b2_2n, 60 * n * n)
+
+    # 3. Exact topological contact rational on S^3/I* & verified stream JSONs
+    pi_contact = Fraction(1920, 31) * Fraction(-22369, 720)
+    assert pi_contact == Fraction(-178952, 93)
+    for sub in ("p2_01", "p2_06"):
+        d = json.loads((tdir / sub / "results.json").read_text(encoding="utf-8"))
+        assert d["status"] == "verified"
+        kts = d["verification"]["kill_tests"]
+        assert len(kts) >= 3 and all(k["passed"] is True for k in kts)
+
+    res["pi_contact_Istar"] = str(pi_contact)
+    res["elapsed_s"] = round(time.perf_counter() - t0, 3)
+    return res
+
+
+def check_track4b() -> dict:
+    """Validate Track IV-B (Goldstone-Covariant Fluctuation Theory & Dynamical Hosotani Avalanches)."""
+    t0 = time.perf_counter()
+    res = {}
+    tdir = REPO_ROOT / "track4b"
+    d1 = json.loads((tdir / "t4b_01_goldstone_covariant.json").read_text(encoding="utf-8"))
+    d6 = json.loads((tdir / "t4b_06_final_referee_audit.json").read_text(encoding="utf-8"))
+    sub30 = [r for r in d6["subhorizon_N24_vs_N30"] if r["N_max"] == 30][0]
+    assert sub30["escaped"] is True and sub30["max_H_res_rel"] < 1e-12
+    assert isinstance(d1, dict) and len(d1) > 0
+    res["subhorizon_H_res"] = float(sub30["max_H_res_rel"])
+    res["elapsed_s"] = round(time.perf_counter() - t0, 3)
+    return res
+
+
+def check_track5() -> dict:
+    """Validate Track V (Pure-Graviton Casimir, Chiral Asymmetry, Prolate Stabilization & Twisted Dirac)."""
+    t0 = time.perf_counter()
+    res = {}
+    tdir = REPO_ROOT / "track5"
+
+    # 1. Exact rational Galois jumps for twisted Dirac Casimir energies on S^3/I*
+    assert Fraction(-106957, 86400) - Fraction(394163, 86400) == Fraction(-29, 5)
+    assert Fraction(-26959, 19200) - Fraction(72881, 19200) == Fraction(-26, 5)
+
+    # 2. Verify all 3 formal pure-graviton streams (p2_03, p2_04, p2_05)
+    total_kts = 0
+    for sub in ("p2_03", "p2_04", "p2_05"):
+        d = json.loads((tdir / sub / "results.json").read_text(encoding="utf-8"))
+        assert d["status"] == "verified"
+        kts = d["verification"]["kill_tests"]
+        assert len(kts) == 4 and all(k["passed"] is True for k in kts)
+        total_kts += len(kts)
+
+    res["track5_kts_passed"] = total_kts
+    res["elapsed_s"] = round(time.perf_counter() - t0, 3)
+    return res
+
+
+def check_ledger_and_reports() -> dict:
+    """Validate Claim Ledger (including preserved RETRACTED entries) and all 6 technical PDFs."""
+    t0 = time.perf_counter()
+    ledger = json.loads((REPO_ROOT / "ledger" / "claims.json").read_text(encoding="utf-8"))
+    claims = ledger.get("claims", [])
+    retracted = [c for c in claims if c.get("status") == "RETRACTED"]
+    assert len(claims) >= 23 and len(retracted) >= 2
+
+    pdfs = sorted((REPO_ROOT / "reports").glob("*.pdf"))
+    assert len(pdfs) == 6 and all(p.stat().st_size > 50_000 for p in pdfs)
+    return {
+        "claims": len(claims),
+        "retracted": len(retracted),
+        "pdfs": len(pdfs),
+        "elapsed_s": round(time.perf_counter() - t0, 3),
+    }
+
+
 def main() -> None:
     t_start = time.perf_counter()
     print("=" * 72)
-    print("Poincare Homology Sphere S^3/I* Trilogy — Automated Smoke Test Suite")
+    print("Poincare Homology Sphere S^3/I* (v2.0.0) : Automated Smoke Test Suite")
     print("=" * 72)
 
     r1 = check_track1()
-    print(f"[PASS] Track I  ({r1['elapsed_s']:.2f}s): H_res={r1['t1_sync_H_res_end']:.2e}, "
+    print(f"[PASS] Track I   ({r1['elapsed_s']:.2f}s): H_res={r1['t1_sync_H_res_end']:.2e}, "
           f"SU2_G3={r1['t1_su2_gauss_res']:.2e}, sin3_eq={r1['t1_faceted_sin3_eq']:.6f}")
 
     r2 = check_track2()
-    print(f"[PASS] Track II ({r2['elapsed_s']:.2f}s): 280x_gap={r2['t2_stabilization_ratio']:.4f}x, "
+    print(f"[PASS] Track II  ({r2['elapsed_s']:.2f}s): 280x_gap={r2['t2_stabilization_ratio']:.4f}x, "
           f"P7_norm2=[{r2['t2_p7_norm2_range'][0]:.4f},{r2['t2_p7_norm2_range'][1]:.4f}], "
           f"twisted_err={r2['t2_twisted_casimir_max_err']:.2e}")
 
     r3 = check_track3()
-    print(f"[PASS] Track III({r3['elapsed_s']:.2f}s): KAM_e00={r3['t3_kam_e00_max']:.2e}, "
+    print(f"[PASS] Track III ({r3['elapsed_s']:.2f}s): KAM_e00={r3['t3_kam_e00_max']:.2e}, "
           f"Berger_spec_err={r3['t3_berger_spec_err']:.2e}, "
           f"Riegert_W={r3['t3_riegert_wronskian_drift']:.2e}, "
           f"Weyl_2to1_peak={r3['t3_weyl_2to1_peak_beta0']:.4f}")
+
+    r4a = check_track4a()
+    print(f"[PASS] Track IV-A({r4a['elapsed_s']:.2f}s): Bach 6j & Ward N=1..61 exact, "
+          f"Pi_contact={r4a['pi_contact_Istar']}, p2_01+p2_06 verified")
+
+    r4b = check_track4b()
+    print(f"[PASS] Track IV-B({r4b['elapsed_s']:.2f}s): Goldstone-covariant & t4b_06 N30 H_res={r4b['subhorizon_H_res']:.2e}")
+
+    r5 = check_track5()
+    print(f"[PASS] Track V   ({r5['elapsed_s']:.2f}s): Dirac jumps -29/5 & -26/5 exact, "
+          f"p2_03+p2_04+p2_05 ({r5['track5_kts_passed']}/12 KTs passed)")
+
+    rl = check_ledger_and_reports()
+    print(f"[PASS] Archive   ({rl['elapsed_s']:.2f}s): {rl['claims']} claims ({rl['retracted']} RETRACTED preserved), "
+          f"{rl['pdfs']} technical PDFs")
 
     total = time.perf_counter() - t_start
     print("-" * 72)

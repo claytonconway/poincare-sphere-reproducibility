@@ -1,0 +1,226 @@
+{
+  "schema_version": "1.0",
+  "stream_id": "p2_01_discrete_photon_pole_sum",
+  "title": "Discrete S^3/I* Two-Photon Spectral Pole Sum & Horowitz Pinch-Off Shift (CLM-OPEN-01)",
+  "status": "verified",
+  "updated_at": "2026-11-25",
+  "conventions": {
+    "metric_signature": "(-,+,+,+)",
+    "units": "M_Pl = H_S = 1 (Starobinsky-Casimir dimensionless units, Lambda = 0)",
+    "coframe": "d(omega^a) = -eps_abc omega^b ^ omega^c, [X_a, X_b] = 2 eps_abc X_c",
+    "volume_S3": "2*pi^2",
+    "volume_S3_Istar": "pi^2 / 60",
+    "renormalization_scheme": "Local UV Hadamard/Euclidean asymptotic matching: K_disc(i*Om_E; mu_cyl) = ln(Om_E^2/mu_cyl^2) + O(Om_E^-2) with mu_cyl = x_ring * H_S"
+  },
+  "parameters": {
+    "C_ANOM": 0.2903225806451613,
+    "SIGMA_0": 0.2903225806451613,
+    "KAPPA_V": -481.0537634408602,
+    "X_RING": 21.916753546579507,
+    "n_mode": 2,
+    "k_2_sq": 8,
+    "p_2": 3,
+    "M_Istar_2": 26,
+    "M_S3_2": 6,
+    "J_cut_time_domain_primary": 30,
+    "J_cut_time_domain_verify": 60
+  },
+  "quantities": {
+    "beta_pinch_Istar_discrete_ModelA": {
+      "value": 0.6837745099972342,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (H_S=1)",
+      "precision_digits": 15
+    },
+    "Omega_pinch_Istar_discrete_ModelA": {
+      "value": 17.928997760500977,
+      "uncertainty_or_tol": 1e-14,
+      "units": "conformal frequency (1/a)",
+      "precision_digits": 14
+    },
+    "beta_pinch_Istar_continuum_M26": {
+      "value": 0.3836386711436761,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (H_S=1)",
+      "precision_digits": 15
+    },
+    "beta_pinch_Istar_shift_rel": {
+      "value": 0.7823398980056276,
+      "uncertainty_or_tol": 1e-14,
+      "units": "relative shift (+78.23%)",
+      "precision_digits": 14
+    },
+    "beta_pinch_Istar_discrete_ModelB_abs": {
+      "value": 0.5615091455680911,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (un-factored Kubo bubble sensitivity)",
+      "precision_digits": 14
+    },
+    "beta_pinch_Istar_discrete_ModelB_relS3": {
+      "value": 0.5746728833209618,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (un-factored Kubo bubble relative to S^3)",
+      "precision_digits": 14
+    },
+    "beta_pinch_S3_discrete_exact": {
+      "value": 7.723779096813513,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (H_S=1)",
+      "precision_digits": 15
+    },
+    "topology_advantage_ratio_discrete": {
+      "value": 11.295798518205592,
+      "uncertainty_or_tol": 1e-14,
+      "units": "beta_pinch(S^3)/beta_pinch(S^3/I*)",
+      "precision_digits": 14
+    },
+    "beta_pinch_adiabatic_max_xring_discrete": {
+      "value": 0.7265947909000123,
+      "uncertainty_or_tol": 0.0005,
+      "units": "dimensionless (H_S=1)",
+      "precision_digits": 4
+    },
+    "beta_pinch_adiabatic_max_xb15_discrete": {
+      "value": 1.1272784274168517,
+      "uncertainty_or_tol": 0.001,
+      "units": "dimensionless (H_S=1)",
+      "precision_digits": 4
+    },
+    "gamma_xring_beta0_0p50_discrete": {
+      "value": 0.22202180836885627,
+      "uncertainty_or_tol": 0.0005,
+      "units": "H_S",
+      "precision_digits": 4
+    },
+    "gamma_xring_beta0_1p00_discrete": {
+      "value": 0.00012622732607633707,
+      "uncertainty_or_tol": 0.0002,
+      "units": "H_S",
+      "precision_digits": 3
+    },
+    "time_domain_Jcut30_vs_Jcut60_rel_diff_beta0_1p0": {
+      "value": 0.0002320618299348834,
+      "uncertainty_or_tol": 1e-05,
+      "units": "relative pi2 difference over eta=10",
+      "precision_digits": 3
+    },
+    "static_beta0_0p50_aux_ode_vs_mp40_gamma_rel_err_J30": {
+      "value": 2.522895734377981e-05,
+      "uncertainty_or_tol": 0.0003,
+      "units": "relative growth-rate error vs 40-digit root (J30; J60 peak-fit = 2.19e-4)",
+      "precision_digits": 3
+    },
+    "static_beta0_0p50_aux_ode_vs_mp40_gamma_rel_err_J60": {
+      "value": 0.00021886640108771354,
+      "uncertainty_or_tol": 0.0003,
+      "units": "relative growth-rate error vs 40-digit root (J60)",
+      "precision_digits": 3
+    },
+    "long_horizon_eta35_bdf_vs_radau_max_gamma_diff": {
+      "value": 2.9068236473722182e-06,
+      "uncertainty_or_tol": 1e-06,
+      "units": "H_S (across beta_0 in {0.747, 1.00, 1.719})",
+      "precision_digits": 3
+    },
+    "zeta_Istar_1_exact": {
+      "value": -241.33333333333334,
+      "uncertainty_or_tol": 1e-15,
+      "units": "exact rational -724/3",
+      "precision_digits": 15
+    },
+    "zeta_S3_1_exact": {
+      "value": -24.666666666666668,
+      "uncertainty_or_tol": 1e-15,
+      "units": "exact rational -74/3",
+      "precision_digits": 15
+    }
+  },
+  "verification": {
+    "conservation_residuals": {
+      "p05_xring_friedmann_e00_max_rel": 3.5703087799204416e-11,
+      "p05_xring_friedmann_e00_rms_rel": 1.3807654954020649e-11,
+      "p05_xring_friedmann_e00_max_abs": 1.2456095183077665e-13,
+      "p05_xb15_friedmann_e00_max_rel": 2.806223346441081e-11,
+      "p05_xb15_friedmann_e00_max_abs": 1.8014582880976349e-13,
+      "exact_discrete_pole_hamiltonian_H_tot_dop853_eta8_max_rel_drift": 2.2721080031755638e-14,
+      "exact_discrete_pole_hamiltonian_H_tot_kt4_prod_bdf_eta35_max_rel_drift": 3.382861821802277e-08,
+      "rg_scale_invariance_aux_ode_rel_diff": 4.860475830299353e-15,
+      "rg_scale_invariance_direct_volterra_rel_diff": 1.5374552488645961e-12,
+      "analytical_jacobian_vs_fd_rel_err": 7.183496658576644e-11
+    },
+    "solver_cross_checks": {
+      "C_R_racah_cg_vs_exact_max_err": 8.881784197001252e-16,
+      "C_R_su2_curl_matrix_vs_exact_max_err": 8.881784197001252e-16,
+      "bach_polynomial_factorization_rel_err": 1.3158198810372225e-16,
+      "kt3_mp40_vs_float64_beta_pinch_max_diff": 1.1102230246251565e-16,
+      "dyn_beta0_0p289_radau_vs_bdf_rel_diff": 1.961529432466911e-09,
+      "dyn_beta0_0p50_radau_vs_bdf_rel_diff": 8.173109660984461e-10,
+      "dyn_beta0_1p00_radau_vs_bdf_rel_diff": 2.3874374699417444e-11,
+      "static_beta0_1p00_aux_ode_vs_direct_volterra_richardson_rel_diff": 2.2521573731851263e-06,
+      "dyn_beta0_1p00_aux_ode_vs_direct_volterra_richardson_rel_diff": 2.5299185154176174e-06,
+      "long_horizon_eta35_bdf_vs_radau_max_gamma_diff_HS": 2.9068236473722182e-06
+    },
+    "matched_controls": [
+      {
+        "control_id": "MC1_continuum_M26_vs_discrete_Istar_xring_beta0_0p50",
+        "matched_components": "Identical P05 x_ring background, y0_4d=[0,0,1,0], beta_0=0.50, c_anom=9/31, mu_cyl=x_ring, BDF rtol=1e-8",
+        "treatment_result": "Discrete S^3/I* pole sum (J_cut=30, E<=122 + K0-matched UV tail): UHP Horowitz runaway gam=+2.2202e-01 H_S, blowup=True",
+        "control_result": "Matched continuum-log M=26: bounded gam=-8.7677e-05 H_S, max_ratio=1.059, blowup=False",
+        "conclusion": "Discrete pole repulsion shifts conformal-Weyl (Model A) static beta_pinch from 0.3836 to 0.6838 (adiabatic max 0.7266), reopening UHP Horowitz runaway in [0.44, 0.72]."
+      },
+      {
+        "control_id": "MC2_discrete_S3_vs_discrete_Istar_xring_beta0_1p00",
+        "matched_components": "Identical P05 x_ring background, y0_4d=[0,0,1,0], beta_0=1.00, exact discrete 2-photon pole sum (S^3/I*: J_cut=30, 15 poles E<=122; round S^3: J_cut=15, 29 poles E<=62; both K0-matched to UV continuum-log tail), BDF rtol=1e-8",
+        "treatment_result": "Discrete S^3/I* pole sum: bounded gam=+1.2623e-04 H_S, max_ratio=1.003, blowup=False",
+        "control_result": "Matched discrete round S^3 pole sum: catastrophic UHP runaway gam=+1.1267e-01 H_S, blowup=True",
+        "conclusion": "Chiral topological Horowitz stabilization survives exact conformal-Weyl discrete pole replacement across Regime IV beta_0 in [0.75, 7.72] (11.30x advantage over round S^3)."
+      },
+      {
+        "control_id": "MC3_same_chirality_j0_E4_selection_rule",
+        "matched_components": "Identical SU(2) left-invariant mode space for j=0 (-2,-2) pair vs opposite-chirality j=6 (+12,-14) pair",
+        "treatment_result": "Maxwell (1 - s1*s2) = 0.0 identically kills E=4 despite unit geometric overlap |O|^2 = 1.0000",
+        "control_result": "Opposite-chirality j=6 (+12,-14) gives (1 - s1*s2) = 2 and first nonzero S^3/I* pole at E_6 = 26",
+        "conclusion": "Chiral gap |Omega| < 26 is enforced strictly by electromagnetic duality T_ij^TF ~ (1 - s1*s2), not geometric vanishing."
+      }
+    ],
+    "kill_tests": [
+      {
+        "id": "KT1",
+        "hypothesis_attacked": "KT1 (Analyticity & Chiral Gap): Exact opposite-chirality selection (1 - s_1*s_2) preserves Im Pi_discrete(Omega) == 0 identically for all |Omega| < 26 and recovers exact M_{S^3}(2)=6 on round S^3.",
+        "passed": true,
+        "metric": 0.0,
+        "notes": "Exact C_R(j)=(2j-1)(2j+3)/[5(2j+1)] proved analytically via stretched Wigner 6j-symbol and verified via Racah CG (8.88e-16) and SU(2) curl-matrix diagonalization (8.88e-16); max |Im K_I*| below 26 is 0.0; lowest S^3 pole E=6, S^3/I* pole E=26; same-chirality j=0 (E=4) has |O|^2=1.0000 killed strictly by (1-s1*s2)=0."
+      },
+      {
+        "id": "KT2",
+        "hypothesis_attacked": "KT2 (Continuum & Weyl-Anomaly UV Recovery): High-frequency average of the discrete S^3/I* spectral density recovers the exact 4D conformal Weyl-anomaly coefficient c_anom = 9/31 (and continuum-log slope) as Omega -> infinity.",
+        "passed": true,
+        "metric": 9.767602137555897e-06,
+        "notes": "Sliding-window period-30 dissipative spectral density (rho = 2*Im chi_R) average converges O(1/E^2) to exact 1/(40*pi)*B_2(Om) (Im Pi_micro = -Im chi_R = -N_v/(80*pi)*B_2 -> c_anom=9/31, rel err 9.77e-06 at E~6060); Euclidean K_I*(i*OmE)-ln(OmE^2/mu^2) = +724/(3*OmE^2) (rel err 1.92e-06 at OmE=5000); Gaussian heat-kernel exp(-(eps*E)^2) confirms exact cancellation of O(OmE^4 ln OmE) and O(OmE^2) local UV counterterms."
+      },
+      {
+        "id": "KT3",
+        "hypothesis_attacked": "KT3 (Cutoff Convergence & Pole-Repulsion Shift): Track beta_pinch(N_cut) and UHP/real Stelle roots across spectral cutoffs N_cut (e.g. 60, 100, 160, 240) plus dual-precision (float64 vs mpmath) check to confirm quantitative convergence and quantify shift relative to 0.3836.",
+        "passed": true,
+        "metric": 2.18091019115218e-05,
+        "notes": "Static conformal-Weyl (Model A) beta_pinch(S^3/I*) shifts +78.23% from 0.383639 to 0.683775 (Om_pinch=17.9290; round S^3 shifts +21.22% from 6.371770 to 7.723779; advantage 11.30x). Period-30 truncated ladder J=30,60,120,240 converges O(1/J^2): 1.50e-03 -> 3.61e-04 -> 8.83e-05 -> 2.18e-05; K0-matched hybrid converges O(1/J^4): 5.88e-05 -> 4.15e-06 -> 1.79e-08; mp40 vs float64 max diff 1.11e-16; all upper companion and Omega_1 roots resolved with zero null dropouts. Partial un-factored Kubo bubble (Model B) gives 0.5615-0.5747."
+      },
+      {
+        "id": "KT4",
+        "hypothesis_attacked": "KT4 (Dynamical Volterra vs Discrete-Pole Sidebands): Run unreduced dynamical evolution on P05 x_ring and x_b=15 across Regime IV beta_0 in [0.44, 6.37] to test whether discrete 2-photon poles above Omega=26 destabilize any narrow sub-window via scalaron sidebands (Omega_grav + k*omega_scal).",
+        "passed": true,
+        "metric": 0.0004614993404952785,
+        "notes": "Adiabatic discrete pinch-off envelope rises to 0.7266 on x_ring (vs 0.4206 cont) and 1.1273 on x_b=15 (vs 0.7326 cont). On x_ring, beta_0 in [0.44, 0.72] is destabilized by UHP Horowitz pole repulsion (b0=0.50: gam=+2.2202e-01 H_S; Volterra Richardson diff static=2.71e-05, dyn=2.51e-05; static mp40 err J30=2.52e-05, J60=2.19e-04). Above 0.7266, 0/28 sampled points in [0.747, 8.00] (including exact dressed hyperbolic Krein candidates H1=0.747, H_fund=1.199, H2_mod=1.217, H3=1.994, H4=2.186) destabilize (max |gam|=4.615e-04 H_S, max_ratio<=1.26, blowup=False; zero-pi2 IC |gam_E|<=7.42e-05 H_S, true graviton-eigenvector IC |gam_E|<=1.29e-06 H_S; long-horizon eta=35 BDF vs Radau max |dg|=2.91e-06 H_S; J_cut=60 confirms b0=0.781, 1.00, 2.00 bounded). On x_b=15, beta_0 >= 1.20 is bounded (max |gam|=3.449e-04 H_S, blowup=False)."
+      }
+    ],
+    "domain_of_validity": {
+      "regime": "1-loop conformally coupled Maxwell fields (large-N_v dominance) on R_eta x S^3/I* with homogeneous n=2 (-) TT graviton perturbation on P05 Starobinsky-Casimir KAM background.",
+      "caveats": [
+        "Model A (primary, beta_pinch=0.6838) is strictly the conformal-Weyl-factored discrete kernel B_2(Om)*K_disc(Om), not the complete 1-loop Maxwell self-energy on R x S^3/I*. In the un-factored Kubo <T_ij T_kl> bubble (Model B), exact polynomial division B_2(E_j)/(E_j^2-Om^2) = (E_j^2-20) + Om^2 + B_2(Om)/(E_j^2-Om^2) generates O(1)-relative-to-Einstein-Hilbert non-Weyl topological Casimir terms on P05's Casimir-supported ring (x_ring^2 = 480.34 ~ |kappa_V| = 481.05): (a) a topology-dependent kinetic shift -2*c_anom*(zeta_{I*}(1)-zeta_{S^3}(1))*Om^2 = +125.81*Om^2 (26.2% of x_ring^2; absolute -2*c_anom*zeta_{I*}(1)*Om^2 = +140.13*Om^2 = 29.2%) that cannot be absorbed by local UV counterterms or metric-derivative-free contact diagrams, shifting static beta_pinch to 0.5615-0.5747; and (b) a Kubo Om^0 constant -2*c_anom*(zeta_{I*}(3)-20*zeta_{I*}(1)) = +608048/155 = +3922.89 (102% of 8*x_ring^2 = 3842.75) that combines with the uncomputed squashed-Bianchi-IX contact/tadpole diagram to form the O(1)-relative-to-curvature static Casimir shear modulus.",
+        "Time-domain dynamical runs use exact discrete harmonic oscillators for all nonzero S^3/I* poles j <= J_cut (J_cut=30, 15 poles E<=122; verified at J_cut=60, 45 poles E<=242 with 2.32e-4 trajectory diff at beta_0=1.0) K0-matched to a smooth continuum-log UV tail above M_tail = 4*J_cut+4; KT4 production BDF (rtol=1e-8, max_step=0.025) conserves exact H_tot to 3.38e-8 over eta=35 and matches tight-tolerance Radau (rtol=1e-10, max_step=0.01, Nu=64) to |d_gamma| <= 2.91e-6 H_S across beta_0 in {0.747, 1.00, 1.719}.",
+        "KT4 tests 34 beta_0 values on x_ring (including exact dressed hyperbolic Krein candidates H1=0.747, H_fund=1.199, H2_mod=1.217, H3=1.994, H4=2.186) over tau = 773.4 H_S^-1 (5.65 T_macro) and 12 beta_0 values on x_b=15 over tau = 707.5 H_S^-1; macro-modulation of Om_scal in [38.60, 43.47] chirps across E_10=42 and suppresses locking, though ultra-narrow tongues (Delta_beta_0 << 0.01) or secular growth below gamma ~ 1e-4 H_S beyond tau = 773 are not excluded.",
+        "Large-N_v Maxwell closure omits O(1/N_v) 2-graviton self-loops (cut at 2*sqrt(8)~5.66 < 26) and nonlinear radiation/scalaron backreaction into Friedmann E_00=0 (CLM-OPEN-02); P05's sigma_0=9/31 background sits at 4*c_anom*omega_scal^2 = 4.000 (strict 1-loop scalaron EFT requires sigma_t >= 4)."
+      ]
+    }
+  }
+}

@@ -1,0 +1,259 @@
+{
+  "schema_version": "1.0",
+  "stream_id": "p2_03_graviton_casimir_null_cone",
+  "title": "1-Loop Pure-Graviton Casimir Energy and Null-Cone Focusing Consistency Across Spherical Space Forms S^3/Gamma",
+  "status": "verified",
+  "updated_at": "2026-11-26",
+  "conventions": {
+    "metric_signature": "(-,+,+,+)",
+    "units": "Reduced Planck M_Pl^-2 = 8*pi*G_N = 1, c = 1; unreduced Planck length l_P = sqrt(G_N*hbar) = l_Pl / sqrt(8*pi) used for Chandrasekaran dimensionless area s = A / (4*l_P^2) = 2*pi*A / l_Pl^2",
+    "coframe": "d(omega^a) = -eps_abc omega^b ^ omega^c, [X_a, X_b] = 2 eps_abc X_c, dvol = +omega^1 ^ omega^2 ^ omega^3",
+    "volume_S3_Gamma": "2*pi^2*a^3 / |Gamma| (Vol(S^3/I*, a) = pi^2*a^3 / 60)",
+    "renormalization_scheme": "Topological Casimir difference Delta_C_top(Gamma) = u(S^3/Gamma) - u(S^3), cancelling all local quartic, quadratic, and logarithmic UV counterterms identically (exact quasi-polynomial zero-mean sum rules sum C_r = sum A_r = sum B_r = 0)",
+    "vacuum_prescriptions_checked": "Exact on-shell vacuum global dS_4/Gamma canonical ADM reduction + Bunch-Davies TT vacuum (Ford-Parker minisuperspace effective stress tensor) AND physical-TT-only static-background (H -> 0 ESU, omega_p = sqrt(p^2 - 1)) limit"
+  },
+  "parameters": {
+    "mpmath_dps": 50,
+    "ode_rtol": 1e-13,
+    "ode_atol": 1e-18,
+    "macroscopic_dS_scale_ratio_a_dS_over_a_Cas": 10000.0,
+    "ade_groups_tested": [
+      "RP3",
+      "Q8",
+      "T*",
+      "O*",
+      "I*"
+    ],
+    "lens_p_range_scanned": "2..25, 30, 40, 60, 100",
+    "dihedral_m_range_scanned": "2..15, 20, 30, 50"
+  },
+  "quantities": {
+    "pi2_Delta_C_top_EH_TT_RP3": {
+      "value": 0.8122655897792616,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (pi^2 * a^4 * Delta_u / hbar)",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_EH_TT_Q8": {
+      "value": 4.528512274421229,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (pi^2 * a^4 * Delta_u / hbar)",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_EH_TT_Tstar": {
+      "value": 23.755535905501027,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (pi^2 * a^4 * Delta_u / hbar)",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_EH_TT_Ostar": {
+      "value": 52.861438736646306,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (pi^2 * a^4 * Delta_u / hbar)",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_EH_TT_Istar": {
+      "value": 129.06129834887156,
+      "uncertainty_or_tol": 1e-15,
+      "units": "dimensionless (pi^2 * a^4 * Delta_u / hbar; 50-digit HZ vs AP err 2.57e-46)",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_conf2_Istar": {
+      "value": 148.68194444444444,
+      "uncertainty_or_tol": 1e-15,
+      "units": "exact rational 107051/720",
+      "precision_digits": 15
+    },
+    "pi2_Delta_C_top_BD_rad_a4_Istar": {
+      "value": 110.79274443959459,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (prescription-independent a^-4 Bunch-Davies radiation piece on global dS_4/I*)",
+      "precision_digits": 14
+    },
+    "pi2_Delta_C_top_BD_bounce_Istar": {
+      "value": 120.26504444080705,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (Ford-Parker BD at bounce: 110.792744 a^-4 + 9.472300 a_dS^-2 a^-2)",
+      "precision_digits": 14
+    },
+    "Delta_s_star_Istar_EH_tip_at_bounce": {
+      "value": -2.336453835527332,
+      "uncertainty_or_tol": 1e-10,
+      "units": "dimensionless Bekenstein-Hawking area shift (negative = focusing tightening)",
+      "precision_digits": 10
+    },
+    "Delta_s_star_Istar_EH_centered": {
+      "value": -2.2204265651045563,
+      "uncertainty_or_tol": 1e-10,
+      "units": "dimensionless Bekenstein-Hawking area shift",
+      "precision_digits": 10
+    },
+    "Delta_s_star_Istar_BD_tip_at_bounce": {
+      "value": -2.182358245032886,
+      "uncertainty_or_tol": 1e-10,
+      "units": "dimensionless Bekenstein-Hawking area shift (global dS_4/I* Ford-Parker BD)",
+      "precision_digits": 10
+    },
+    "Delta_s_star_Istar_BD_centered": {
+      "value": -2.0698958052529246,
+      "uncertainty_or_tol": 1e-10,
+      "units": "dimensionless Bekenstein-Hawking area shift (global dS_4/I* Ford-Parker BD)",
+      "precision_digits": 10
+    },
+    "N_V_crit_Istar_ESU": {
+      "value": 5,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer dark-photon threshold in static-ESU TT limit (exact crossover 4.154148)",
+      "precision_digits": 15
+    },
+    "N_V_crit_Istar_BD_dS4": {
+      "value": 4,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer dark-photon threshold in global dS_4/I* BD (exact 3.880170 tip / 3.872523 ctr; a^-4-only 3.566131)",
+      "precision_digits": 15
+    },
+    "N_SU2_crit_Istar_total_switch": {
+      "value": 2,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer SU(2) copies for total (1g+YM) switch (ESU 1.3847/1.4577; BD@bounce 1.2903/1.3584)",
+      "precision_digits": 15
+    },
+    "L_p_1_p_crit_Tuu_par_permanent": {
+      "value": 11,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer order p (permanent Hopf-parallel defocusing for p>=11; isolated anomaly at L(3,1) with pi^2*T_uu^par=-0.8360; u_grav<0 for p>=14)",
+      "precision_digits": 15
+    },
+    "L_3_1_pi2_Tuu_par_anomaly": {
+      "value": -0.8360230368568063,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (isolated odd-lens Hopf-parallel defocusing despite pi^2*u=+0.8216>0; S_slope(3)=+112, S_slope(4)=+864)",
+      "precision_digits": 14
+    },
+    "D_m_star_m_crit_Tuu_par_permanent": {
+      "value": 6,
+      "uncertainty_or_tol": 0.0,
+      "units": "integer order m (Hopf-parallel defocusing for m>=6; u_grav<0 for m>=8)",
+      "precision_digits": 15
+    },
+    "flat_cubic_T3_u_grav_L4": {
+      "value": -1.6750738213921637,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (u_grav * L^4 / hbar = -Z_3(4)/pi^2 < 0, defocusing negative control)",
+      "precision_digits": 14
+    },
+    "Istar_pure_grav_Lmin_over_l_sp_red_at_aCas": {
+      "value": 0.9275821557464027,
+      "uncertainty_or_tol": 1e-14,
+      "units": "dimensionless (strictly < 1, inside CLM-T3-01 species-scale squeeze; static |Xi|=1 proxy: 0.43594)",
+      "precision_digits": 14
+    }
+  },
+  "verification": {
+    "conservation_residuals": {
+      "adm_dS4_gauge_invariance_50dps": 4.802624088446914e-52,
+      "adm_dS4_scalar_EL_hamiltonian_50dps": 0.0,
+      "adm_dS4_scalar_EL_trace_50dps": 5.473822126268817e-48,
+      "adm_dS4_scalar_contracted_bianchi_50dps": 5.473822126268817e-48,
+      "adm_dS4_p2_conformal_killing_50dps": 5.345529420184391e-51,
+      "adm_dS4_p1_homogeneous_gauge_50dps": 1.3363823550460978e-51,
+      "bunch_davies_ode_residual_50dps": 9.562373727405869e-50,
+      "bunch_davies_canonical_wronskian_err_50dps": 2.6727647100921956e-51,
+      "friedmann_e00_max_rel_all_5_ADE_and_BD": 5.716052330921062e-12,
+      "raychaudhuri_algebraic_consistency_max_err": 7.413938834551623e-13,
+      "berger_sphere_torsion_residual": 2.220446049250313e-16,
+      "berger_sphere_ricci_identity_err": 1.7763568394002505e-15,
+      "anisotropic_stress_tensor_trace_residual": 3.503246160812043e-46,
+      "rp3_L2_1_isotropy_ppar_minus_pperp": 0.0,
+      "q8_D2_star_isotropy_ppar_minus_pperp": 0.0,
+      "round_S3_exact_dS4_max_abs_Xi": 0.0,
+      "round_S3_exact_dS4_max_abs_u_over_rho_minus_1": 0.0,
+      "flat_space_limit_a_1e12_aCas_Xi": 9.549150281252629e-26
+    },
+    "solver_cross_checks": {
+      "ade_50dps_hurwitz_digamma_vs_abel_plana_max_err": 2.569275260517426e-46,
+      "ade_hurwitz_vs_4pt_richardson_heat_kernel_max_err": 1.4173986238472434e-06,
+      "dS4_raychaudhuri_dop853_vs_radau_max_rel_diff": 3.388669738820881e-11,
+      "dS4_bd_two_component_ode_dop853_vs_radau_max_rel_diff": 1.4986083497088826e-12,
+      "dS4_nonlinear_ode_vs_50dps_analytic_max_rel_diff": 5.9191997414664854e-08,
+      "berger_theorem2_analytic_vs_matrix_max_err": 6.252776074688882e-13,
+      "berger_theorem2_hf_vs_fd_max_err": 8.179404176189564e-08,
+      "berger_theorem2_stretched_finite_lam_max_err": 1.0800249583553523e-12,
+      "anisotropic_lens_dihedral_hurwitz_vs_abel_plana_max_err": 1.2658213666996639e-47,
+      "L3_anomaly_ppar_hurwitz_vs_4pt_heat_kernel_abs_err": 4.182033563893128e-08,
+      "molien_vs_character_sum_max_err_50dps": 3.600427885670995e-46,
+      "T3_epstein_Z3_4_chowla_selberg_vs_direct_R120_rel_err": 4.816035128733795e-07,
+      "pure_gravity_species_identity_max_err": 3.552713678800501e-15
+    },
+    "matched_controls": [
+      {
+        "control_id": "MC1_flat_cubic_T3_vs_ADE_spherical_space_forms",
+        "matched_components": "2 massless graviton helicities, UV-finite topological Casimir stress tensor, maximal sub-injectivity causal diamond (rho_S = L_min/2 on T^3 vs a*sin(chi_inj) on S^3/Gamma)",
+        "treatment_result": "All 5 ADE isotropy-irreducible spherical space forms have strictly positive (focusing) pure-graviton Casimir null energy (pi^2*Delta_C_top in [+0.8123, +129.0613], tightening area ceiling Delta_s_* in [-15.3488, -2.2123] across all 10 tested dS_4/Gamma configs).",
+        "control_result": "Flat cubic T^3 has strictly negative (defocusing) pure-graviton Casimir energy u_grav = -1.675074/L^4 < 0 (Xi/(1/s) = -2.7554, Delta_s_* = +1.8369 > 0), while sharing L-independent (a-independent) O(1) scaling of Delta_s_*.",
+        "conclusion": "The a-independence of Delta_s_* = O(1) is universal 4D conformal dimensional analysis (shared with flat T^3), whereas the strictly positive focusing sign across all 5 ADE manifolds is genuinely spherical-space-form-specific."
+      },
+      {
+        "control_id": "MC2_L3_1_graviton_vs_L3_1_maxwell_spin1",
+        "matched_components": "Identical odd-order lens space L(3,1) (|G|=3, N_KV=4, identical Berger-sphere geometry) with 2 massless bosonic helicities (spin-2 EH graviton vs spin-1 Maxwell photon)",
+        "treatment_result": "Pure spin-2 graviton on L(3,1) exhibits an isolated low-order Hopf-parallel defocusing anomaly (pi^2*u = +0.8216 > 0, pi^2*p_par = -1.6576, pi^2*T_uu^par = -0.8360 < 0, defocusing cone theta < 32.49 deg), triple-verified via Hurwitz+digamma, Abel-Plana (err 2.45e-48), and heat kernel (err 4.18e-08).",
+        "control_result": "Matched spin-1 Maxwell field on L(3,1) has exact rational pi^2*p_par^EM = 0 (Bernoulli proof; L(2,1) check = 1/16) and stays strictly focusing along the Hopf fiber (pi^2*T_uu^par,EM = +4/9 = +0.4444 > 0).",
+        "conclusion": "The isolated L(3,1) Hopf-parallel defocusing anomaly is a genuine spin-2 spectral effect driven by a positive topological slope remainder S_slope(p) > 0 (e.g. S_slope(3)=+112, S_slope(4)=+864, reflecting a deficit of high-|M_L| negative-slope modes relative to S^3 combined with odd-order period-6 parity structure), absent for spin-1 Maxwell fields."
+      },
+      {
+        "control_id": "MC3_round_S3_dS4_and_flat_space_limits",
+        "matched_components": "Identical coupled FLRW + Raychaudhuri ODE solvers (DOP853 & Radau, rtol=1e-13, atol=1e-18) on round S^3 (K_top = 0) and macroscopic limit a = 1e12*a_Cas",
+        "treatment_result": "Non-trivial ADE quotients S^3/Gamma (Gamma != {1}) generate strictly nonzero focusing Xi/(1/s) in [+3.2681, +10.1650] and ceiling tightening Delta_s_* in [-15.3488, -2.2123].",
+        "control_result": "Round S^3 exact dS_4 recovers Xi === 0 (0.00e+00) and u_*/rho_S === 1 (0.00e+00); flat-space limit a = 1e12*a_Cas recovers Xi = 9.55e-26 and |u_*/rho_S - 1| = 3.18e-26.",
+        "conclusion": "All reported focusing shifts originate purely from nontrivial quotient topology Gamma != {1}, with exact recovery of Chandrasekaran Eq. (5.21c) in both covering-space and flat-space limits."
+      },
+      {
+        "control_id": "MC4_static_ESU_TT_limit_vs_on_shell_dS4_Bunch_Davies_vacuum",
+        "matched_components": "Identical S^3/Gamma TT spectrum across all 5 ADE space forms; compares physical-TT-only static-background (H -> 0 ESU) limit against exact on-shell global dS_4/Gamma Bunch-Davies vacuum (Ford-Parker minisuperspace stress tensor)",
+        "treatment_result": "Physical-TT static-ESU limit gives pi^2*Delta_C_top(I*) = +129.0613 (Delta_s_*^tip = -2.3365, N_V^crit = 5).",
+        "control_result": "On-shell global dS_4/I* Ford-Parker BD gives pi^2*Delta_C_top^BD(bounce) = +120.2650 (+110.7927 a^-4 + +9.4723 a_dS^-2 a^-2; Delta_s_*^tip = -2.1824, N_V^crit = 4; prescription-indep a^-4 alone gives N_V^crit = 4), with strictly positive focusing across all 5 ADE space forms (bounce diff 6.23%--8.72%, integrated Delta_s_* diff 2.35%--8.43%).",
+        "conclusion": "Positive pure-graviton focusing across all 5 ADE space forms is robust between the exact on-shell global dS_4/Gamma Bunch-Davies vacuum and the static-ESU TT limit, shifting bounce amplitudes by 6.23%--8.72% (6.60%--6.82% on S^3/I*) and shifting S^3/I* dark-photon crossover from N_V >= 5 (ESU) to N_V >= 4 (BD)."
+      }
+    ],
+    "kill_tests": [
+      {
+        "id": "KT1",
+        "hypothesis_attacked": "KT1 (Gauge-Completeness & Zero-Mode Sign Test): Verify whether including off-shell longitudinal/trace metric modes, Faddeev-Popov vector ghosts, and the Killing-vector zero-mode mismatch (6 Killing vectors on S^3 vs 3 on S^3/I*) alters the sign or O(1) magnitude of Delta C_top^EH(S^3/I*) relative to the pure physical TT sector (+129.0613).",
+        "passed": true,
+        "metric": 5.473822126268817e-48,
+        "notes": "Verified on-shell vacuum K=+1 global dS_4/Gamma canonical ADM reduction directly to 50 digits: exact gauge invariance (4.80e-52), exact scalar Hamiltonian/trace Euler-Lagrange & contracted Bianchi identity (5.47e-48), non-singular elliptic scalar constraint det = (p^2-4)^2 >= 25 forcing Phi_B=Psi_B===0 for all p>=3 (zero propagating scalar DOF), and exact vector-constraint vs York-Jacobian cancellation [det(a^2(p^2-4))]^(-1/2)*(+1/2)===1 for all p>=3. Conformal Killing scalars at p=2 vanish on all nontrivial S^3/Gamma (d0(2)=0 vs 4 on S^3, pure SO(4,1) boost verified to 5.35e-51); homogeneous p=1 mode is pure time-reparametrization gauge (1.34e-51, d0(1)=1 identically). Spatial Killing vectors at p=2 (6 on S^3, RP^3; 4 on L(p,1), p>=3; 3 on Q_8, D_m*, T*, O*, I*) satisfy h_ij^V===0 and enforce global Isom_0 angular-momentum constraints Q[K_A]=0 (Moncrief 1975/76) with zero local propagating DOF and zero local bulk <T_uv> shift. On-shell global dS_4/Gamma Ford-Parker BD TT vacuum confirms strictly positive focusing across all 5 ADE (+120.2650 bounce / +110.7927 prescription-indep a^-4 piece on S^3/I* vs +129.0613 physical-TT static-ESU H->0 limit)."
+      },
+      {
+        "id": "KT2",
+        "hypothesis_attacked": "KT2 (Independent Regulator & Integrator Oracle): Cross-check every space-form Casimir shift Delta C_top^EH(Gamma) between 50-digit Hurwitz-zeta + digamma analytic continuation and independent exponential heat-kernel / Abel-Plana summation (tolerance < 1e-10), and verify on-shell dS_4/Gamma Raychaudhuri integrals with DOP853 vs Radau (tolerance < 1e-9) plus exact round-S^3 dS_4 (Xi === 0) and flat-space (a -> inf) limits.",
+        "passed": true,
+        "metric": 3.388669738820881e-11,
+        "notes": "50-digit Hurwitz-zeta + digamma agrees with independent 50-digit Abel-Plana contour summation to max abs err 2.57e-46 (<< 1e-10) across all 5 ADE space forms (4-pt Richardson heat kernel <= 1.42e-06). All 5 ADE space forms are strictly positive (RP^3: +0.812266, Q_8: +4.528512, T*: +23.755536, O*: +52.861439, I*: +129.061298). Coupled nonlinear FLRW + Raychaudhuri ODEs (both 10 ADE ESU configs and 2-component S^3/I* BD configs) match DOP853 vs Radau to max rel diff 3.39e-11 (< 1e-9), Friedmann |e00|_rel <= 5.72e-12, and analytic 50-digit integrals to <= 5.92e-8. Round-S^3 exact dS_4 gives |Xi|=0.00e+00, |u_*/rho_S - 1|=0.00e+00; flat-space limit a=1e12*a_Cas gives Xi=9.55e-26."
+      },
+      {
+        "id": "KT3",
+        "hypothesis_attacked": "KT3 (Negative Controls & Anisotropic Fiber Tensor Test): Compute the exact anisotropic stress tensor T_{uu}^grav(theta) (Hopf-parallel vs Hopf-transverse) on L(p,1) and S^3/D_m* (checking S^1 flat-circle limit u_grav -> -pi^2/(45 L_min^4) as p -> inf) and compare against flat cubic T^3 to isolate what is genuinely spherical-space-form-specific vs universal 4D conformal dimensional analysis.",
+        "passed": true,
+        "metric": 1.2658213666996639e-47,
+        "notes": "Analytically proved Theorem 2 (exact operator identity d(Delta_L)/d(lam)|_1 = 4 J.S + 64/3 - 8 K3^2 - 4 K3 S3 - (4/3) S3^2 + Lande c1=4s/(p+s) + Wigner-Eckart c2=12/(p(p+s)) => d(omega^2)/d(lam)|_1 = 4s(p+s)^2/p - 8(p+2s)/p M_L^2; matrix err 6.25e-13, finite-lam stretched state err 1.08e-12). Hurwitz+digamma vs Abel-Plana agrees to 1.27e-47 on u & p_par, with exact isotropy |p_par - p_perp| = 0.00e+00 on RP^3=L(2,1) and Q_8=D_2*. Critical pinch thresholds: L(p,1) flips permanently to Hopf-parallel defocusing for p >= 11 (u_grav < 0 for p >= 14), plus an isolated odd-lens low-order anomaly at L(3,1) (pi^2*u=+0.8216 > 0, pi^2*p_par=-1.6576, pi^2*T_uu^par=-0.8360 < 0 driven by positive S_slope(3)=+112, S_slope(4)=+864, triple-verified to 4.18e-08; matched spin-1 Maxwell on L(3,1) has exact Bernoulli p_par=0, T_uu^par=+4/9>0); S^3/D_m* flips for m >= 6 (u_grav < 0 for m >= 8). Exact S^1 flat-circle limit verified at L(100,1) & S^3/D_50*; flat cubic T^3 negative control gives u_grav = -1.675074/L^4 < 0 (defocusing, Delta_s_*=+1.8369>0)."
+      },
+      {
+        "id": "KT4",
+        "hypothesis_attacked": "KT4 (EFT / Species-Scale & Matter-Coupled Boundary): Verify that for all 5 ADE space forms and for N_V dark photons or Ad(rho_i) flat SU(2) connections (rho_0, rho_1, rho_2), Chandrasekaran's finite-dimensionality bound dim H_D < inf remains intact throughout the EFT-controlled regime a >> a_Cas (finite bounded shift Delta s_*), and map the exact breakdown boundary where |Xi| ~ O(1) intersects CLM-T3-01 (L_min / l_sp^red < 1).",
+        "passed": true,
+        "metric": 0.9275821557464027,
+        "notes": "Dark-photon crossover: RP^3, Q_8, T*, O* never flip negative for any N_V >= 0; uniquely on S^3/I*, N_V^crit = 5 in static-ESU TT limit (exact 4.1541) and N_V^crit = 4 in on-shell global dS_4/I* BD (exact 3.8802 tip / 3.8725 ctr; prescription-indep a^-4 piece alone 3.5661 -> 4); conformal scalar thresholds N_S^crit = (26, 27, 5, 4, 3). Non-abelian SU(2) flat-holonomy switch on S^3/I* (valid in weakly coupled deconfined regime g_YM(1/a) << 1, L_min << Lambda_YM^-1 per CLM-T2-03): pure-YM switches rho_0/rho_1 <-> rho_2, while including 1-loop graviton keeps N_SU(2)=1 focusing in all 3 vacua and requires N_SU(2) >= 2 (ESU 1.3847/1.4577; BD@bounce 1.2903/1.3584) to flip total focusing sign. Throughout a >> a_Cas (L_min >> l_sp^red), Delta_s_* is a finite bounded a-independent constant preserving dim H_D < inf; nonperturbative |Xi| ~ O(1) sits strictly inside CLM-T3-01's species-scale squeeze (pure gravity on S^3/I*: L_min(a_Cas)/l_sp^red = 0.92758 < 1, static |Xi|=1 proxy 0.43594 < 1)."
+      }
+    ],
+    "domain_of_validity": {
+      "regime": "1-loop semiclassical pure-vacuum-GR graviton (+ free conformal gauge/scalar matter) QFT on globally hyperbolic cosmological quotients (on-shell global dS_4/Gamma and physical-TT static-background H -> 0 limit) in the macroscopic EFT regime a >> a_Cas and L_min(a) >> l_sp^red.",
+      "caveats": [
+        "Vacuum & Stress-Tensor Prescription: The on-shell vacuum background is global dS_4/Gamma (whereas static R_t x S^3/Gamma is only the physical-TT H -> 0 limit, not an on-shell pure-GR vacuum). On global dS_4/Gamma, Delta_T_uu^BD uses the Ford-Parker / exponential-parameterization minisuperspace TT effective stress tensor: the leading a^-4 radiation piece (+110.7927 on S^3/I*, alone giving N_V^crit = 4) is prescription-independent, whereas the subleading O(a_dS^-2 a^-2) curvature piece (+9.4723, 7.9% of bounce total) differs from linear-metric <G_uv^(2)[h]> by O(H^2 <h^2>) prescription terms. Switching between static-ESU TT and Ford-Parker BD preserves strictly positive focusing across all 5 ADE space forms (bounce diff 6.23%--8.72%, 6.60%--6.82% on S^3/I*) while shifting S^3/I* dark-photon flip from N_V >= 5 (ESU) to N_V >= 4 (BD).",
+        "Weak-Coupling Deconfined Regime for Non-Abelian SU(2) Switch (CLM-T2-03): The 1-loop Ad(rho_i)-twisted pure-YM Casimir energies on S^3/I* hold strictly in the weakly coupled deconfined UV regime g_YM(1/a) << 1 (L_min << Lambda_YM^-1); in the macroscopic IR regime L_min >> Lambda_YM^-1, confinement exponentially suppresses the YM Casimir shift as O(exp(-m_gap * L_min)).",
+        "Static Round Metric for Anisotropic Quotients: Anisotropic Berger-sphere graviton pressures (p_par, p_perp) on L(p,1) and S^3/D_m* are evaluated at the round metric (lam_B = 1) using the exact scale-covariant 3D Lichnerowicz operator -Delta_2 - 2*R_{ikjl} h^{kl}; per CLM-RET-01 / CLM-T3-02, O(100%) Casimir shear drives dynamical Berger-sphere squashing backreaction (a_3 != a_perp) once a approaches a_Cas.",
+        "Species-Scale Cutoff (CLM-T3-01): Across all 5 ADE space forms and all N_V >= 0 (including pure gravity N_V = 0 where L_min(a_Cas)/l_sp^red = 0.92758 and static |Xi|=1 proxy L_min/l_sp^red = 0.43594 on S^3/I*; dynamical dS_4 with K_top > 0 has no bounce for a_b < sqrt(2)*a_Cas), the nonperturbative |Xi| ~ O(1) regime sits strictly below the Dvali species scale (L_min < l_sp^red), where 1-loop semiclassical gravity EFT breaks down.",
+        "Semiclassical Backreaction vs Local Null-Cone Algebra: Chandrasekaran (arXiv:2611.34924) quantizes pure vacuum GR inside a single causal diamond; the global 1-loop Casimir stress tensor enters semiclassical Raychaudhuri focusing as a c-number vacuum expectation value <T_uu> shifting the macroscopic area ceiling by a finite constant Delta_s_* without modifying the local single-diamond canonical algebra."
+      ]
+    }
+  }
+}

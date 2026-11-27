@@ -1,0 +1,87 @@
+{
+  "background_info": {
+    "x_b": 21.916753546579507,
+    "eta_end": 40.0,
+    "tau_end": 884.5914900611914,
+    "x_min": 20.794861166687937,
+    "x_max": 23.424194319938803,
+    "max_rel_e00": 1.169567914738323e-13
+  },
+  "zero_memory_reduction_vs_T3B": {
+    "beta0_1.0": {
+      "tau_end": 331.93926001209536,
+      "max_rel_diff_q1": 5.075721378983474e-10
+    },
+    "beta0_0.289": {
+      "tau_end": 331.93926001209536,
+      "max_rel_diff_q1": 8.039452718131392e-10
+    }
+  },
+  "full_nonlocal_AuxODE_vs_DirectVolterra": {
+    "M26_Istar_beta0_0.289": {
+      "eta_end": 3.0,
+      "d_eta": 0.001,
+      "static_rel_diff_AuxODE_vs_Volterra": 0.00884503628276868,
+      "static_gamma_AuxODE_HS": 0.2181221096116085,
+      "static_gamma_Volterra_HS": 0.21798201083865082,
+      "static_gamma_Goal1_exact_HS": 0.2181529466428317,
+      "static_gamma_err_vs_Goal1": 0.0001413550983277986,
+      "dyn_KAM_rel_diff_AuxODE_vs_Volterra": 0.008805558544766466,
+      "dyn_KAM_gamma_AuxODE_HS": 0.20944618606521997
+    },
+    "M26_Istar_beta0_1.0": {
+      "eta_end": 5.0,
+      "d_eta": 0.002,
+      "static_rel_diff_AuxODE_vs_Volterra": 0.00044330409344881666,
+      "static_gamma_AuxODE_HS": 0.0021241199831054207,
+      "static_gamma_Volterra_HS": 0.002110835491779669,
+      "static_gamma_Goal1_exact_HS": 0.0,
+      "static_gamma_err_vs_Goal1": 0.0021241199831054207,
+      "dyn_KAM_rel_diff_AuxODE_vs_Volterra": 0.0004278123710162521,
+      "dyn_KAM_gamma_AuxODE_HS": 0.0024787808813950436
+    },
+    "M6_S3_beta0_1.0": {
+      "eta_end": 5.0,
+      "d_eta": 0.002,
+      "static_rel_diff_AuxODE_vs_Volterra": 0.004599507686195682,
+      "static_gamma_AuxODE_HS": 0.11265008344119935,
+      "static_gamma_Volterra_HS": 0.11262224570829504,
+      "static_gamma_Goal1_exact_HS": 0.11265099116187212,
+      "static_gamma_err_vs_Goal1": 8.057813459107199e-06,
+      "dyn_KAM_rel_diff_AuxODE_vs_Volterra": 0.005814163671754993,
+      "dyn_KAM_gamma_AuxODE_HS": 0.11286979826708098
+    },
+    "M6_S3_beta0_0.289": {
+      "eta_end": 2.5,
+      "d_eta": 0.001,
+      "static_rel_diff_AuxODE_vs_Volterra": 0.0033421990871707985,
+      "static_gamma_AuxODE_HS": 0.3630142118447951,
+      "static_gamma_Volterra_HS": 0.3631570222652547,
+      "static_gamma_Goal1_exact_HS": 0.3631490714930105,
+      "static_gamma_err_vs_Goal1": 0.0003713616770682246,
+      "dyn_KAM_rel_diff_AuxODE_vs_Volterra": 0.0018617931810931253,
+      "dyn_KAM_gamma_AuxODE_HS": 0.362802877093481
+    }
+  },
+  "rg_invariance_kill_tests": {
+    "full_aux_ode_rel_diff": 8.280477999294226e-15,
+    "full_direct_volterra_rel_diff": 1.4117047879386451e-12
+  },
+  "order_reduced_static_cross_check": {
+    "M26_Istar": {
+      "rel_diff_AuxODE_vs_Volterra": 0.0013677483451305927,
+      "gamma_AuxODE_HS": -3.021541795296768e-09,
+      "gamma_Volterra_HS": -2.349450342048994e-10
+    },
+    "M6_S3": {
+      "rel_diff_AuxODE_vs_Volterra": 0.001404058300749219,
+      "gamma_AuxODE_HS": 2.2949252700289367e-09,
+      "gamma_Volterra_HS": -1.8958753578268657e-09
+    },
+    "M0_naive": {
+      "rel_diff_AuxODE_vs_Volterra": 0.001372841410388077,
+      "gamma_AuxODE_HS": 0.0009573783936570898,
+      "gamma_Volterra_HS": 0.0009573324114204211
+    }
+  }
+}

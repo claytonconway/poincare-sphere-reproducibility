@@ -1,0 +1,111 @@
+{
+  "runtime_sec": 20.25646471977234,
+  "kt1_adversarial": {
+    "c_inv_p36_centered_uncapped": 0.16021850380506847,
+    "c_inv_p36_quad_grid": [
+      21,
+      38,
+      72
+    ],
+    "c_inv_p36_asymp_pred": 0.16056920877425426,
+    "c_inv_p36_asymp_err": 0.0003507049691857944,
+    "global_28_modes_strictly_monotonic": true,
+    "c_inv_p30_global_asymp_err": 7.880087103950828e-07,
+    "passed": true
+  },
+  "kt2_adversarial": {
+    "max_chiral_hz_vs_ap": 2.66506714772713e-46,
+    "max_ortho_hz_vs_ap": 6.842277657836021e-48,
+    "Istar_chiral_global_6alpha_err": 1.7105694144590052e-49,
+    "anisotropic_L3_dG_dlam_err": 0.0,
+    "anisotropic_L3_p3_Phi_par_minus_Phi_perp": 0.5000000000000001,
+    "passed": true
+  },
+  "kt3_adversarial": {
+    "total_dropped_modes_in_spline_window": 0,
+    "all_surviving_friedmann_rhs_lambda0_negative": true,
+    "wide_C2_band_L24_lam105": {
+      "1g + 3 anti-per scalars": {
+        "upp_loc_-100": {
+          "L_min_over_lsp": 1.5615312426445094,
+          "R3_over_MPl2": 0.03591682442050738,
+          "friedmann_rhs_lambda0": -0.016904856082790364,
+          "stable": true
+        },
+        "upp_loc_0": {
+          "L_min_over_lsp": 1.5526818782517224,
+          "R3_over_MPl2": 0.03632740024319705,
+          "friedmann_rhs_lambda0": -0.017085452940784247,
+          "stable": true
+        },
+        "upp_loc_250": {
+          "L_min_over_lsp": 1.5303346033767549,
+          "R3_over_MPl2": 0.037396115327542986,
+          "friedmann_rhs_lambda0": -0.017554199916083212,
+          "stable": true
+        }
+      },
+      "1g + 4 anti-per scalars": {
+        "upp_loc_-100": {
+          "L_min_over_lsp": 2.0210806587350723,
+          "R3_over_MPl2": 0.017866963465375568,
+          "friedmann_rhs_lambda0": -0.00851108981240088,
+          "stable": true
+        },
+        "upp_loc_0": {
+          "L_min_over_lsp": 2.015391117589832,
+          "R3_over_MPl2": 0.01796798436498435,
+          "friedmann_rhs_lambda0": -0.008556696209164218,
+          "stable": true
+        },
+        "upp_loc_250": {
+          "L_min_over_lsp": 2.001096493482383,
+          "R3_over_MPl2": 0.0182256060819995,
+          "friedmann_rhs_lambda0": -0.00867287277794734,
+          "stable": true
+        }
+      },
+      "1g + 2 per Weyl (Ramond)": {
+        "upp_loc_-100": {
+          "L_min_over_lsp": 2.284701286794424,
+          "R3_over_MPl2": 0.013981674545842081,
+          "friedmann_rhs_lambda0": -0.006684847394213973,
+          "stable": true
+        },
+        "upp_loc_0": {
+          "L_min_over_lsp": 2.27966977819751,
+          "R3_over_MPl2": 0.01404346117007931,
+          "friedmann_rhs_lambda0": -0.006712960627384667,
+          "stable": true
+        },
+        "upp_loc_250": {
+          "L_min_over_lsp": 2.267042151569875,
+          "R3_over_MPl2": 0.014200343539106966,
+          "friedmann_rhs_lambda0": -0.006784286463179934,
+          "stable": true
+        }
+      }
+    },
+    "near_round_pinch_L24": {
+      "7:8 (1g+5per_s+8anti_s)": {
+        "lam_cross_Lmin_eq_lsp_L24": 1.0120333555703802,
+        "max_prolate_shift_dlam": 0.01203335557038021
+      },
+      "7:8 (1g+2EM+1per_s+8anti_s)": {
+        "lam_cross_Lmin_eq_lsp_L24": 1.011933955970647,
+        "max_prolate_shift_dlam": 0.011933955970647059
+      },
+      "1g + 1 per Weyl (Ramond 2:2)": {
+        "lam_cross_Lmin_eq_lsp_L24": 1.039467645096731,
+        "max_prolate_shift_dlam": 0.03946764509673106
+      }
+    },
+    "passed": true
+  },
+  "kt4_adversarial": {
+    "rp3_weyl_zero_control": "0",
+    "single_untwisted_weyl_E_exact": "567443/345600",
+    "sm_45_weyl_pi2_dC_exact": "17731/4",
+    "passed": true
+  }
+}
