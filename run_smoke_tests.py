@@ -316,16 +316,43 @@ def check_track5() -> dict:
     return res
 
 
+def check_track6() -> dict:
+    """Validate Track VI (Complete Kubo-plus-Contact Nonlinear KAM Backreaction & Misner Talbot Scrambler)."""
+    t0 = time.perf_counter()
+    res = {}
+    tdir = REPO_ROOT / "track6"
+
+    # 1. Exact rational rel-S^3 kinetic & static contact-plus-Kubo constants
+    pi_kin = Fraction(3900, 31)
+    pi_rem = Fraction(984896, 465)
+    assert abs(math.sqrt(float(pi_kin)) - 11.216347) < 1e-5
+    assert abs(float(pi_rem) - 2118.055914) < 1e-5
+
+    # 2. Verify both formal Track VI streams (p2_02 + p2_07, 8/8 kill-tests)
+    total_kts = 0
+    for sub in ("p2_02", "p2_07"):
+        d = json.loads((tdir / sub / "results.json").read_text(encoding="utf-8"))
+        assert d["status"] == "verified"
+        kts = d["verification"]["kill_tests"]
+        assert len(kts) == 4 and all(k["passed"] is True for k in kts)
+        total_kts += len(kts)
+
+    res["track6_kts_passed"] = total_kts
+    res["x_kin_relS3"] = round(math.sqrt(float(pi_kin)), 4)
+    res["elapsed_s"] = round(time.perf_counter() - t0, 3)
+    return res
+
+
 def check_ledger_and_reports() -> dict:
-    """Validate Claim Ledger (including preserved RETRACTED entries) and all 6 technical PDFs."""
+    """Validate Claim Ledger (including preserved RETRACTED entries) and all 7 technical PDFs."""
     t0 = time.perf_counter()
     ledger = json.loads((REPO_ROOT / "ledger" / "claims.json").read_text(encoding="utf-8"))
     claims = ledger.get("claims", [])
     retracted = [c for c in claims if c.get("status") == "RETRACTED"]
-    assert len(claims) >= 23 and len(retracted) >= 2
+    assert len(claims) >= 24 and len(retracted) >= 2
 
     pdfs = sorted((REPO_ROOT / "reports").glob("*.pdf"))
-    assert len(pdfs) == 6 and all(p.stat().st_size > 50_000 for p in pdfs)
+    assert len(pdfs) == 7 and all(p.stat().st_size > 50_000 for p in pdfs)
     return {
         "claims": len(claims),
         "retracted": len(retracted),
@@ -337,7 +364,7 @@ def check_ledger_and_reports() -> dict:
 def main() -> None:
     t_start = time.perf_counter()
     print("=" * 72)
-    print("Poincare Homology Sphere S^3/I* (v2.0.0) : Automated Smoke Test Suite")
+    print("Poincare Homology Sphere S^3/I* (v2.1.0) : Automated Smoke Test Suite")
     print("=" * 72)
 
     r1 = check_track1()
@@ -365,6 +392,10 @@ def main() -> None:
     r5 = check_track5()
     print(f"[PASS] Track V   ({r5['elapsed_s']:.2f}s): Dirac jumps -29/5 & -26/5 exact, "
           f"p2_03+p2_04+p2_05 ({r5['track5_kts_passed']}/12 KTs passed)")
+
+    r6 = check_track6()
+    print(f"[PASS] Track VI  ({r6['elapsed_s']:.2f}s): x_kin={r6['x_kin_relS3']:.4f}, "
+          f"p2_02+p2_07 ({r6['track6_kts_passed']}/8 KTs passed)")
 
     rl = check_ledger_and_reports()
     print(f"[PASS] Archive   ({rl['elapsed_s']:.2f}s): {rl['claims']} claims ({rl['retracted']} RETRACTED preserved), "

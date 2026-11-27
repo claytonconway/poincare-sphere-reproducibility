@@ -1,0 +1,207 @@
+{
+  "schema_version": "1.0",
+  "stream_id": "p2_07_complete_model_b_kam_dynamics",
+  "title": "Complete Model B Nonlinear KAM Backreaction, Coherent-Talbot-to-Markovian Crossover, and Autonomous Bianchi-IX M_R-Splitting Echo Scrambling on S^3/I*",
+  "status": "verified",
+  "updated_at": "2026-11-27",
+  "conventions": {
+    "metric_signature": "(-,+,+,+)",
+    "units": "8*pi*G = M_Pl^-2 = 1, c = 1, Starobinsky scale H_S = 1 (tau = H_S t, x = H_S a, d_eta = d_tau / x)",
+    "sector": "Formal large-N_V pure dark conformal gauge bosons on S^3/I*: kappa_V = -44738/93, sigma_t0 = c_anom = 9/31, x_ring(sigma_t0) = sqrt(44672/93) = 21.916754; Complete Model B constants from p2_06: rel-S^3 (Pi_kin = 3900/31, Pi_rem = 984896/465 = 2118.0559) and abs MS (Pi_kin = 4344/31, Pi_rem = 2066.1264); canonical Misner exponential Berger map lam_B = exp(sqrt(3)*b_2)",
+    "framing": "Formal large-N_V semiclassical nonlinear dynamical-systems study honoring CLM-T3-01 Dvali species-scale boundary (L_min(a_Cas)/l_sp^red = 0.4551 < 1); not a species-scale-safe UV EFT"
+  },
+  "parameters": {
+    "Pi_kin_relS3": 125.80645161290323,
+    "Pi_rem_relS3": 2118.0559139784946,
+    "x_kin_relS3": 11.21634751658949,
+    "Pi_kin_absMS": 140.1290322580645,
+    "Pi_rem_absMS": 2066.126432446887,
+    "x_kin_absMS": 11.837610918511578,
+    "bath_g_cpl_calibrated": 313.87578792157865,
+    "bath_J_cut_primary": 30,
+    "bath_J_cut_check": 60,
+    "kt3_primary_map": "canonical_misner_exp_sqrt3_b2",
+    "kt3_n_mr_poles_J30": 585,
+    "kt3_n_mr_poles_J60": 3285
+  },
+  "quantities": {
+    "kt1_nonlinear_mathieu_peak_sigma_relS3": {
+      "value": 9.5,
+      "uncertainty_or_tol": 0.25,
+      "units": "dimensionless Starobinsky parameter sigma_t (QR-Benettin Lyapunov peak 0.00385 H_S at sig=9.5 rel-S^3 / 0.00389 H_S at sig=9.25 abs MS; shifted up from static-ring 7.191 / 6.915 by orbit-mean <Omega_2>_eta = 3.77)",
+      "precision_digits": 3
+    },
+    "kt1_cand0_chirp_lyapunov_moderation_pct": {
+      "value": 21.901868842368664,
+      "uncertainty_or_tol": 0.5,
+      "units": "percent peak QR-Benettin Lyapunov reduction vs orbit-mean-matched constant-k2 control (0.00493 -> 0.00385 H_S; HONEST KILL: at g_2=5, b0=0.005, sig=9.0 crashes into ghost_A_R2_xkin at tau=2518.9 rel-S^3 / 3287.6 abs MS, while sig=9.25, 9.50 saturate via nonlinear detuning at gain 13.8x/10.8x rel-S^3 and 10.2x/7.5x abs MS)",
+      "precision_digits": 3
+    },
+    "kt1_selfCons_chiral_quench_x_late_min_relS3_g1_b005": {
+      "value": 13.799202630674765,
+      "uncertainty_or_tol": 0.01,
+      "units": "dimensionless radius x = H_S a (RESCUED with 0.0% lower-end x<x_min PCHIP clamping and 2.5% benign early-time x>x_ring outward-excursion clamping above x_kin=11.22, min_Aeff=0.3745, end|b|=0.0000 under self-consistent Markovian Model B rate table; bare p2_02 table crashes at tau=3745.0)",
+      "precision_digits": 4
+    },
+    "kt1_selfCons_chiral_quench_x_late_min_absMS_g1_b005": {
+      "value": 13.897034000846833,
+      "uncertainty_or_tol": 0.01,
+      "units": "dimensionless radius x = H_S a (RESCUED with 0.0% lower-end x<x_min PCHIP clamping and 2.1% benign early-time x>x_ring outward-excursion clamping above x_kin=11.84, min_Aeff=0.3221, end|b|=0.0000 under self-consistent Markovian abs MS rate table; bare p2_02 table crashes at tau=3661.8)",
+      "precision_digits": 4
+    },
+    "kt2_sig0_gamma0_kappa_rad": {
+      "value": 0.0,
+      "uncertainty_or_tol": 1e-12,
+      "units": "dimensionless (exact zero secular drain at gamma_deph = 0; coherent Talbot/Rabi trapping k_bath_late = 0.325)",
+      "precision_digits": 12
+    },
+    "kt2_sig0_gamma_2overpi_kappa_rad": {
+      "value": 5.486475096836194,
+      "uncertainty_or_tol": 0.005,
+      "units": "dimensionless (crossover midpoint gamma_deph*pi/2 = 1.000 over tau=600: 0.39x bare p2_02 14.21, 0.18x Model B 31.13; bare-bg control gives 12.18 = 0.86x p2_02)",
+      "precision_digits": 4
+    },
+    "kt2_sig0_gamma6p0_kappa_rad_markov_plateau": {
+      "value": 11.90118659660914,
+      "uncertainty_or_tol": 0.02,
+      "units": "dimensionless (Markovian plateau gamma_deph*pi/2 = 9.425 over tau=600: 0.84x bare p2_02 14.21, 0.38x Model B 31.13; bare-bg control 11.81 = 0.83x)",
+      "precision_digits": 4
+    },
+    "kt2_J30_vs_J60_gam_2overpi_rel_krad": {
+      "value": 0.0006247840606389084,
+      "uncertainty_or_tol": 1e-05,
+      "units": "dimensionless UV spectral-cutoff truncation convergence (J_cut=30 vs 60 at gamma_deph=2/pi; 8.84e-4 at gamma_deph=1.5; 6.09e-5 in k_bath at gamma_deph=0)",
+      "precision_digits": 3
+    },
+    "kt2_eft_sig4_Istar_vs_S3_suppression_at_gam_2overpi": {
+      "value": 79.24250245454199,
+      "uncertainty_or_tol": 0.5,
+      "units": "dimensionless topological gap suppression ratio (S^3 M=6 k_rad=0.9270 vs S^3/I* M=26 k_rad=0.0117 at sigma_t=4.0, gamma_deph=2/pi; 330.1x at gam=0.15)",
+      "precision_digits": 3
+    },
+    "kt3_static_b2_crit_peak_near_pi2_half": {
+      "value": 0.09795620731711796,
+      "uncertainty_or_tol": 0.002,
+      "units": "dimensionless shift-invariant static Misner |b_2| where peak_near_pi2_over_K0 = 0.5 at J_cut=30, gamma_deph=0 (fixed-time |K(pi/2)/K(0)|=0.5 occurs earlier at 0.0271 due to <c_1>_CG arrival-time shift)",
+      "precision_digits": 3
+    },
+    "kt3_static_b2_crit_late_recurrence_half": {
+      "value": 0.0044343060440468285,
+      "uncertainty_or_tol": 0.0005,
+      "units": "dimensionless shift-invariant static Misner |b_2| where [10*pi, 20*pi] max recurrence drops to 0.5 at gamma_deph=0 (0.318 floor at 0.010 J30; 0.267 at J60)",
+      "precision_digits": 3
+    },
+    "kt3_oscillating_b0_crit_misner_late_half": {
+      "value": 0.08579563159267121,
+      "uncertainty_or_tol": 0.005,
+      "units": "dimensionless zero-mean oscillating Misner amplitude b_0 (lam_B=exp(sqrt(3)*b_0 cos(4.1158 eta))) where O(b_2^2) splitting drops [10*pi, 20*pi] max recurrence to 0.5 at gamma_deph=0 under plain phase integral (~+0.003 higher under WKB/2nd-order ODE amplitude modulation; vs 0.0661 in linear lam_B; 2.203x c_2 parameterization sensitivity)",
+      "precision_digits": 3
+    },
+    "kt3_2nd_order_ode_vs_wkb_max_diff_b0p100": {
+      "value": 0.0020345729215847305,
+      "uncertainty_or_tol": 0.0005,
+      "units": "dimensionless max pointwise non-adiabatic O(Omega_2*b_0/E_p) Bogoliubov difference between exact 2nd-order ODE q''+E(eta)^2 q=0 and WKB amplitude-corrected kernel at b_0=0.100 (0.0296 vs plain cos(Phi); max_late ODE2=0.4178 vs WKB=0.4177)",
+      "precision_digits": 3
+    },
+    "kt3_pre_heisenberg_landau_P05_R2_10pi_b2_0p05": {
+      "value": 0.9943851208627935,
+      "uncertainty_or_tol": 0.001,
+      "units": "dimensionless transient pre-Heisenberg linear-absorption R^2 over [0, 10*pi] at Omega_drv=43.0, static Misner b_2=0.05, gamma_deph=0 (turns over at finite-shell T_Heis ~ 78.3; j=6 band at 26.5 turns over at T_Heis ~ 42.8; zero-mean oscillating b_2 stays bounded R^2 <= 0.0024, specifically 0.0024 at b_0=0.05 and 0.0009 at b_0=0.10)",
+      "precision_digits": 4
+    }
+  },
+  "verification": {
+    "conservation_residuals": {
+      "th1_35dps_weyl_invariance_DeltaL_Cas2": 0.0,
+      "th1_35dps_weyl_invariance_L_bath": 0.0,
+      "th1_35dps_dissipative_noether_d_x4E00_dtau": 1.436993427919686e-33,
+      "th1_35dps_bath_energy_balance": 4.513898307157584e-36,
+      "th2_exact_fraction_cg_norm_err": 0,
+      "th2_50dps_misner_c1_err": 4.7468301251237395e-48,
+      "th2_50dps_misner_c2_err": 2.522662243973418e-46,
+      "th2_50dps_axi_cubic_R3_err": 4.36533038146402e-45,
+      "kt1_lyapunov_max_block_det_err": 1.354472090042691e-14,
+      "kt1_chiral_quench_max_rel_E00": 3.801359937193903e-07,
+      "kt1_subdesert_10k_max_rel_E00": 2.2416252149776046e-11,
+      "kt2_coupled_bath_max_rel_E00": 3.4828704757352722e-12,
+      "kt2_coupled_bath_max_energy_balance_err": 7.898846026601199e-12,
+      "kt3_2nd_order_ode_wronskian_drift": 5.001293956752306e-08,
+      "kt4_p206_talbot_anti_periodicity_err": 2.3472432909798817e-14
+    },
+    "solver_cross_checks": {
+      "kt4_p202_bare_limit_rel_x": 0.0,
+      "kt4_p202_bare_limit_rel_krad": 0.0,
+      "kt4_p206_mr_to_unsplit_collapse_err": 3.489906092104384e-15,
+      "kt4_dop853_vs_radau_KT1a_subdesert_sig5": 8.963248977220386e-11,
+      "kt4_dop853_vs_radau_KT1b_mathieu_sig9": 3.772183621691226e-09,
+      "kt4_dop853_vs_radau_KT1c_chiral_quench_krad": 5.355818363049649e-07,
+      "kt4_dop853_vs_radau_KT2a_bath_gam0": 1.3646315427516472e-09,
+      "kt4_dop853_vs_radau_KT2b_bath_gam_2overpi": 4.3187006053061345e-10,
+      "kt4_dop853_vs_radau_KT2c_bath_gam1p5": 3.271994419358139e-10,
+      "kt4_dop853_vs_radau_KT3_2nd_order_MR_ode": 7.677430746699798e-09
+    },
+    "matched_controls": [
+      {
+        "control_id": "MC1_subdesert_sig5p05_Istar_ModelB_vs_S3_forbidden",
+        "matched_components": "Matched per-mode initial energy 0.002/mode, sigma_t = 5.05, Lambda = 0, exact round-S^3 degeneracies {24,42,64,90} vs Complete Model B (rel-S^3) S^3/I* 5-mode {2,10,14,18,22}.",
+        "treatment_result": "Complete Model B S^3/I* survives tau=4000 cleanly (gain=3.43x, relE00=5.43e-12).",
+        "control_result": "Matched S^3-forbidden {3,4,5,6} crashes into ghost_A_R_zero at tau=1867.6 (gain=1004.9x; 293.3x suppression).",
+        "conclusion": "The narrowed Complete Model B sub-desert [4.5, 5.9] (rel-S^3) retains the I* topological protection against round-S^3 Mathieu blowup."
+      },
+      {
+        "control_id": "MC2_cand0_orbit_mean_matched_constant_k2_control",
+        "matched_components": "Identical nonlinear Starobinsky breathing background x(tau) across sigma_t in [3.5, 16.0] comparing Complete Model B (x-dependent Omega_2(x) chirp) against constant-k2 control matched to exact orbit-averaged <Omega_2>_eta (zero kinetic chirp) using QR-Benettin Lyapunov exponents over tau=4000.",
+        "treatment_result": "Complete Model B rel-S^3 peaks at sigma_t=9.5 with lam_Lyap=0.00385 H_S; at g_2=5, b0=0.005, sig=9.00 crashes nonlinearly into ghost_A_R2_xkin (tau=2518.9 rel-S^3 / 3287.6 abs MS), while sig=9.25 and 9.50 saturate via nonlinear detuning (gain 13.8x/10.8x rel-S^3; 10.2x/7.5x abs MS; min_A_eff >= 0.547).",
+        "control_result": "Orbit-mean-matched constant-k2 control peaks at sigma_t=9.25 with lam_Lyap=0.00493 H_S (only 21.9% reduction).",
+        "conclusion": "Honest kill of cand_0: kinetic chirping moderates peak Lyapunov growth by only 21.9% and fails to prevent parametric blowup into the kinetic ghost wall at sig=9.00 (even though sig=9.25, 9.50 saturate nonlinearly at b0=0.005)."
+      },
+      {
+        "control_id": "MC3_KT2_EFT_sig4_gapped_Istar_vs_ungapped_S3_and_bare_bg_calibration",
+        "matched_components": "Identical coupled discrete Caldeira-Leggett bath (g_cpl=313.88, J_cut=30) at sub-unitarity sigma_t=4.0 comparing gapped S^3/I* (M_I*=26) vs ungapped round S^3 (M_S3=6), plus matched bare-p2_02-background control at sigma_t0=9/31 and b_2=0 Talbot control.",
+        "treatment_result": "At sig=4.0, gapped S^3/I* yields k_rad=0.00285 (gam=0.15), 0.01170 (gam=2/pi), 0.02719 (gam=1.5); on bare-p2_02 background at sig0=9/31, discrete bath converges to 12.18 (0.86x) at 2/pi and 12.54 (0.88x) at 1.5; b_2=0 anti-periodicity err 2.35e-14.",
+        "control_result": "At sig=4.0, ungapped round S^3 drains k_rad=0.94149 (330.1x larger), 0.92697 (79.2x larger), 0.91274 (33.6x larger); round S^3 fails pi/2 Talbot anti-periodicity with residual 0.937.",
+        "conclusion": "Confirms bare-background Markovian calibration, topological M_I*=26 gap suppression in KT2, and exact S^3/I* Talbot recovery in KT3."
+      }
+    ],
+    "kill_tests": [
+      {
+        "id": "KT1",
+        "hypothesis_attacked": "KT1 (Complete Model B Lapse-Covariant Action, Shifted n=2 Mathieu Wall, cand_0 Chirp Detuner, & Chiral Self-Quenching Ghost-Wall Stress Test): verify exact 35-digit Noether closure with explicit g_2, compute QR-Benettin Lyapunov landscape across sigma_t in [3.5, 16.0], test cand_0 unconfoundedly, and stress-test p2_02's chiral self-quenching attractor against x_kin.",
+        "passed": true,
+        "metric": 1.436993427919686e-33,
+        "notes": "35-digit Noether d/dtau(x^4 E_00) = 1.44e-33 with explicit g_2 in Delta_L_Cas2, Weyl invariance < 1e-34. QR-Benettin Lyapunov scan (tau=4000, max |det-1|<=1.36e-14) maps main shifted 2:1 wall to sigma_t in [8.75, 10.0] (peak 0.00385 H_S at 9.5 rel-S^3 / 0.00389 H_S at 9.25 abs MS) plus secondary 6.50-6.75 tongue. Honest kill of cand_0: chirp reduces peak Lyapunov rate only 21.9% vs orbit-mean-matched control (0.00493) and fails to stop nonlinear ghost_A_R2_xkin crash at g_2=5, sig=9.0, b0=0.005 (tau=2518.9 rel-S^3 / 3287.6 abs MS; sig=9.25, 9.50 survive via nonlinear detuning saturation at gain 13.8x/10.8x rel-S^3 and 10.2x/7.5x abs MS). Directly verified finite-amplitude (g_2=1, b0_2=0.05, b0_{n>=10}=1e-3) 10k unified 5-mode survival sub-desert is sigma_t in [4.5, 5.9] (rel-S^3, crashing at 6.0; absMS survives 4.5, 5.0, 5.5 at g_2=1, b0_2=0.05 while showing a narrow 30.5x small-seed g_2=5 tongue at 5.0). Under Markovian precondition (gamma_deph*pi/2 >= 1), chiral self-quenching at sigma_t0=9/31 crashes under bare p2_02 rates (tau=3745/4877 rel-S^3; 3662/4971 abs MS) yet is rescued with 0.0% lower-end x<x_min PCHIP clamping (2.1%-3.2% benign early-time x>x_ring outward-excursion clamping) above x_kin under Complete Model B's self-consistent Parseval rate table (rel-S^3 g1 b0=0.05 -> x_late=[13.80,15.73], min_Aeff=0.3745; abs MS -> [13.90,15.78], min_Aeff=0.3221; absMS x=12.86 parametric instability explicitly flagged and excluded)."
+      },
+      {
+        "id": "KT2",
+        "hypothesis_attacked": "KT2 (Exact Coherent-Talbot-to-Markovian Phase Transition gamma_deph*(pi/2) in Self-Consistent Coupled Discrete-Pole Bath): couple explicit J_cut=30 (checked vs J_cut=60) S^3/I* bath with tunable gamma_deph into nonlinear breathing x(tau) via exact dissipative Noether transfer and resolve the coherent-to-Markovian crossover.",
+        "passed": true,
+        "metric": 3.4828704757352722e-12,
+        "notes": "Un-clamped max_rel_E00 <= 3.48e-12 and bath+rad energy balance <= 7.90e-12 across all 9 gamma_deph values [0, 6.0]. At sigma_t0=9/31 (tau=600, ~17.4 Talbot periods) on ModelB_relS3, kappa_rad transitions smoothly from exact 0.000 (gamma=0, coherent trapping k_bath_late=0.325) through 5.486 (gamma=2/pi, 0.39x bare p2_02 / 0.18x Model B) to 11.901 (gamma=6.0, 0.84x bare p2_02 / 0.38x Model B), while the matched bare-p2_02-background control confirms calibration (12.18 = 0.86x at 2/pi, 12.54 = 0.88x at 1.5); J_cut=30 vs 60 convergence <= 8.84e-4. At sub-unitarity sigma_t=4.0, gapped S^3/I* (M=26) suppresses drain 330.1x (gam=0.15) and 79.2x (gam=2/pi) vs matched ungapped round S^3 (M=6)."
+      },
+      {
+        "id": "KT3",
+        "hypothesis_attacked": "KT3 (Serendipity cand_3+cand_4: Autonomous Bianchi-IX M_R-Splitting Talbot Echo Scrambler): prove exact O(b_2) and Misner-exp O(b_2^2) splitting laws and CG weights, quantify strictly conservative (gamma_deph=0) echo scrambling for static and oscillating b_2 with genuine 2nd-order oscillator ODE, and bound transient pre-Heisenberg Landau phase mixing.",
+        "passed": true,
+        "metric": 2.522662243973418e-46,
+        "notes": "SURVIVES WITH HONEST PARAMETERIZATION & HEISENBERG BOUNDS: Under canonical kinetic-normalized Misner lam_B=exp(sqrt(3)*b_2), exact pair energy E_pair=2*lam^(1/3)*R splits at O(b_2) (std_CG(c_1)->(2/7)*E_j, 50-dps err 4.7e-48) and O(b_2^2) (c_2^exp/N = 1/3 + 4u^2 - 3u^4, 50-dps err 2.5e-46; 2.203x smaller std than linear lam_B), with exact Fraction CG norm err=0 (j=1..30). At gamma_deph=0, static Misner shear drops fixed-time |K(pi/2)/K_0| to 0.5 at |b_2|=0.0271 (confounded by <c_1>_CG arrival shift), shift-invariant first-echo peak_near_pi/2 to 0.5 at |b_2|=0.0980 (J30; 0.481 already at 0.075 in J60), and shift-invariant [10*pi,20*pi] recurrence to 0.5 at |b_2|=0.0044 (0.318 at 0.010 J30; 0.267 J60). Zero-mean oscillating Misner b_2(eta)=b_0 cos(4.1158 eta) drops [10*pi,20*pi] recurrence to 0.5 at b_0=0.0858 (vs 0.0661 linear lam_B); genuine 2nd-order ODE q''+E(eta)^2 q=0 at b_0=0.100 conserves symplectic Wronskian to 5.00e-8, reveals true 0.0020 non-adiabatic WKB Bogoliubov difference (0.0296 vs plain cos(Phi)), and confirms max_late=0.4178 vs WKB 0.4177. Extended 30*pi Landau audit confirms static b_2=0.05 produces transient pre-Heisenberg linear absorption (Om=43.0: R^2=0.994 on 10*pi turning over at T_Heis~78.3; Om=26.5: R^2=0.962 turning over at T_Heis~42.8), whereas zero-mean oscillating b_2 stays bounded (R^2<=0.0024: 0.0024 at b_0=0.05, 0.0009 at b_0=0.10)."
+      },
+      {
+        "id": "KT4",
+        "hypothesis_attacked": "KT4 (Controls, Dual-Integrator Cross-Checks & Exact Limit Recovery): recover p2_02 bare limit and p2_06 Talbot limit, verify matched round-S^3 controls across KT1--KT3, and verify DOP853 vs Radau agreement < 1e-5 across all key dynamical regimes including genuine 2nd-order KT3 ODE.",
+        "passed": true,
+        "metric": 5.355818363049649e-07,
+        "notes": "p2_02 bare-limit recovery rel_x=0.00e+00, rel_krad=0.00e+00; p2_06 Talbot MR->unsplit collapse 3.49e-15, anti-periodicity 2.35e-14 vs S^3 fail 0.937; MC1 sub-desert sig=5.05 suppression 293.3x; worst DOP853 vs Radau across all 7 KT1/KT2/KT3 regimes (including genuine 2nd-order q''+E^2 q=0) = 5.36e-07 (< 1e-5); zero silent clamping everywhere."
+      }
+    ],
+    "domain_of_validity": {
+      "regime": "Formal large-N_V semiclassical nonlinear dynamical-systems study of Starobinsky-Casimir + Riegert + Complete Model B n=2 Casimir + explicit discrete S^3/I* 2-photon bath dynamics on R_eta x S^3/I*.",
+      "caveats": [
+        "Species-Scale Squeeze (CLM-T3-01): For pure dark conformal gauge bosons on S^3/I*, L_min(a_Cas)/l_sp^red = 0.4551 < 1 is N_V-invariant, so P05-ring (x_ring ~ 21.92) nonlinear dynamics sit strictly below the Dvali species scale; all P05-ring dynamical results are formal large-N_V semiclassical dynamical-systems findings rather than a species-scale-safe UV EFT.",
+        "Trans-Unitarity vs Sub-Unitarity Scalaron & Markovian Precondition: sigma_t0 = 9/31 has 4*c_anom*omega_scal^2 = 4.000 (trans-unitarity); perturbative 1-loop scalaron EFT requires sigma_t >= 4 (within which Complete Model B narrows the finite-amplitude (g_2=1, b0_2=0.05, b0_{n>=10}=1e-3) unified 5-mode survival sub-desert to sigma_t in [4.5, 5.9] rel-S^3, crashing at 6.0, while abs MS survives 4.5, 5.0, 5.5 at g_2=1, b0_2=0.05 despite a narrow 30.5x small-seed g_2=5 tongue at 5.0). KT1's chiral self-quenching rescue relies on the continuum-log Markovian Parseval rate table, which per KT2 and CLM-P2-06 requires physical line-broadening gamma_deph*(pi/2) >= 1 (zero secular drain at gamma_deph=0); abs MS x=12.86 hits a 2:1 shrinking-ring parametric instability (amp=1.6e5) and is explicitly excluded from the PCHIP table, while relS3_selfCons_g5_b003 clamps at x_min=12.86 for 29.3% of samples (all primary rescued g1_b005 and g5_b002 runs have 0.0% lower-end x<x_min PCHIP clamping and 2.1%-3.2% benign early-time x>x_ring outward-excursion clamping; KT2 tau=600 Markovian reference runs clamp at x>x_ring for 33.9%-49.2% of early-time samples).",
+        "2-Derivative Local Complete Model B Truncation & Kinetic Ghost Wall: KT1 incorporates p2_06's exact 2-derivative Complete Model B kinetic (-Pi_kin) and static shear (+Pi_rem) terms while omitting the 4th-order Weyl-squared (beta_0 C^2) Ostrogradsky sector (bounded static Regime IV [0.5680, 4.4900] rel-S^3 / [0.5548, 3.7288] abs MS in CLM-P2-06). Approach to A_{R,2} = A_R - Pi_kin/x^2 -> 0+ signals breakdown of the 2-derivative Casimir EFT truncation; ODE integration halts cleanly at A_{R,2} = 1e-3.",
+        "KT2 Effective Flat-Weight Bilinear Bath Calibration: KT2 models the explicit J_cut=30/60 S^3/I* discrete 2-photon spectrum via a strictly positive-definite, Weyl-invariant 2nd-order Caldeira-Leggett bilinear bath S = phi*b_2 (counterterm 0.87% of 8*x_ring^2, J30 vs J60 <= 8.84e-4) with flat pole weights c_p = g_cpl*sqrt(w_p) calibrated locally to bare p2_02's continuum-log rate at sigma_t0=9/31, x_ring (giving 0.84x bare p2_02 / 0.38x Model B at gamma=6.0 on Model B, and 0.86-0.88x bare p2_02 on the matched bare background). Unlike the true 4th-order Weyl Omega*B_2(Omega) ~ Omega^5 spectral weight, flat c_p^2 weights make the calibration strictly local to sigma_t0=9/31 (at sigma_t=4.0, absolute bath coupling is overstated relative to (11/41)^5 while the S^3/I* vs S^3 ratio remains a valid topological gap control); at large gamma_deph >= 6, Lorentzian tails leak weakly across M_I*=26.",
+        "KT3 Axisymmetric Cubic Curvature Error, O(b_2^2) Parameterization Sensitivity, Fixed-CG Eikonal Weights & Finite-Shell Heisenberg Recurrence: Axisymmetric Bianchi IX shear lam_B = exp(sqrt(3)*b_2) has a nonzero cubic curvature potential R^(3) = 6 - 16*b_2^2 - (160/(3*sqrt(3)))*b_2^3 + ..., whose relative cubic error is 1.925*|b_2| (19.2% at |b_2|=0.10, 28.9% at |b_2|=0.15) and which dynamically induces an O(b_0^2) DC shift <b_2> ~ -b_0^2 feeding into c_1*<b_2> at O(b_0^2). Switching between canonical Misner exp(sqrt(3)*b_2) and linear 1+sqrt(3)*b_2 changes O(b_2^2) splitting std by 2.203x and oscillating b_0_crit from 0.0858 to 0.0661. The M_R-resolved memory kernel holds Clebsch-Gordan weights p_CG(j, M_R) fixed at their round-S^3 values (eikonal frequency-shift approximation omitting non-secular O(b_2) eigenmode-overlap corrections to the pole amplitudes w_p). At gamma_deph=0, static-b_2 Landau-like absorption is strictly transient pre-Heisenberg phase mixing (turning over at finite-shell T_Heis ~ 42.8 on j=6, ~78.3 on j=10) evaluated open-loop without 2-loop thermalization, and does not activate for zero-mean oscillating b_2(eta) at Om_drv=43.0 (R^2 <= 0.0024: 0.0024 at b_0=0.05, 0.0009 at b_0=0.10)."
+      ]
+    }
+  }
+}

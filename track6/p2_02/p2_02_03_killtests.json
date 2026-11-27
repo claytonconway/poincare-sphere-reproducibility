@@ -1,0 +1,172 @@
+{
+  "stream_id": "p2_02_nonlinear_kam_backreaction",
+  "stage": "03_kill_tests",
+  "round": 4,
+  "KT1": {
+    "passed": true,
+    "sigma0_n2_xdep_tau10000": {
+      "outcome": "kam_cyclic_survived",
+      "true_max_rel_E00": 3.218125836745797e-08,
+      "max_abs_x4_E00": 7.862643914661912e-06,
+      "kappa_rad_ode": 308.1854484415439,
+      "kappa_rad_trapz_check": 308.18550817129994,
+      "integral_self_consistency_rel_err": 1.9381108472941983e-07,
+      "scalaron_depletion_frac_safe": 0.6122301574682235,
+      "end_abs_b2": 0.004628901793246156
+    },
+    "sigma4_5mode_eft_tau10000": {
+      "outcome": "kam_cyclic_survived",
+      "true_max_rel_E00": 4.871310302025831e-12,
+      "max_abs_x4_E00": 2.95931564113033e-09,
+      "kappa_rad_ode": 11.240316797112635,
+      "kappa_rad_trapz_check": 11.24031607878055,
+      "integral_self_consistency_rel_err": 6.390674732178262e-08
+    },
+    "worst_true_max_rel_E00": 3.218125836745797e-08,
+    "worst_integral_self_consistency_rel_err": 1.9381108472941983e-07
+  },
+  "KT2": {
+    "passed": true,
+    "worst_rel_diff": 2.7091959950306086e-06,
+    "mathieu_crash_sigma0": {
+      "tau_crash_DOP853": 101.86060899823973,
+      "tau_crash_Radau": 101.86060899788667,
+      "tau_crash_rel_diff": 3.466055013970904e-12,
+      "pre_crash_x_rel_diff": 1.4474541449170103e-11,
+      "pre_crash_rho_rad_rel_diff": 5.5498397253421425e-11,
+      "DOP853_true_max_rel_E00": 3.997838437357992e-11,
+      "Radau_true_max_rel_E00": 8.501972970000283e-12
+    },
+    "n2_xdep_sigma0_tau7000": {
+      "x_rel_diff": 5.026205133613338e-07,
+      "rho_rad_rel_diff": 2.7091959950306086e-06,
+      "kappa_rad_rel_diff": 1.581832994107663e-07,
+      "kappa_rad_end": 284.78317364450544,
+      "x_end": 14.276471513409104
+    },
+    "eft_5mode_sigma4_tau2000": {
+      "x_rel_diff": 7.900391980718567e-11,
+      "rho_rad_rel_diff": 2.661817208768715e-10,
+      "kappa_rad_end": 10.606500239391632
+    },
+    "ir_dS_exit_lam5e5_G1e3": {
+      "outcome_DOP853": "ir_dS_exit",
+      "outcome_Radau": "ir_dS_exit",
+      "tau_exit_DOP853": 1986.6322280858901,
+      "tau_exit_Radau": 1986.6321916495085,
+      "tau_exit_rel_diff": 1.8340778474743105e-08,
+      "kappa_rad_rel_diff": 4.2208052575966587e-07,
+      "h_end_DOP853": 0.007055489164561484,
+      "rho_scal_end_DOP853": 8.698293422551052e-09,
+      "rho_rad_end_DOP853": 3.2934853529855328e-09,
+      "rho_lam": 0.00015000000000000001,
+      "kappa_rad_end_DOP853": 17565.25521592284
+    },
+    "web_diffusion_sigma10_b05": {
+      "outcome_DOP853": "ghost_A_R_zero",
+      "outcome_Radau": "ghost_A_R_zero",
+      "tau_crash_DOP853": 4661.994514860298,
+      "tau_crash_Radau": 4661.994693010257,
+      "tau_crash_rel_diff": 3.821324929936682e-08
+    },
+    "chaotic_separatrix_check_lam1e4_G2e4": {
+      "x_exit_cap": 100000.0,
+      "outcome_DOP853": "ghost_A_R_zero",
+      "outcome_Radau": "ghost_A_R_zero",
+      "tau_end_DOP853": 5360.553359382679,
+      "tau_end_Radau": 5359.83315746893,
+      "h_end_DOP853": 1.1299480927277312,
+      "h_end_Radau": 1.1299486009432256,
+      "rho_scal_end_DOP853": 1.8271553315419515,
+      "rho_rad_end_DOP853": 7.1413067039438115e-06,
+      "rho_lam": 0.00030000000000000003,
+      "note": "At rtol=1e-11 and x_exit_cap=1e5, both DOP853 and Radau confirm lam=1e-4, G=2e-4 undergoes a chaotic UV Starobinsky runaway (H ~ 1.13 H_S, rho_scal ~ 1.83 >> rho_lam=3e-4) terminating at ghost_A_R_zero near tau=5360, rather than a robust IR de Sitter exit."
+    }
+  },
+  "KT3": {
+    "passed": true,
+    "matched_S3_forbidden_controls": [
+      {
+        "sigma_t": 5.05,
+        "eps_scal_4c_wscal2": 0.22995847971893965,
+        "matched_init_kappa_per_mode": 0.002,
+        "Istar_outcome": "kam_cyclic_survived",
+        "Istar_tau_end": 4000.0,
+        "Istar_max_amp_gain": 1.1791819476892034,
+        "Istar_kappa_tt_max_safe": 0.017163542957380647,
+        "S3_forbidden_target_n": 4,
+        "S3_forbidden_outcome": "ghost_A_R_zero",
+        "S3_forbidden_tau_end": 1867.5746433591398,
+        "S3_forbidden_max_amp_gain": 1004.9497243618828,
+        "S3_forbidden_kappa_tt_max_safe": 409.01769357239704,
+        "suppression_factor_gain": 852.2431388398062
+      },
+      {
+        "sigma_t": 8.6,
+        "eps_scal_4c_wscal2": 0.1350337584396099,
+        "matched_init_kappa_per_mode": 0.002,
+        "Istar_outcome": "kam_cyclic_survived",
+        "Istar_tau_end": 4000.0,
+        "Istar_max_amp_gain": 1.183476964009459,
+        "Istar_kappa_tt_max_safe": 0.0185465432496219,
+        "S3_forbidden_target_n": 3,
+        "S3_forbidden_outcome": "kam_cyclic_survived",
+        "S3_forbidden_tau_end": 4000.0,
+        "S3_forbidden_max_amp_gain": 269.1614523697963,
+        "S3_forbidden_kappa_tt_max_safe": 183.36492848573286,
+        "suppression_factor_gain": 227.43277694051088
+      }
+    ],
+    "bilinear_modulation_sensitivity_sigma0": {
+      "bilinear_true_outcome": "blowup_pos",
+      "bilinear_true_tau_end": 101.86060900881967,
+      "bilinear_false_outcome": "blowup_pos",
+      "bilinear_false_tau_end": 102.30900630260005
+    }
+  },
+  "KT4": {
+    "passed": true,
+    "x_ring": 21.916753546579507,
+    "rel_diff_vs_P05_ode_rhs": 9.038972730238934e-10,
+    "smoothed_envelope_early_50_1000": [
+      21.571988390971065,
+      22.675348828155926
+    ],
+    "smoothed_envelope_late_9000_9950": [
+      21.57197196785188,
+      22.67535595892251
+    ],
+    "macro_envelope_drift_min": 7.613168933220895e-07,
+    "macro_envelope_drift_max": 3.1447218904855165e-07,
+    "true_max_rel_E00": 1.19482187061638e-09,
+    "kappa_rad_end": 0.0,
+    "bianchi_ix_anharmonic_validity": [
+      {
+        "b0": 0.01,
+        "rel_O_b4_err": 0.00023334711152318203,
+        "leading_7over3_b2": 0.00023333333333333336
+      },
+      {
+        "b0": 0.05,
+        "rel_O_b4_err": 0.0058419507468883405,
+        "leading_7over3_b2": 0.0058333333333333345
+      },
+      {
+        "b0": 0.1,
+        "rel_O_b4_err": 0.023471515007573298,
+        "leading_7over3_b2": 0.023333333333333338
+      },
+      {
+        "b0": 0.2,
+        "rel_O_b4_err": 0.0955637664245952,
+        "leading_7over3_b2": 0.09333333333333335
+      },
+      {
+        "b0": 0.3,
+        "rel_O_b4_err": 0.22145869677733213,
+        "leading_7over3_b2": 0.21000000000000002
+      }
+    ]
+  },
+  "all_passed": true
+}

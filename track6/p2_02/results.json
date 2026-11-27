@@ -1,0 +1,245 @@
+{
+  "schema_version": "1.0",
+  "stream_id": "p2_02_nonlinear_kam_backreaction",
+  "title": "Nonlinear Scalaron-Radiation-Graviton Backreaction on the S^3/I* KAM Island (CLM-OPEN-02)",
+  "status": "verified",
+  "updated_at": "2026-11-25",
+  "conventions": {
+    "metric_signature": "(-,+,+,+)",
+    "units": "8*pi*G = M_Pl^-2 = 1, c = 1, H_S = 1 (dimensionless Starobinsky time tau = H_S t, radius x = H_S a)",
+    "manifold": "S^3/I*, Vol(S^3/I*, a) = pi^2 a^3 / 60, Scal = 6/a^2, r_inj = pi*a/10",
+    "sector": "Pure dark conformal gauge bosons (N_V >= 1): kappa_V = -44738/93, sigma_t0 = c_anom = 9/31",
+    "variational_closure": "Exact first-order lapse-covariant Starobinsky + Riegert + O(b^2) multi-mode TT graviton action with dissipative Noether forces Q_phi, Q_{b_n} preserving d/dtau(x^4 E_00) == 0 identically (un-clamped, un-floored rel_E00)"
+  },
+  "parameters": {
+    "kappa_V": -481.0537634408602,
+    "sigma_t0": 0.2903225806451613,
+    "c_anom": 0.2903225806451613,
+    "x_ring_sigma0": 21.916753546579507,
+    "kappa_scal_budget_sigma0": 960.6881720430108,
+    "sub_unitarity_eft_window_sigma_t": [
+      4.0,
+      12.0
+    ],
+    "istar_tt_modes_n": [
+      2,
+      10,
+      14,
+      18,
+      22
+    ],
+    "istar_tt_multiplicities": [
+      5,
+      9,
+      17,
+      17,
+      46
+    ],
+    "n2_chiral_damping_window_x_sigma0": [
+      12.485212034086155,
+      15.533215082090729
+    ]
+  },
+  "quantities": {
+    "kappa_scal_budget_sigma0": {
+      "value": 960.6881720430108,
+      "uncertainty_or_tol": 1e-13,
+      "units": "dimensionless (x^4 rho_scal / 3)",
+      "precision_digits": 12
+    },
+    "kappa_rad_crit_barrier_flip_sigma0": {
+      "value": 480.3440860215054,
+      "uncertainty_or_tol": 1e-13,
+      "units": "dimensionless (|kappa_eff| = x_ring^2)",
+      "precision_digits": 12
+    },
+    "mathieu_n18_n22_crash_tau_b1e4_diss": {
+      "value": 101.86060899823973,
+      "uncertainty_or_tol": 3.530544745444786e-10,
+      "units": "H_S^-1 (KT2a rtol=1e-11, full upper-sideband MR scalaron share)",
+      "precision_digits": 8
+    },
+    "mathieu_n18_n22_crash_tau_b1e4_nodiss": {
+      "value": 86.42204755322135,
+      "uncertainty_or_tol": 1e-05,
+      "units": "H_S^-1",
+      "precision_digits": 6
+    },
+    "n2_xdep_sigma0_b005_self_quenched_kappa_rad": {
+      "value": 308.1854188077254,
+      "uncertainty_or_tol": 0.0001,
+      "units": "dimensionless (radius-dependent Parseval/MR, g_2=1, self-quenched in x in [12.4, 14.6], end|b_2|=0.0046)",
+      "precision_digits": 5
+    },
+    "n2_xdep_sigma0_b010_punchthrough_crash_tau": {
+      "value": 3475.2362966228898,
+      "uncertainty_or_tol": 0.01,
+      "units": "H_S^-1 (radius-dependent Parseval/MR, g_2=1, outcome=ghost_A_R_zero)",
+      "precision_digits": 5
+    },
+    "n2_xdep_sigma0_b015_punchthrough_crash_tau": {
+      "value": 1136.60592696939,
+      "uncertainty_or_tol": 0.01,
+      "units": "H_S^-1 (radius-dependent Parseval/MR, g_2=1, outcome=ghost_A_R_zero)",
+      "precision_digits": 5
+    },
+    "direct_gamma_scal_lam0_crash_kappa_rad_threshold": {
+      "value": 461.0337339402824,
+      "uncertainty_or_tol": 10.0,
+      "units": "dimensionless (stochastic shrinking-ring boundary ~0.96 |kappa_eff|)",
+      "precision_digits": 3
+    },
+    "direct_gamma_scal_lam0_G1e4_shrunk_x_end": {
+      "value": 7.79162374561079,
+      "uncertainty_or_tol": 0.0001,
+      "units": "dimensionless (x = H_S a; analytical sqrt(|kappa_eff|-kappa_rad) = 7.88)",
+      "precision_digits": 4
+    },
+    "positive_lambda_ir_dS_exit_tau_lam5e5_G1e3": {
+      "value": 1986.6322280858901,
+      "uncertainty_or_tol": 3.6436381606108625e-05,
+      "units": "H_S^-1 (KT2d DOP853 vs Radau verified; transient Starobinsky-kick + reheating onto IR dS h=sqrt(lam))",
+      "precision_digits": 7
+    },
+    "web_diffusion_crash_tau_sigma10_b05": {
+      "value": 4661.994514860298,
+      "uncertainty_or_tol": 0.00017814995862863725,
+      "units": "H_S^-1 (KT2e DOP853 vs Radau verified)",
+      "precision_digits": 6
+    },
+    "Istar_spectral_desert_lower_sigma_t_n10": {
+      "value": 1.0021999236761174,
+      "uncertainty_or_tol": 1e-12,
+      "units": "dimensionless (leading-order large-x_ring 2:1 Mathieu locus for n=10)",
+      "precision_digits": 10
+    },
+    "Istar_spectral_desert_upper_sigma_t_n2_linear": {
+      "value": 15.485605272285813,
+      "uncertainty_or_tol": 1e-12,
+      "units": "dimensionless (leading-order 2:1 Mathieu locus for n=2; nonlinear onset at 16.5)",
+      "precision_digits": 10
+    },
+    "n10_secondary_1to1_tongue_sigma4p20_nodiss_gain": {
+      "value": 70.78716787481284,
+      "uncertainty_or_tol": 0.1,
+      "units": "dimensionless (saturates cleanly; quenched to 25.564x by 1-loop damping)",
+      "precision_digits": 4
+    },
+    "n2_2gamma_kinematic_shutoff_sigma_t": {
+      "value": 0.8957533969218059,
+      "uncertainty_or_tol": 1e-12,
+      "units": "dimensionless (1st harmonic Om_2 + Om_scal = M_I*(2) = 26)",
+      "precision_digits": 10
+    },
+    "n2_nonlinear_mathieu_wall_sigma_t": {
+      "value": 16.5,
+      "uncertainty_or_tol": 0.25,
+      "units": "dimensionless (EFT-safe homogeneous shear 2:1 Mathieu crash onset)",
+      "precision_digits": 3
+    }
+  },
+  "verification": {
+    "conservation_residuals": {
+      "mpmath_35dps_dissipative_noether_bianchi_err": 8.972115389811432e-34,
+      "mpmath_35dps_4d_covariant_lapse_action_rel_err": 7.181253907330479e-20,
+      "KT1a_sigma0_n2_xdep_tau10000_true_max_rel_E00": 3.218125836745797e-08,
+      "KT1a_sigma0_n2_xdep_tau10000_integral_self_consistency_rel_err": 1.9381108472941983e-07,
+      "KT1b_sigma4_5mode_eft_tau10000_true_max_rel_E00": 4.871310302025831e-12,
+      "KT1b_sigma4_5mode_eft_tau10000_integral_self_consistency_rel_err": 6.390674732178262e-08,
+      "KT4_decoupled_P05_tau10000_true_max_rel_E00": 1.19482187061638e-09
+    },
+    "solver_cross_checks": {
+      "DOP853_vs_Radau_mathieu_crash_tau_rel_diff": 3.466055013970904e-12,
+      "DOP853_vs_Radau_mathieu_pre_crash_x_rel_diff": 1.4474541449170103e-11,
+      "DOP853_vs_Radau_mathieu_pre_crash_rho_rad_rel_diff": 5.5498397253421425e-11,
+      "DOP853_vs_Radau_n2_xdep_tau7000_x_rel_diff": 5.026205133613338e-07,
+      "DOP853_vs_Radau_n2_xdep_tau7000_rho_rad_rel_diff": 2.7091959950306086e-06,
+      "DOP853_vs_Radau_eft_sigma4_tau2000_x_rel_diff": 7.900391980718567e-11,
+      "DOP853_vs_Radau_eft_sigma4_tau2000_rho_rad_rel_diff": 2.661817208768715e-10,
+      "DOP853_vs_Radau_ir_dS_exit_tau_rel_diff": 1.8340778474743105e-08,
+      "DOP853_vs_Radau_web_diffusion_sigma10_tau_rel_diff": 3.821324929936682e-08,
+      "coupled_decoupled_vs_P05_ode_rhs_rel_diff": 9.038972730238934e-10
+    },
+    "matched_controls": [
+      {
+        "id": "MC1_Istar_vs_S3_forbidden_sigma5p05",
+        "description": "Matched per-mode initial graviton energy 0.002/mode (exact round-S^3 degeneracies {24,42,64,90}) at sub-unitarity EFT sigma_t = 5.05 (eps_scal = 0.230), Lambda = 0",
+        "matched_components": [
+          "per_mode_init_kappa_TT = 0.002",
+          "sigma_t = 5.05",
+          "Lambda = 0",
+          "x_b = x_ring",
+          "pure_variational"
+        ],
+        "treatment_result": "S^3/I* {2,10,14,18,22}: kam_cyclic_survived (gain=1.18x, kTTsafe=0.017)",
+        "control_result": "Matched S^3-forbidden {3,4,5,6}: ghost_A_R_zero at tau=1867.6 (dom n=4, gain=1004.9x)"
+      },
+      {
+        "id": "MC2_Istar_vs_S3_forbidden_sigma8p60",
+        "description": "Matched per-mode initial graviton energy 0.002/mode (exact round-S^3 degeneracies {24,42,64,90}) at sub-unitarity EFT sigma_t = 8.60 (eps_scal = 0.135), Lambda = 0",
+        "matched_components": [
+          "per_mode_init_kappa_TT = 0.002",
+          "sigma_t = 8.60",
+          "Lambda = 0",
+          "x_b = x_ring",
+          "pure_variational"
+        ],
+        "treatment_result": "S^3/I* {2,10,14,18,22}: kam_cyclic_survived (gain=1.18x)",
+        "control_result": "Matched S^3-forbidden {3,4,5,6}: resonant n=3 Mathieu amplification (gain=269.2x, kTTsafe=183.36)"
+      },
+      {
+        "id": "MC3_decoupled_P05_baseline",
+        "description": "Zero-graviton, zero-dissipation control on x_ring = 21.9168 at sigma_t0 = 9/31 over tau in [0, 10000]",
+        "matched_components": [
+          "x_b = x_ring",
+          "sigma_t = 9/31",
+          "Lambda = 0",
+          "kappa_V = -44738/93"
+        ],
+        "treatment_result": "Exact recovery of P05 KAM ring (rel diff vs P05 ode_rhs = 9.04e-10, macro envelope drift = 7.61e-07 <= 1e-5, true max_rel_E00 = 1.19e-09)",
+        "control_result": "P05 Theorem 3 baseline (x_ring = 21.9168, smoothed drift 5.3e-6)"
+      }
+    ],
+    "kill_tests": [
+      {
+        "id": "KT1",
+        "hypothesis_attacked": "KT1 (Un-Clamped Friedmann & Covariant Energy Conservation): Enforce and log exact un-floored E_00 = 0 residual and integral radiation self-consistency without silent clamping across tau in [0, 10000].",
+        "passed": true,
+        "metric": 3.218125836745797e-08,
+        "notes": "Worst true un-floored max_rel_E00 = 3.218e-08 (<1e-6) and integral self-consistency rel_err = 1.938e-07 (<1e-5) across tau=10,000 for both sigma_t0=9/31 (radius-dependent n=2 catalyzed) and sigma_t=4.0 (5-mode EFT)."
+      },
+      {
+        "id": "KT2",
+        "hypothesis_attacked": "KT2 (Dual-Integrator Cross-Check): Verify DOP853 vs Radau agreement on exit-time, crash-time, attractor-amplitude observables and radiation energy density rho_rad(tau).",
+        "passed": true,
+        "metric": 2.7091959950306086e-06,
+        "notes": "Worst DOP853 vs Radau rel_diff = 2.709e-06 (<1e-5) across 5 deterministic regimes: Mathieu crash time (3.47e-12), n=2 x-dep self-quench tau=7000 rho_rad (2.71e-06), sigma=4 EFT rho_rad (2.66e-10), lam=5e-5 Starobinsky-kick->IR-dS exit time (1.83e-08), and sigma=10 web crash time (3.82e-08); plus KT2f chaotic separatrix check on lam=1e-4, G=2e-4 (both DOP853 and Radau at rtol=1e-11, x_exit_cap=1e5 confirm UV Starobinsky runaway -> ghost_A_R_zero near tau=5360)."
+      },
+      {
+        "id": "KT3",
+        "hypothesis_attacked": "KT3 (Sub-Unitarity EFT Regime Control): Compare dark-gauge sigma_t0 = 9/31 (4*c_anom*omega_scal^2 = 4.0) against sub-unitarity sigma_t in [4, 12] to separate true 1-loop EFT physics from trans-unitarity scalaron artifacts.",
+        "passed": true,
+        "metric": 852.2431388398062,
+        "notes": "At trans-unitarity sigma_t0=9/31 (eps_scal=4.0), n=18,22 Mathieu reheating destroys the KAM ring in tau in [28, 277], invariant under bilinear modulation toggle. Across sub-unitarity EFT sigma_t in [4, 12] (eps_scal=0.097..0.290), the I* spectral desert suppresses Mathieu gain by 852x at sigma=5.05 (I* survives vs S^3-forbidden n=4 crash) and 227x at sigma=8.60 (I* survives vs S^3-forbidden n=3 269.2x amplification)."
+      },
+      {
+        "id": "KT4",
+        "hypothesis_attacked": "KT4 (Zero-Dissipation & Decoupled Control): Setting radiative coupling / Mathieu transfer to zero must recover Track III / P05 adiabatic KAM island (x_ring = 21.9168, drift <= 1e-5) to machine/integrator tolerance.",
+        "passed": true,
+        "metric": 7.613168933220895e-07,
+        "notes": "Zero-graviton zero-dissipation control matches P05 ode_rhs to 9.04e-10 over tau=10,000 with smoothed macro-envelope drift 7.61e-07 (<=1e-5), true un-floored max_rel_E00=1.19e-09, and exact kappa_rad=0.0. Exact Bianchi IX O(b^4) anharmonic error is 0.58% at b=0.05 and 2.35% at b=0.10."
+      }
+    ],
+    "domain_of_validity": {
+      "regime": "1-loop semiclassical Starobinsky-Casimir + covariant Riegert + O(b^2) multi-mode TT graviton backreaction on S^3/I* (N_V >= 1 pure conformal dark gauge bosons, assuming Regime IV nonlocal Weyl stabilization: continuum-log beta_0 >= 0.44 in CLM-T4A-02, superseded by discrete-pole beta_0 >= 0.75 on x_ring in CLM-OPEN-01). Strict perturbative 1-loop EFT validity requires sub-unitarity scalaron coupling sigma_t in [4, 12] (4*c_anom*omega_scal^2 in [0.097, 0.290] << 1, avoiding both trans-unitarity sigma_t0 = 9/31 where 4*c_anom*omega_scal^2 = 4.0 and light-scalaron Casimir swamping sigma_t >> |kappa_V|=481) and moderate TT amplitude (|b_2| <= 0.15 for homogeneous shear, RMS sqrt(sum g_n b_n^2) << 1 and spatial curvature perturbation dR^(3)/R^(3) << 1 for inhomogeneous modes).",
+      "caveats": [
+        "At dark-gauge zero-counterterm sigma_t0 = 9/31, 4*c_anom*omega_scal^2 = 4.000 and n=18,22 sit at eps_EFT = 0.87-1.28; moreover, by the time n=18,22 flip kappa_eff through zero, inhomogeneous spatial curvature perturbations dR^(3)/R^(3) ~ (1/3)*g_n*k_n^2*b_n^2 become O(1-10), so the sigma_t0=9/31 Mathieu crash marks an EFT/linearization breakdown trigger rather than a UV-complete endpoint.",
+        "Inhomogeneous TT modes n=10,14,18,22 enter the homogeneous FLRW Friedmann constraint E_00 via Brill-Hartle / Isaacson isotropic spatial averaging at O(b_n^2), omitting O(b_n^2) inhomogeneous scalar/vector metric potentials and O(b^3) mode-mode scattering; homogeneous n=2 Bianchi IX O(b^4) spatial curvature error is 0.58% at b=0.05 and 2.35% at b=0.10. Once A_R -> 0+ (f'(R) -> 0 antigravity surface) is approached, integration stops cleanly at A_R = 1e-3 and physical radiation budgets are reported at the last pre-singularity state (A_R >= 0.1, |phi| <= 50).",
+        "The conservative 4th-order Weyl-squared (beta_0 C^2) term and real nonlocal dispersive form factor are omitted from L_TT (Track IV-A's continuum-log Regime IV boundary beta_0 >= 0.44 in CLM-T4A-02 was superseded by CLM-OPEN-01's exact discrete two-photon pole sum, which raises the dynamical adiabatic pinch-off on x_ring from 0.4206 to 0.7266 and reopens UHP Horowitz ghost runaway on beta_0 in [0.44, 0.72], requiring beta_0 >= 0.75). Furthermore, as already quantified in CLM-OPEN-01 (p2_01) and flagged in CLM-T3-02, because x_ring^2 = 480.34 ~ |kappa_V| = 481.05, the omitted non-Weyl topological Casimir kinetic remainder for n=2 (+3900/31 Omega^2 = 26.2% of EH rel-S^3; +4344/31 Omega^2 = 29.2% abs) and Kubo Omega^0 constant (+608048/155 = +3922.89, 102% of 8*x_ring^2, pending the uncomputed squashed-Bianchi-IX contact/tadpole diagram) are O(1) already at x_ring; including them can shift both the n=2 2:1 Mathieu wall (sigma_t ~ 16.5) and the n=2 chiral damping window [12.49, 15.53] at O(1), whereas higher inhomogeneous modes (n >= 10) are suppressed by k_n^-2.",
+        "1-loop 2-photon dissipation uses Markovian cycle-averaged Parseval / Manley-Rowe bilinear transfer rates calibrated to Track IV-A's continuum-log kernel above M_I*(n) (including radius-dependent shrinking-ring PCHIP rates for n=2 across x in [8.68, 21.92], clamped at x_min = 8.68 during punch-through crashes where |b_2| > 0.15 already exceeds linearization validity); exact discrete S^3/I* 2-photon spectral pole corrections are audited in CLM-OPEN-01 (p2_01).",
+        "Within the sub-unitarity EFT window sigma_t in [4, 12], unified 5-mode evolution survives tau=10,000 at sigma_t = 4 (g_2=1 and g_2=5), 6, 8, 12 (and sigma_t = 10 for b0_2 <= 0.02 or lambda = 5e-5), while a narrow finite-amplitude nonlinear web diffusion resonance appears at sigma_t = 10, b0_2 = 0.05, lambda = 0 (crashing at tau = 4662.0, DOP853 vs Radau verified to 3.82e-08), a razor-narrow secondary 1:1 n=10 tongue appears at sigma_t = 4.20 (saturating at 70.8x without dissipation and quenched to 33.46x peak / 25.564x late using the nearby off-resonance sigma_4p0 1-loop rate table), and the EFT-safe n=2 homogeneous shear 2:1 Mathieu wall opens at sigma_t >= 16.5.",
+        "Per Track III Species-Scale Squeeze (CLM-T3-01), L_min(a_Cas)/l_sp^red = 0.4551 < 1 for pure dark vectors remains N_V-invariant, so non-perturbative quantum-gravity corrections at the species scale remain O(1)."
+      ]
+    }
+  }
+}

@@ -1,10 +1,10 @@
 {
-  "title": "Poincare Homology Sphere Gauge Cosmology and Semiclassical Gravity (S^3/I*): Open Reproducibility Archive, Verification Suite, Claim Ledger, and Technical Reports (Tracks I-V)",
-  "version": "2.0.0",
+  "title": "Poincare Homology Sphere Gauge Cosmology and Semiclassical Gravity (S^3/I*): Open Reproducibility Archive, Verification Suite, Claim Ledger, and Technical Reports (Tracks I-VI)",
+  "version": "2.1.0",
   "upload_type": "software",
   "access_right": "open",
   "license": "MIT",
-  "description": "Self-contained Python, NumPy/SciPy, and 50-digit mpmath verification suite, exact spectral and differential-geometry oracles, deterministic JSON reference datasets, automated smoke tests, Claim Ledger (including permanently preserved retracted dead ends), and six standalone technical reports (Tracks I-V) exploring classical Bianchi IX general relativity, SU(2)_L Yang-Mills-Higgs sphalerons and dynamical Hosotani restoration, pure-graviton 1-loop spectral geometry, nonlocal Weyl-squared dispersion, and half-antipodal Talbot revivals on the Poincare homology sphere S^3/I* and spherical space forms S^3/Gamma. Produced through a human-directed, AI-assisted symbolic and numerical verification workflow.",
+  "description": "Self-contained Python, NumPy/SciPy, and 50-digit mpmath verification suite, exact spectral and differential-geometry oracles, deterministic JSON reference datasets, automated smoke tests, Claim Ledger (24 claims including permanently preserved retracted dead ends), and seven standalone technical reports (Tracks I-VI) exploring classical Bianchi IX general relativity, SU(2)_L Yang-Mills-Higgs sphalerons and dynamical Hosotani restoration, pure-graviton 1-loop spectral geometry, nonlocal Weyl-squared dispersion, half-antipodal Talbot revivals, and nonlinear Kubo-plus-contact KAM backreaction dynamics on the Poincare homology sphere S^3/I* and spherical space forms S^3/Gamma. Produced through a human-directed, AI-assisted symbolic and numerical verification workflow.",
   "creators": [
     {
       "name": "Conway, Clayton",

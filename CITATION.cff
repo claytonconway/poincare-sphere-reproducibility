@@ -1,8 +1,8 @@
 cff-version: 1.2.0
 message: "If you use this verification suite, datasets, or technical reports in your research, please cite it as below."
-title: "Poincare Homology Sphere Gauge Cosmology and Semiclassical Gravity (S^3/I*): Open Reproducibility Archive, Verification Suite, Claim Ledger, and Technical Reports (Tracks I-V)"
+title: "Poincare Homology Sphere Gauge Cosmology and Semiclassical Gravity (S^3/I*): Open Reproducibility Archive, Verification Suite, Claim Ledger, and Technical Reports (Tracks I-VI)"
 type: software
-version: 2.0.0
+version: 2.1.0
 date-released: 2026-11-27
 license: MIT
 repository-code: "https://github.com/claytonconway/poincare-sphere-reproducibility"

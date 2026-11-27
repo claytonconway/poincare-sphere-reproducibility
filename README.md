@@ -1,10 +1,10 @@
-# Poincare Homology Sphere Gauge Cosmology (`S³/I*`) : Open Reproducibility Archive (`v2.0.0`)
+# Poincare Homology Sphere Gauge Cosmology (`S³/I*`) : Open Reproducibility Archive (`v2.1.0`)
 
 [![Smoke Tests](https://github.com/claytonconway/poincare-sphere-reproducibility/actions/workflows/smoke.yml/badge.svg)](https://github.com/claytonconway/poincare-sphere-reproducibility/actions/workflows/smoke.yml)
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24561721.svg)](https://doi.org/10.5281/zenodo.24561721)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
-This self-contained public repository contains the complete verification code, exact symbolic and 50-digit numerical oracles, machine-readable JSON datasets, permanent Claim Ledger, and six standalone technical reports (Tracks I--V) exploring classical general relativity, non-Abelian `SU(2)_L` Yang-Mills-Higgs dynamics, pure-graviton 1-loop spectral geometry, and nonlocal semiclassical gravity on the Poincare homology sphere `S³/I*` and spherical space forms `S³/Γ`.
+This self-contained public repository contains the complete verification code, exact symbolic and 50-digit numerical oracles, machine-readable JSON datasets, permanent Claim Ledger, and seven standalone technical reports (Tracks I--VI) exploring classical general relativity, non-Abelian `SU(2)_L` Yang-Mills-Higgs dynamics, pure-graviton 1-loop spectral geometry, nonlocal semiclassical gravity, and nonlinear dynamical-systems backreaction on the Poincare homology sphere `S³/I*` and spherical space forms `S³/Γ`.
 
 ---
 
@@ -28,7 +28,7 @@ python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
 
-# Automated end-to-end smoke suite across ALL 6 tracks, Claim Ledger, and PDFs (< 2 s):
+# Automated end-to-end smoke suite across ALL 7 tracks, Claim Ledger, and PDFs (< 2 s):
 python3 run_smoke_tests.py
 
 # Regenerate all 12 Phase 1 (Tracks I-III) publication figures:
@@ -37,7 +37,7 @@ python3 generate_all_figures.py --out-dir ./generated_figures
 
 ---
 
-## Complete Archive Map (Tracks I--V)
+## Complete Archive Map (Tracks I--VI)
 
 | Track | Scope & Headline Verified Results | Technical Report | Verification Directory |
 | :--- | :--- | :--- | :--- |
@@ -47,6 +47,7 @@ python3 generate_all_figures.py --out-dir ./generated_figures
 | **Track IV-A** | Exact discrete `S³/I*` 2-photon spectral pole sum (Wigner `6j`, Bach factorization, digamma kernels), exact shell-by-shell Maxwell Contact Ward Identity (`-178952/93`), half-antipodal `Δη = π/2` Talbot revivals, and 2-graviton selection-rule desert | [track4a_grqc_nonlocal_weyl_kam.pdf](reports/track4a_grqc_nonlocal_weyl_kam.pdf) (24 pp) | `track4a/` (`t4a/`, `p2_01/`, `p2_06/`) |
 | **Track IV-B** | Goldstone-covariant fluctuation theory regular at `φ = 0` (`V*C + C'' = 0`), dynamical SM Hosotani symmetry restoration, and real-time `(3+1)`D `k = 7` `ρ_2 -> S_02 -> ρ_0` avalanches | [track4b_hepth_dynamical_hosotani_rho2.pdf](reports/track4b_hepth_dynamical_hosotani_rho2.pdf) (16 pp) | `track4b/` |
 | **Track V** | 50-digit pure-graviton Casimir tables across ADE / `L(p,1)` / `S³/D_m*`, exact Berger slope theorem, universal conformal chiral asymmetry `+(3/4) * order(Γ)`, uncapped 28-mode global focusing, topological prolate stabilization, and Witten-anomaly-free twisted-Dirac Hosotani inversion | [track5_hepth_pure_graviton_spaceforms.pdf](reports/track5_hepth_pure_graviton_spaceforms.pdf) (23 pp) | `track5/` (`p2_03/`, `p2_04/`, `p2_05/`) |
+| **Track VI** | Formal large-`N_V` nonlinear KAM dynamical-systems study: Complete Kubo-plus-contact shifted `n=2` Mathieu wall (`σ̃ ∈ [8.75, 10.00]`), narrowed survival sub-desert `[4.5, 5.9]`, chiral self-quenching rescue above `x_kin`, coherent-Talbot-to-Markovian `γ_deph` crossover, and autonomous Misner `M_R`-splitting Talbot echo scrambler | [track6_grqc_nonlinear_kam_dynamical_systems.pdf](reports/track6_grqc_nonlinear_kam_dynamical_systems.pdf) (23 pp) | `track6/` (`p2_02/`, `p2_07/`) |
 
 ---
 
@@ -62,22 +63,23 @@ python3 generate_all_figures.py --out-dir ./generated_figures
 
 ```text
 .
-├── .zenodo.json                 # Zenodo v2.0.0 archival metadata (ORCID + MIT)
+├── .zenodo.json                 # Zenodo v2.1.0 archival metadata (ORCID + MIT)
 ├── CITATION.cff                 # GitHub / Zenodo citation metadata
 ├── LICENSE                      # MIT License (code)
 ├── README.md                    # This guide
 ├── requirements.txt             # Portable Python 3.9-3.14 dependencies
 ├── requirements-py39-lock.txt   # Exact Python 3.9.6 pinned lockfile
-├── run_smoke_tests.py           # < 2 s end-to-end invariant check across Tracks I-V
+├── run_smoke_tests.py           # < 2 s end-to-end invariant check across Tracks I-VI
 ├── generate_all_figures.py      # Regenerates all 12 Phase 1 figures (Tracks I-III)
-├── ledger/                      # 23-claim ledger (CLAIMS.md + claims.json, incl. RETRACTED)
-├── reports/                     # All 6 standalone technical reports (PDF)
+├── ledger/                      # 24-claim ledger (CLAIMS.md + claims.json, incl. RETRACTED)
+├── reports/                     # All 7 standalone technical reports (PDF)
 ├── track1/                      # Track I scripts, data/ & figure builder
 ├── track2/                      # Track II scripts, data/ & figure builder
 ├── track3/                      # Track III scripts, data/ & figure builder
 ├── track4a/                     # Track IV-A (t4a/, p2_01/, p2_06/) scripts, JSONs & reports
 ├── track4b/                     # Track IV-B (t4b_01..06) scripts, JSONs & report
-└── track5/                      # Track V (p2_03/, p2_04/, p2_05/) scripts, JSONs & reports
+├── track5/                      # Track V (p2_03/, p2_04/, p2_05/) scripts, JSONs & reports
+└── track6/                      # Track VI (p2_02/, p2_07/) scripts, JSONs & reports
 ```
 
 ---
