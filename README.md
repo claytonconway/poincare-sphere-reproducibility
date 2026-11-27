@@ -1,7 +1,7 @@
 # Poincare Homology Sphere Gauge Cosmology (`S³/I*`) : Open Reproducibility Archive (`v2.1.0`)
 
 [![Smoke Tests](https://github.com/claytonconway/poincare-sphere-reproducibility/actions/workflows/smoke.yml/badge.svg)](https://github.com/claytonconway/poincare-sphere-reproducibility/actions/workflows/smoke.yml)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24561721.svg)](https://doi.org/10.5281/zenodo.24561721)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24561720.svg)](https://doi.org/10.5281/zenodo.24561720)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 This self-contained public repository contains the complete verification code, exact symbolic and 50-digit numerical oracles, machine-readable JSON datasets, permanent Claim Ledger, and seven standalone technical reports (Tracks I--VI) exploring classical general relativity, non-Abelian `SU(2)_L` Yang-Mills-Higgs dynamics, pure-graviton 1-loop spectral geometry, nonlocal semiclassical gravity, and nonlinear dynamical-systems backreaction on the Poincare homology sphere `S³/I*` and spherical space forms `S³/Γ`.
